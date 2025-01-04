@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup with Reset Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="openPopup">Open Popup</button>
+
+    <!-- Popup Container -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="closePopup" class="close-btn">&times;</span>
+            <h2>Popup Title</h2>
+            <p>This is a simple popup with a reset button.</p>
+            
+            <!-- Input Fields -->
+            <input type="text" id="inputField" placeholder="Enter something...">
+            <br><br>
+
+            <!-- Buttons -->
+            <button id="closePopupButton">Close Popup</button>
+            <button id="resetButton">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
