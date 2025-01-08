@@ -1,0 +1,50 @@
+
+body {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+
+}
+#hone{
+    color: white;
+    font-size: 22px;
+    padding-top : 33px;
+    padding-left : 51px;
+    padding-right : 51px;
+    padding-bottom : 33px;
+}
+#inputone{
+    width: 80px;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid #B295FF 2px;
+    border-radius: 5px;
+    background-color: #6943FF;
+    font-size: 60px;
+    color: white;
+    font-weight: 800;
+
+}
+
+#buttonone{
+    display:block;
+    position: relative;
+    background-color: white;
+    color: #3D3D3D;
+    left : 200px;
+    margin-top: 35px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#pone{
+    color: #5A537B;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+
+}
