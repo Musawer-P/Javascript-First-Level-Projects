@@ -48,3 +48,23 @@ body {
     font-weight: 500;
 
 }
+
+#lenght-el{
+    color: rgb(83, 65, 65);
+    font-weight: 10px;
+    padding-bottom: 10px;
+}
+
+#volume-el{
+    color: rgb(83, 65, 65);
+    font-weight: 10px;
+    padding-bottom: 20px;
+
+}
+
+#mass-el{
+    color: rgb(83, 65, 65);
+    font-weight: 10px;
+    padding-bottom: 20px;
+
+}
