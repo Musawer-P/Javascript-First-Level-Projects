@@ -12,8 +12,8 @@
  buttonConvert.addEventListener("click" , function(){
     let baseValue = inputMain.value
 
-    lenghtEl.textContent = `${baseValue} meter = ${baseValue * meterToFeet.toFixed(3)} feet`
-    volumeEl.textContent = `${baseValue} volume = ${baseValue * literToGallon.toFixed(3)} gallon`
-    massEl.textContent = `${baseValue} mass = ${baseValue * kiloToPound.toFixed(3)} pound`
+    lenghtEl.textContent = `${baseValue} meter = ${baseValue * meterToFeet.toFixed(3)} feet | ${baseValue} feet = ${baseValue / meterToFeet.toFixed(3)} meter`
+    volumeEl.textContent = `${baseValue} liter = ${baseValue * literToGallon.toFixed(3)} gallon | ${baseValue} gallon = ${baseValue / literToGallon.toFixed(3)} liter`
+    massEl.textContent = `${baseValue} kilo = ${baseValue * kiloToPound.toFixed(3)} pound | ${baseValue} pound = ${baseValue / kiloToPound.toFixed(3)} kilo`
 
  })
