@@ -62,6 +62,11 @@ if (clickedButton.id === "submit") {
   localStorage.setItem("item", item);
   localStorage.setItem("price", price);
 
+  quantityInput.value = "";
+  itemInput.value = "";
+  priceInput.value = "";
+
+  
   alert("Data saved to localStorage successfully!");
 
 } else if (clickedButton.id === "submit-delete") {
