@@ -26,7 +26,53 @@ h1{
     letter-spacing: 10px;
 }
 
-#table{
+/* Table Styling */
+#table {
+    margin: auto;
+  text-align: center;
+  margin-top: 50px;
+    width: 57%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+  }
+  
+  /* Header Styling */
+  #table thead tr {
+    background-color:#1f2022;
+    color: white;
+    font-weight: bold;
     text-align: center;
-    color : white
-}
+  }
+  
+  /* Cell Padding and Borders */
+  #table th, #table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  /* Hover Effect for Rows */
+  #table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Alternate Row Colors */
+  #table tbody tr:nth-child(odd) {
+    background-color: #fdfdfd;
+  }
+  
+  #table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    #table {
+      font-size: 14px;
+    }
+  }
