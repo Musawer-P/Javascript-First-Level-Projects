@@ -3,6 +3,8 @@ const quantityInput = document.getElementById("quantity");
 const itemInput = document.getElementById("item");
 const priceInput = document.getElementById("price");
 const tableBody = document.getElementById("table-body");
+const submitDelete = document.getElementById("submit-delete");
+
 
 // Function to populate the table with data from localStorage
 function populateTable() {
@@ -47,8 +49,11 @@ function populateTable() {
 // Event listener for the form submit
 saveForm.addEventListener("submit", function (event) {
   event.preventDefault();
+// Identify which button was clicked
+const clickedButton = event.submitter;
 
-  // Save data to localStorage
+if (clickedButton.id === "submit") {
+     // Save data to localStorage
   const quantity = quantityInput.value;
   const item = itemInput.value;
   const price = priceInput.value;
@@ -59,8 +64,15 @@ saveForm.addEventListener("submit", function (event) {
 
   alert("Data saved to localStorage successfully!");
 
-  // Repopulate the table with updated data
-  populateTable();
+} else if (clickedButton.id === "submit-delete") {
+
+    localStorage.clear()
+    alert("Data Deleted Succesfully");
+
+}
+// Populate the table on page load
+populateTable();
+
 });
 
 // Populate the table on page load

@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "style.css" rel = "stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>LocalStorage Project</title>
 </head>
+
 <body>
     <h1>Local Storage RUD Project</h1>
-    <div class = "col-md-12" style = "text-align: center;">
-        <form id = "save-form">
-    <input type = "text" placeholder="Quantity" class = "form-control" id = "quantity">
-    <input type = "text" placeholder="Item" class = "form-control"  id = "item">
-    <input type = "text" placeholder="Price" class = "form-control"  id = "price">
-    <button type = "submit" id = "submit">Submit</button>
-    <button type = "submit" id = "submit-delete">Delete</button>
-    <div id="data-display"></div>
+    <div class="col-md-12" style="text-align: center;">
+        <form id="save-form">
+            <input type="text" placeholder="Quantity" class="form-control" id="quantity">
+            <input type="text" placeholder="Item" class="form-control" id="item">
+            <input type="text" placeholder="Price" class="form-control" id="price">
+
+            <button type="submit" id="submit">Submit</button>
 
 
-</form>
-</div>
-<table border="1">
-    <thead>
-      <tr>
-        <th>Quantity</th>
-        <th>Item</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody id="table-body">
-      <!-- Rows will be dynamically added here -->
-    </tbody>
-  </table>
-  
-<script src="script.js"></script>
+            <button type="submit" id="submit-delete" onclick="sbtDelte()">Delete</button>
+
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
