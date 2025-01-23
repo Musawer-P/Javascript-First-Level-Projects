@@ -14,9 +14,19 @@ body{
 #submit{
     padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(0, 0, 0, 0.753); border: none; border-radius: 5px; color: white;
 }
+#submit-delete{
+    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(218, 17, 17, 0.753); border: none; border-radius: 5px; color: white;
+}
+
+
 h1{
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 10px;
+}
+
+#table{
+    text-align: center;
+    color : white
 }

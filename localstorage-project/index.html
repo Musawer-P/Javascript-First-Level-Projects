@@ -14,8 +14,25 @@
     <input type = "text" placeholder="Item" class = "form-control"  id = "item">
     <input type = "text" placeholder="Price" class = "form-control"  id = "price">
     <button type = "submit" id = "submit">Submit</button>
+    <button type = "submit" id = "submit-delete">Delete</button>
+    <div id="data-display"></div>
+
+
 </form>
 </div>
+<table border="1">
+    <thead>
+      <tr>
+        <th>Quantity</th>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Rows will be dynamically added here -->
+    </tbody>
+  </table>
+  
 <script src="script.js"></script>
 </body>
 </html>
