@@ -1,2 +1,2 @@
 Link of the App-
-https://superlative-fairy-7ff755.netlify.app/
+https://effervescent-gecko-8e6a55.netlify.app/
