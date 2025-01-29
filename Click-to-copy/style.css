@@ -1,52 +1,42 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+body{
+    background-color:rgb(41, 80, 102);
 
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    background-color:rgb(60, 191, 231); 
 }
-
-.container {
-    max-width: 900;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
-
-.input-txt {
-    padding: 10px;
-    margin-top: 20px;
-    margin-right: 10px;
-    padding-right: 20px;
-    /* width: 65%; */
-    font-weight: bold;
-}
-
-.btn {
-    padding: .5rem;
-    margin: 0 .5rem;
-    font-size: 1rem;
-    color: black;
+.input-txt{
+    background-color: rgb(41, 80, 102);
     border: none;
-    outline: none;
-    border-radius: 3px;
-    font-weight: 200;
-    cursor: pointer;
-    background-color: white;
-    padding-right: 10px;
-    padding-left: 10px;
-    width: 20%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-radius: 0px;
+width : 50%;
+    color:white;
+    padding-top:  10px;
+    padding-right:  10px;
+    padding-bottom:  10px;
+    padding-left:  10px;
+    font-size: 20px;
+
 }
 
-.header4 {
-    font-size: 1.3rem;
-    font-style: italic;
-    color: gold;
+.btn{
+    background-color: #007bff; /* Primary blue */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.container{
+    padding-top: 40px;
+    text-align: center;
+
+}
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }

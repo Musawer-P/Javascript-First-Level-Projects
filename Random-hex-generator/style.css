@@ -1,0 +1,29 @@
+.container{
+    text-align: center;
+}
+#btn{
+    background-color: rgb(19, 172, 172);
+    color: white;
+    border: none;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+#colorDisplay {
+    background-color: black;
+    color: white;
+    width: fit-content; /* Adjust width based on content */
+    padding: 10px 20px;
+    text-align: center;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
