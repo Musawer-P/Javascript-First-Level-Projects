@@ -18,18 +18,21 @@
         <button type = "submit" id = "delete-btn">Delete</button>
         </div>
     </div>
-    <p id = "insertplace-todo"></p>
-    <div class = "col-md-12">
-        <table id = "todo-table">
+    <div class="col-md-12" id = "table-div">
+        <table id="todo-table" class="table table-bordered">
             <thead>
-                <th></th>
-                <th></th>
-                <tbody>
-
-                </tbody>
+                <tr>
+                    <th>Task</th>
+                    <th>Completed</th>
+                </tr>
             </thead>
+            <tbody id="insertplace-todo">
+                <!-- Tasks will be inserted here -->
+            </tbody>
         </table>
     </div>
+</div>
+
     <script type="module" src = "script.js"></script>
 </body>
 </html>
