@@ -1,2 +1,2 @@
 Link of the App-
-Coming Soon..
+https://leafy-maamoul-1418a4.netlify.app/
