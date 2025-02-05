@@ -5,31 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Notes-App</title>
 </head>
 
 <body>
     <div class="container" id="head-container">
         <h1>Notes</h1>
-        <p id="time"><p>
+        <p id="notes-date"></p>
     </div>
 
 
 
-    <div class="container" id="bi-container">
-        <input type="text" id="add-notes">
+    <div class="container" id="input-container">
+        <input type="text" id="add-notes" placeholder="Add Note">
+       </div>
+       <div class="container" id="button-container">
         <button type="submit" id="notes-submit">Add Notes</button>
+        <button type="submit" id="delete-btn">Delete</button>
+        <div class="search-container">
+            <button id="search-icon" class="search-btn">
+                <img src="search-icon.png" alt="Search" />
+            </button>
+            <div id="search-box" class="search-box">
+                <input type="text" id="search-input" class="search-input" placeholder="Search..." />
+                <button id="close-btn" class="close-btn">×</button>
+            </div>
+        </div>
     </div>
-
-    <input type="text" id="search-input">
+    
+  
+    
     <div class="container" id="note-place">
         <p id="notes-add"></p>
-        <p id="notes-date"></p>
+        <p id="dates-place"></p>
+
 
     </div>
 
 
-    <script type="module" src="script.js"></script>
+    <script type= "module" src="script.js"></script>
 </body>
 
 </html>

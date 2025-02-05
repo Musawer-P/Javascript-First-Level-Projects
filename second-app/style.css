@@ -13,6 +13,7 @@ h1{
     background-color: rgb(157, 27, 161);
     color: white;
     border: none;
+    border-radius: 5px;
     padding-top: 10px;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -20,7 +21,20 @@ h1{
     font-weight: bold;
 
 }
-#time{
+
+#delete-btn{
+    background-color: rgb(238, 41, 58);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-weight: bold;
+
+}
+#notes-date{
     padding-top: 35px;
     color: rgb(157, 27, 161);
     font-family:Arial, Helvetica, sans-serif;
@@ -47,18 +61,83 @@ h1{
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-#search-input {
-    margin-top: 5vh; 
-    padding: 10px 15px;
-    width: 100%;
-    max-width: 400px; 
-    border: 2px solid #ddd;
-    border-radius: 8px; 
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+img{
+    width: 60%;
+  
 }
-#search-input:focus {
+#button-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns buttons to the left */
+    align-items: center; /* Vertically aligns the buttons in the center */
+    gap: 10px; /* Adds space between the buttons */
+    margin-top: 20px; /* Adds margin to separate from the input */
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-box {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 0px 90px 0px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    font-size: 16px;
+    border: none;
+    outline: none;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.close-btn:hover {
+    color: #f00;
+}
+
+.search-box.show {
+    display: block;
+}
+
+.search-input:focus {
+    border-color: #900;
+    box-shadow: 0 0 10px rgba(156, 27, 161, 0.5);
+}
+
+
+#add-notes:focus {
     border-color: rgb(157, 27, 161); 
     box-shadow: 0 4px 8px rgba(156, 27, 161, 0.445);
     outline: none;
