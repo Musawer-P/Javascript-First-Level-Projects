@@ -34,7 +34,9 @@ const datesPlace = document.getElementById("dates-place");
 const notesSubmit = document.getElementById("notes-submit");
 //const searchInputs = document.getElementById("search-inputs");
 const deleteBtn = document.getElementById("delete-btn"); 
-const notesDate = document.getElementById("notes-date")
+const notesDate = document.getElementById("notes-date");
+const themeToggleBtn = document.getElementById("theme-toggle");
+
 function render(notes) {
     let listNotes = "";
     let listDates = ""; 
