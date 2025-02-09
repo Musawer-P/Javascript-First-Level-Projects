@@ -1,6 +1,7 @@
 body{
     background-color: #2e2e2e;
 }
+
 #head-container{
     display: flex;
 }
@@ -47,7 +48,7 @@ h1{
 
 
 #note-place{
-    background-color: blueviolet;
+    background-color: none;
     height: 50px;
     width: 30%;
     margin-top: 20px;
