@@ -45,15 +45,17 @@ function render(notes) {
     let listNotes = "";
     notes.forEach((noteObj) => {
         listNotes += `
-            <div class="note-item">
+            <div class="note-card">
                 <p class="note-text">${noteObj.note}</p>
-                <p class="note-date">${noteObj.date}</p> <!-- Show time beside note -->
+                <p class="note-date">${noteObj.date}</p>
             </div>
         `;
     });
 
-    notesPlace.innerHTML = listNotes;
+    notesPlace.innerHTML = listNotes; // Insert all notes into the container
 }
+
+
 
 // Fetch notes from Firebase
 onValue(referenceInDB, (snapshot) => {
@@ -91,9 +93,9 @@ notesSubmit.addEventListener("click", function (event) {
 deleteBtn.addEventListener("dblclick", function () {
     remove(referenceInDB)
         .then(() => {
-            notesPlace.innerHTML = "<p>No Notes Yet.</p>";
+            notesPlace.innerHTML = "<p style='color: blueviolet;' >No Notes Yet.</p>";
         })
-        .catch((error) => {
+        .catch((error) => { 
             console.error("Error deleting notes:", error);
         });
 });
