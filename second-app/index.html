@@ -11,13 +11,13 @@
 </head>
 
 <body>
+    <div class = "main" id = "main">
     <div class="container" id="head-container">
         <h1>Notes</h1>
         <p id="notes-date"></p>
     </div>
 
     <!-- Dark theme toggle button -->
-    <button type="button" id="theme-toggle">🌙</button>
 
     <div class="container" id="input-container">
         <input type="text" id="add-notes" placeholder="Add your note here">
@@ -38,13 +38,15 @@
                 <button id="close-btn" class="close-btn">×</button>
             </div>
         </div>
+        <button type="button" id="theme-toggle">☀️</button>
+
     </div>
 
     <div class="container" id="note-place">
         <p id="notes-place"></p>
         <p id="dates-place"></p>
     </div>
-
+</div>
     <script type="module" src="script.js"></script>
 </body>
 

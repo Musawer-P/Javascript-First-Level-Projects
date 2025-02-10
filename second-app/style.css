@@ -2,6 +2,10 @@ body{
     background-color: #2e2e2e;
 }
 
+#main{
+    margin-left: 170px;
+}
+
 #head-container{
     display: flex;
 }
@@ -15,6 +19,7 @@ h1{
 
 #notes-submit{
     background-color: blueviolet;
+    width: 30%;
     color: white;
     border: none;
     border-radius: 5px;
@@ -28,6 +33,7 @@ h1{
 
 #delete-btn{
     background-color: rgb(238, 41, 58);
+    width: 30%;
     color: white;
     border: none;
     border-radius: 5px;
@@ -57,8 +63,7 @@ h1{
 #add-notes {
     margin-top: 5vh; 
     padding: 10px 15px;
-    width: 100%;
-    max-width: 400px; 
+    width: 80%;
     border: 2px solid #ddd;
     border-radius: 8px; 
     font-size: 16px;
@@ -149,17 +154,37 @@ img{
 
 
 #theme-toggle{
-    padding: 10px 20px;
+    padding: 5px 30px 5px 30px;
+    width: 15%;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color:#007bff;
+    background-color:white;
     color: white;
     font-size: 16px;
-    margin-top: 20px;
 }
 
-.dark-mode{
-    background-color:#121212;
+/* Dark mode styles */
+.dark-mode {
+    background-color: #f7f7f7;
+    color: #ffffff;
+}
+
+
+.dark-mode .note-item {
+    background-color: #222;
+    border: 1px solid #555;
+}
+
+.dark-mode .note-text, 
+.dark-mode .note-date {
+    color: #fff;
+}
+
+.dark-mode button {
     color: white;
+}
+
+.dark-mode #theme-toggle {
+    background-color: #1d2024;
 }
