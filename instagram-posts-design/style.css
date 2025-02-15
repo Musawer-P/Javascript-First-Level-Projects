@@ -64,8 +64,8 @@ main{
 }
 .third-section{
     margin-top: 20px;
-    padding: 0px 10px 0px 10px;
-
+    padding: 0px 10px 0px px;
+  
 }
 
 #like-section{
@@ -95,7 +95,6 @@ main{
 margin-top: 10px;
 margin-right: 10px;
 width: 10%;
-height: 10%;
 border-radius: 50px;
 }
 #third-profile{
@@ -117,7 +116,7 @@ border-radius: 50px;
 
 }
 #p2-second-container{
-    margin-top: -10px;
+    margin-top: -17px;
     margin-left: clamp(58px, 4.3vw, 100px);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 12px; 
@@ -125,4 +124,5 @@ border-radius: 50px;
 }
 #love-icon, #message-icon , #send-icon{
     font-size: 25px; color: black;
+    margin-left: 10px;
 }
