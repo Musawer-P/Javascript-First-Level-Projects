@@ -68,7 +68,7 @@ main{
   
 }
 
-#like-section{
+#like-section, #like-section-two, #like-section-three{
     color: black;
     font-weight: bold;
     margin-top: 10px;
@@ -125,4 +125,38 @@ border-radius: 50px;
 #love-icon, #message-icon , #send-icon{
     font-size: 25px; color: black;
     margin-left: 10px;
+}
+
+#love-icon, #love , #send-icon{
+    font-size: 25px; color: black;
+    margin-left: 10px;
+}
+#love-icon-two, #love-icon-three{
+    font-size: 25px; color: black;
+    margin-left: 10px;
+}
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
