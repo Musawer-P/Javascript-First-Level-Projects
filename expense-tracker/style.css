@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(241, 238, 233);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    min-height: 100vh;       /* Full viewport height */
+    margin: 0;
+}
+main{
+  padding: 20px;  /* Optional: Adds space around the content */
+  border-radius: 8px; /* Optional: Rounded corners */
+  width: 80%;      /* Adjust the width as needed */
+  max-width: 800px;
+}
+.input-section{
+}
+h1{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 100;
+color: white;
+background-color: rgb(235, 160, 48);
+width: 34%;
+padding: 5px 0px 5px 12px;
+border-radius: 5px;
+}
+
+#expense-name, #amount, #date, #category{
+    padding: 10px 10px 10px 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border: none;
+    border-bottom: 3px solid rgb(235, 160, 48); 
+    margin-top: 10px;
+}
+#submit-add{
+    padding: 10px 50px 10px 50px;
+    border: none;
+    background-color: rgb(235, 160, 48);
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 50%;
+}
+#submit-add:hover{
+    background-color:  rgb(241, 238, 233);
+    color: rgb(235, 160, 48);
+    border: 1px solid rgb(235, 160, 48);
+}
+
+.button-section{
+text-align: start;
+width: 100%;
+margin-top: 20px;
+
+}
+
+#expense-name:focus, 
+#amount:focus, 
+#date:focus, 
+#category:focus{
+border-bottom: 2px solid rgba(0, 0, 0, 0.623);
+outline: none;
+color: rgba(0, 0, 0, 0.623);
+}  
+
+#search{
+    padding: 10px 50px 10px 5px;
+    border: none;
+    border-bottom: 1px solid rgb(235, 160, 48);
+    background-color:  rgb(241, 238, 233);
+    color: rgb(235, 160, 48);
+    border-radius: 0px;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 33%;
+}
+
+    #search:focus {
+        border-bottom: 2px solid rgb(235, 160, 48); /* Make border thicker on focus */
+        outline: none;  /* Remove default focus outline */
+        color: rgba(0, 0, 0, 0.623); /* Optional: Change text color on focus */
+    }
+
+
+#search::placeholder{
+    color: rgb(235, 160, 48);
+    
+}
+#search-icon{
+    color:rgb(235, 160, 48);
+    margin-left: -30px;
+}
