@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/icon" href="expense-icon.png">
     <title>Expense Tracker</title>
 </head>
 
@@ -18,24 +19,32 @@
             <input type="text" id="amount" placeholder="Amount">
 
             <input type="date" id="date" placeholder="">
+            <select id="category" name="category">
+                <option value="" disabled selected>Category</option>
+                <option value="Food">Food</option>
+                <option value="Office">Office</option>
+                <option value="Vehicle">Vehicle</option>
+                <option value="Other">Other</option>
+            </select>
 
-            <input type="text" id="category" placeholder="category">
         </div>
         <div class="button-section">
-            <button type="submit" id = "submit-add">Add</button>
+            <button type="submit" id="submit-add">Add</button>
             <input type="text" id="search" placeholder="Search...">
-            <i class="fa fa-search" id = "search-icon"></i>
+            <i class="fa fa-search" id="search-icon"></i>
 
         </div>
         <div class="table-section">
-            <table id = "expense-table">
-                <th>Expense Name</th>
-                <th>Amount</th>
-                <th>Date</th>
-                <th>Category</th>
-                <th>Action</th>              
-                <tbody id = "table-body">
-              
+            <table id="expense-table">
+                <thead>
+                    <th style="padding: 10px; border: none;">Expense</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="table-body">
+
                 </tbody>
             </table>
         </div>

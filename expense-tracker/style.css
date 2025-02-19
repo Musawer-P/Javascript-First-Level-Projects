@@ -15,9 +15,10 @@ main{
 h1{
 font-family: Arial, Helvetica, sans-serif;
 font-weight: 100;
+font-size: clamp(1rem, 2.5vw, 1.5rem);
 color: white;
 background-color: rgb(235, 160, 48);
-width: 34%;
+width: 25%;
 padding: 5px 0px 5px 12px;
 border-radius: 5px;
 }
@@ -29,6 +30,9 @@ border-radius: 5px;
     border: none;
     border-bottom: 3px solid rgb(235, 160, 48); 
     margin-top: 10px;
+}
+#category{
+    width: 26%;
 }
 #submit-add{
     padding: 10px 50px 10px 50px;
@@ -74,7 +78,7 @@ color: rgba(0, 0, 0, 0.623);
 }
 
     #search:focus {
-        border-bottom: 2px solid rgb(235, 160, 48); /* Make border thicker on focus */
+        border-bottom: 2px solid rgba(0, 0, 0, 0.623); /* Make border thicker on focus */
         outline: none;  /* Remove default focus outline */
         color: rgba(0, 0, 0, 0.623); /* Optional: Change text color on focus */
     }
@@ -87,4 +91,25 @@ color: rgba(0, 0, 0, 0.623);
 #search-icon{
     color:rgb(235, 160, 48);
     margin-left: -30px;
+}
+thead{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(235, 160, 48);
+    color: white;
+    border-radius: 5px;
+}
+
+#table-section{
+    margin-top: 20px;
+    width: 100%;
+}
+#expense-table{
+    width: 96%;
+    margin-top: 40px;
+
+}
+#table-body td{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid rgb(235, 160, 48);
 }
