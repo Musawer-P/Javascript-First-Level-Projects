@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to top, #4e9f9e, #1a535c);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weather-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #1a535c;
+    margin-bottom: 20px;
+  }
+
+  .city-name {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #2d3d3b;
+    margin-bottom: 20px;
+  }
+
+  .temperature {
+    font-size: 4em;
+    color: #ff5e57;
+    font-weight: 700;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .temperature:hover {
+    transform: scale(1.1);
+  }
+
+  .condition {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .additional-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    color: #3c474a;
+  }
+
+  .info-item {
+    text-align: center;
+  }
+
+  .info-item span {
+    font-weight: 600;
+    color: #1a535c;
+  }
+
+  .footer {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #fff;
+  }
+  p{
+    color: #fff;
+    background-color: #1a535c;
+    border-radius: 5px;
+  }
+  #wind{
+    color: #fff; 
+    background-color: #1a535c; 
+    border-radius: 5px; 
+    padding-left: 7px; 
+    padding-right: 7px;
+  }
+  #humidity{
+    color: #fff; 
+    background-color: #1a535c; 
+    border-radius: 5px; 
+    padding-left: 7px; 
+    padding-right: 7px;
+  }
+  #pressure{
+    color: #fff; 
+    background-color: #1a535c; 
+    border-radius: 5px; 
+    padding-left: 7px; 
+    padding-right: 7px;
+  }

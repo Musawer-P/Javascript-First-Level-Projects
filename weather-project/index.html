@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "style.css" rel = "stylesheet">
-    <title>Weather</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href = "style.css" rel = "stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <script src = "script.js"></script>
+
+  <div class="weather-container">
+    <h1>Weather App</h1>
+    <div class="city-name" id="city-name">New York</div>
+    <div class="temperature" id="temperature">20°C</div>
+    <div class="condition" id="condition">Clear Sky</div>
+
+    <div class="additional-info">
+      <div class="info-item">
+        <div style = "font-weight: bold;">Wind</div>
+        <span id="wind">10 km/h</span>
+      </div>
+      <div class="info-item">
+        <div style = "font-weight: bold;">Humidity</div>
+        <span id="humidity">60%</span>
+      </div>
+      <div class="info-item">
+        <div style = "font-weight: bold;">Pressure</div>
+        <span id="pressure">1015 hPa</span>
+      </div>
+    </div>
+
+    <div class="footer"> 
+      <p>Weather data provided by Weather API</p>
+    </div>
+  </div>
+<script src = "script.js"></script>
+
 </body>
 </html>
