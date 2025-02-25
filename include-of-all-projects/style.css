@@ -1,0 +1,29 @@
+.menu-container {
+    position: fixed;  /* Sticks to the bottom */
+    bottom: 20px;  /* Space from the bottom */
+    left: 50%;  /* Start from the center */
+    transform: translateX(-50%);  /* Shift back by half of its width */
+    width: calc(50% - 40px);  /* 50% width with spacing */
+    height: 40px;  /* Fixed height */
+    background-color: rgba(54, 53, 53, 0.63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0px -3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px; /* Ensures inner spacing */
+}
+
+/* ===== Responsive Design (Ensuring a Clean Mobile View) ===== */
+@media (max-width: 768px) {
+    .menu-container {
+        width: calc(100% - 40px); /* Keeps spacing from sides */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;  /* Keeps smooth corners */
+        bottom: 10px; /* Adjusts bottom spacing */
+        height: 40px; /* Slightly larger for touch-friendliness */
+        padding: 15px; /* Adds padding for a balanced look */
+        box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+    }
+}
