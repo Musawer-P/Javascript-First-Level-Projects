@@ -19,14 +19,14 @@
             <input type="file" id="img" accept="image/*">
             <label for="img" class="file-label">Choose an Image</label>
             <div class = "center-container">
-        <button type="submit" id="submit-btn">Submit</button>
+        <button type="submit" id="submit-btn" onclick = "addToTable()">Submit</button>
     </div>
 
         <div class="table-container">
             <div class="search-bar-container">
                 <input type="text" id="search-bar" placeholder="Search...">
             </div>
-            <table>
+            <table id = "dataTable">
                 <thead>
                     <th>Name</th>
                     <th>Phone</th>
@@ -72,6 +72,8 @@
                     </td>
 
                 </tr>
+                    
+                
             </table>
         </div>
 
