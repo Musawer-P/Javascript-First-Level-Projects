@@ -1,3 +1,27 @@
+//Random Password Generator
+const characters = [
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
+    "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f",
+    "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
+    "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "~", "`",
+    "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[",
+    "}", "]", ",", "|", ":", ";", "<", ">", ".", "?", "/"
+];
+const passwordLength = 12;
+
+function generateRandomPassword(){
+    let randomPassword = "";
+    for (let i = 0; i < passwordLength; i++){
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        randomPassword += characters[randomIndex];
+    }
+    return randomPassword;
+}
+
+function displayPasswords(){
+    document.getElementById("password").value = generateRandomPassword();
+}
+
 let sbtButton = document.getElementById("submit-btn");
 
 sbtButton.addEventListener("click", addToTable); // Add event listener to button
@@ -9,12 +33,15 @@ function addToTable() {
     let emailInput = document.getElementById("email").value;
     let addressInput = document.getElementById("address").value;
     let ageInput = document.getElementById("age").value;
+    let usernameInput = document.getElementById("username").value;
+    let passwordInput = document.getElementById("password").value;
+
 
 
 
   
 
-    if (!nameInput && !phoneInput && !emailInput && !addressInput && !ageInput) return;
+    if (!nameInput && !phoneInput && !emailInput && !addressInput && !ageInput && !usernameInput && !passwordInput) return;
 
     let data = JSON.parse(localStorage.getItem("tableData")) || [];
 
@@ -24,7 +51,9 @@ function addToTable() {
         phoneInput || "",
         emailInput || "",
         addressInput || "",
-        ageInput || ""
+        ageInput || "",
+        usernameInput || "",
+        passwordInput || ""
     ]);
     
     localStorage.setItem("tableData", JSON.stringify(data));
@@ -37,6 +66,9 @@ function addToTable() {
     document.getElementById("email").value = "";
     document.getElementById("address").value = "";
     document.getElementById("age").value = "";
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+
 
 
 
@@ -44,7 +76,7 @@ function addToTable() {
 }
 function updateTable() {
     let table = document.getElementById("dataTable");
-    table.innerHTML = "<tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Age</th><th>Actions</th></tr>";
+    table.innerHTML = "<tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Age</th><th>Username</th><th>Password</th><th>Actions</th></tr>";
 
     let data = JSON.parse(localStorage.getItem("tableData")) || [];
     
@@ -67,6 +99,12 @@ function updateTable() {
         cell5.textContent = entry[4];
 
         let cell6 = row.insertCell(5);
+        cell6.textContent = entry[5];
+        
+        let cell7 = row.insertCell(6);
+        cell7.textContent = entry[6];
+
+        let cell8 = row.insertCell(7);
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.style.color = "white";
@@ -80,7 +118,7 @@ function updateTable() {
             deleteRow(index);
         });
 
-        cell6.appendChild(deleteButton);
+        cell8.appendChild(deleteButton);
     });
 }
 
