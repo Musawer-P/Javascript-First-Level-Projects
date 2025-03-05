@@ -14,15 +14,18 @@
         <div class="input-container">
             <input type="text" id="name" placeholder="Name">
             <input type="text" id="phone" placeholder="Phone">
+            
             <input type="text" id="email" placeholder="E-mail">
             <input type="text" id="address" placeholder="Address">
             <input type="number" id="age" placeholder="Age">
-            <input type="text" id="username" placeholder="Username">
-            <input type="text" id="password" placeholder="Password">
-            <button type="submit" id="submit-password" onclick = "displayPasswords()">Random</button>
             <input type="file" id="img" accept="image/*">
             <label for="img" class="file-label">Choose an Image</label>
-            <div class = "center-container">
+         
+            <input type="text" id="username" placeholder="Username">
+            <input type="text" id="password" placeholder="Password">
+            <small class="under-label" id="submit-password" onclick = "displayPasswords()">Random Password</small>
+
+             <div class = "center-container">
         <button type="submit" id="submit-btn" onclick = "addToTable()">Submit</button>
 
     </div>
@@ -33,13 +36,7 @@
             </div>
             <table id = "dataTable">
                 <thead>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>E-mail</th>
-                    <th>Address</th>
-                    <th>Age</th>
-                    <th>Image</th>
-                    <th>Action</th>
+             
                 </thead>
               
                 

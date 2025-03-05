@@ -1,3 +1,5 @@
+
+
 //Random Password Generator
 const characters = [
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
@@ -76,7 +78,7 @@ function addToTable() {
 }
 function updateTable() {
     let table = document.getElementById("dataTable");
-    table.innerHTML = "<tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Age</th><th>Username</th><th>Password</th><th>Actions</th></tr>";
+    table.innerHTML = "<tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Age</th><th>Username</th><th>Password</th><th>Actions</th><th>Meeting Deadline</th></tr>";
 
     let data = JSON.parse(localStorage.getItem("tableData")) || [];
     
@@ -119,6 +121,21 @@ function updateTable() {
         });
 
         cell8.appendChild(deleteButton);
+
+        let cell9 = row.insertCell(8);
+
+        let checkbox = document.createElement("input")
+        checkbox.type = "checkbox";
+        let savedState = localStorage.getItem('checkboxState');
+        if (savedState !== null){
+            checkbox.checked = JSON.parse(savedState);
+        }
+        checkbox.addEventListener("change", function(){
+            localStorage.setItem('checkboxState', JSON.stringify(checkbox.checked));
+
+        });
+
+        cell9.appendChild(checkbox);
     });
 }
 
