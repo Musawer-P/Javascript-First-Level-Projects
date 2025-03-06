@@ -24,6 +24,21 @@ function displayPasswords(){
     document.getElementById("password").value = generateRandomPassword();
 }
 
+
+function getRandomColor() {
+    let letters = "CDEF89"; // Possible hex characters
+    let color = "#";
+    for (let i = 0; i < 6; i++) { // Loop 6 times for a 6-character hex code
+        color += letters[Math.floor(Math.random() * letters.length)]; // Pick a random letter/number
+    }
+    return color;
+}
+
+function changeColor() {
+    document.body.style.backgroundColor = getRandomColor();
+}
+
+
 let sbtButton = document.getElementById("submit-btn");
 
 sbtButton.addEventListener("click", addToTable); // Add event listener to button
@@ -70,19 +85,15 @@ function addToTable() {
     document.getElementById("age").value = "";
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
-
-
-
-
-   
 }
+
 function updateTable() {
     let table = document.getElementById("dataTable");
     table.innerHTML = "<tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Age</th><th>Username</th><th>Password</th><th>Actions</th><th>Meeting Deadline</th></tr>";
 
     let data = JSON.parse(localStorage.getItem("tableData")) || [];
     
-    data.forEach((entry, index) => {  // ✅ Added index parameter
+    data.forEach((entry, index) => {  //  Added index parameter
         let row = table.insertRow();
 
         let cell1 = row.insertCell(0);
@@ -141,9 +152,9 @@ function updateTable() {
 
 function deleteRow(index) {
     let data = JSON.parse(localStorage.getItem("tableData")) || [];
-    data.splice(index, 1);  // ✅ Remove only the specific row
+    data.splice(index, 1);  //  Remove only the specific row
     localStorage.setItem("tableData", JSON.stringify(data));
-    updateTable();  // ✅ Update the table to reflect changes
+    updateTable();  //  Update the table to reflect changes
 }
 
 window.onload = updateTable; // Load the table when the page is loaded

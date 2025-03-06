@@ -1,3 +1,8 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: background-color 0.5s;
+
+}
 .menu-container {
     position: fixed;  /* Sticks to the bottom */
     bottom: 20px;  /* Space from the bottom */
@@ -34,7 +39,6 @@
 }
 
 #name, #phone, #email, #address, #age, #username, #password {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 100%;
     max-width: 200px; /* Adjust width as needed */
     padding: 10px;
@@ -54,8 +58,6 @@
 
 /* Custom Label Styling */
 .file-label {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
     display: inline-block;
     padding: 10px 20px;
     background-color: #2663be;
@@ -92,7 +94,6 @@
 table{
     width: 100%;
     border-collapse: collapse;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 10px;
     
     
@@ -122,7 +123,6 @@ tbody td{
 }
 #search-bar:focus {
     outline: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
 }
 .center-container {
@@ -134,7 +134,6 @@ tbody td{
 }
 
 #submit-btn {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px 80px;
     border: none;
     background-color: #2663be;
@@ -145,7 +144,6 @@ tbody td{
 }
 
 .under-label {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 12px;
     color: gray;
     cursor: pointer;
