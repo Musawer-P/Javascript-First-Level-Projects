@@ -1,5 +1,3 @@
-
-
 //Random Password Generator
 const characters = [
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
@@ -42,11 +40,23 @@ function resetColor(){
     document.body.style.backgroundColor = "";
 }
 
+// Search funcion 
+document.getElementById("search-bar").addEventListener("input", function() {
+    let mysearchQuery = this.value.toLowerCase();
+    let mytableRows = document.querySelectorAll("#dataTable tbody tr");
+
+    mytableRows.forEach(row => {
+        let rowText = row.textContent.toLowerCase();
+        if (rowText.includes(mysearchQuery)) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+});
+
 let sbtButton = document.getElementById("submit-btn");
-
 sbtButton.addEventListener("click", addToTable); // Add event listener to button
-
-
 function addToTable() {
     let nameInput = document.getElementById("name").value;
     let phoneInput = document.getElementById("phone").value;
@@ -55,11 +65,6 @@ function addToTable() {
     let ageInput = document.getElementById("age").value;
     let usernameInput = document.getElementById("username").value;
     let passwordInput = document.getElementById("password").value;
-
-
-
-
-  
 
     if (!nameInput && !phoneInput && !emailInput && !addressInput && !ageInput && !usernameInput && !passwordInput) return;
 
@@ -129,7 +134,7 @@ function updateTable() {
         deleteButton.style.padding = "5px 10px";
         deleteButton.style.cursor = "pointer";
 
-        // ✅ Pass index correctly to deleteRow function
+        //  Pass index correctly to deleteRow function
         deleteButton.addEventListener("click", function () {
             deleteRow(index);
         });
