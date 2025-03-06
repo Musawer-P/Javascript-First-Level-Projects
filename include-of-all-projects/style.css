@@ -150,3 +150,24 @@ tbody td{
     display: inline;
     margin-top: 20px; /* Adjust this value to move the element down */
 }
+#random-background-btn{
+    background-color: rgb(12, 127, 221);
+    padding: 10px 10px;
+    color: white;
+    border: none;
+    margin-right: 10px; 
+    border-radius: 5px;
+    cursor: pointer; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+#default-background-btn{
+    background-color: rgba(12, 127, 221, 0); 
+    padding: 10px 10px; 
+    color: white;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: box-shadow 0.3s ease-in-out;
+}

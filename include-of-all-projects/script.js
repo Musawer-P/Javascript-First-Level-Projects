@@ -38,6 +38,9 @@ function changeColor() {
     document.body.style.backgroundColor = getRandomColor();
 }
 
+function resetColor(){
+    document.body.style.backgroundColor = "";
+}
 
 let sbtButton = document.getElementById("submit-btn");
 
