@@ -10,7 +10,7 @@ body{
     transform: translateX(-50%);  /* Shift back by half of its width */
     width: calc(50% - 40px);  /* 50% width with spacing */
     height: 40px;  /* Fixed height */
-    background-color: #2663be;
+    background-color: #2678f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ body{
 .file-label {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2663be;
+    background-color: #2678f3;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -86,7 +86,7 @@ body{
 
 /* Focus Effect */
 #name:focus, #phone:focus, #email:focus, #address:focus, #age:focus, #username:focus, #password:focus {
-    border-color: #2663be; /* Green border on focus */
+    border-color: #2678f3; /* Green border on focus */
     box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
     background-color: #fff;
 }
@@ -116,7 +116,7 @@ tbody td{
     width: 99%;
     padding: 10px 0px 7px 7px;
     border: none;
-    border-bottom: 2px solid #2663be;
+    border-bottom: 2px solid #2678f3;
     border-radius: 0px;
 
 
@@ -136,7 +136,7 @@ tbody td{
 #submit-btn {
     padding: 10px 80px;
     border: none;
-    background-color: #2663be;
+    background-color: #2678f3;
     color: white;
     text-align: center;
     cursor: pointer;
@@ -151,14 +151,14 @@ tbody td{
     margin-top: 20px; /* Adjust this value to move the element down */
 }
 #random-background-btn{
-    background-color: rgb(12, 127, 221);
+    background-color:#2678f3;
     padding: 10px 10px;
     color: white;
     border: none;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.733);
     margin-right: 10px; 
-    border-radius: 5px;
+    border-radius: 0px;
     cursor: pointer; 
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.3s ease-in-out;
 }
 #default-background-btn{
@@ -166,8 +166,20 @@ tbody td{
     padding: 10px 10px; 
     color: white;
     border: none;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.733);
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 0px;
+    cursor: pointer; 
+    transition: box-shadow 0.3s ease-in-out;
+}
+#holidays-btn{
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 10px 10px; 
+    color: white;
+    border: none;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.733);
+    margin-right: 10px;
+    border-radius: 0px;
     cursor: pointer; 
     transition: box-shadow 0.3s ease-in-out;
 }
