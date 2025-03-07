@@ -55,6 +55,32 @@ document.getElementById("search-bar").addEventListener("input", function() {
     });
 });
 
+// Image inserting in localStorage
+function saveImage() {
+    const fileInput = document.getElementById('img');
+    const file = fileInput.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            localStorage.setItem('storedImage', event.target.result);
+            displayImage();
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+function displayImage() {
+    const storedImage = localStorage.getItem('storedImage');
+    if (storedImage) {
+        document.getElementById('tablebody').innerHTML = 
+            `<tr><td><img src="${storedImage}" width="100"></td></tr>`;
+    }
+}
+
+// Display image on page load
+displayImage();
+
 let sbtButton = document.getElementById("submit-btn");
 sbtButton.addEventListener("click", addToTable); // Add event listener to button
 function addToTable() {
@@ -63,10 +89,11 @@ function addToTable() {
     let emailInput = document.getElementById("email").value;
     let addressInput = document.getElementById("address").value;
     let ageInput = document.getElementById("age").value;
+    let imgInput = document.getElementById("img").value;
     let usernameInput = document.getElementById("username").value;
     let passwordInput = document.getElementById("password").value;
 
-    if (!nameInput && !phoneInput && !emailInput && !addressInput && !ageInput && !usernameInput && !passwordInput) return;
+    if (!nameInput && !phoneInput && !emailInput && !addressInput && !ageInput &&!imgInput && !usernameInput && !passwordInput) return;
 
     let data = JSON.parse(localStorage.getItem("tableData")) || [];
 
@@ -77,6 +104,7 @@ function addToTable() {
         emailInput || "",
         addressInput || "",
         ageInput || "",
+        imgInput || "",
         usernameInput || "",
         passwordInput || ""
     ]);
@@ -91,13 +119,14 @@ function addToTable() {
     document.getElementById("email").value = "";
     document.getElementById("address").value = "";
     document.getElementById("age").value = "";
+    document.getElementById("img").value = "";
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
 }
 
 function updateTable() {
     let table = document.getElementById("dataTable");
-    table.innerHTML = "<tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Age</th><th>Username</th><th>Password</th><th>Actions</th><th>Meeting Deadline</th></tr>";
+    table.innerHTML = "<tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Age</th><th>img</th><th>Username</th><th>Password</th><th>Actions</th><th>Meeting Deadline</th></tr>";
 
     let data = JSON.parse(localStorage.getItem("tableData")) || [];
     
@@ -126,6 +155,9 @@ function updateTable() {
         cell7.textContent = entry[6];
 
         let cell8 = row.insertCell(7);
+        cell8.textContent = entry[7];
+
+        let cell9 = row.insertCell(8);
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.style.color = "white";
@@ -139,9 +171,9 @@ function updateTable() {
             deleteRow(index);
         });
 
-        cell8.appendChild(deleteButton);
+        cell9.appendChild(deleteButton);
 
-        let cell9 = row.insertCell(8);
+        let cell10 = row.insertCell(9);
 
         let checkbox = document.createElement("input")
         checkbox.type = "checkbox";
@@ -154,7 +186,7 @@ function updateTable() {
 
         });
 
-        cell9.appendChild(checkbox);
+        cell10.appendChild(checkbox);
     });
 }
 
