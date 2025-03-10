@@ -1,0 +1,82 @@
+body{
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #1F75FE;
+}
+.login-form{
+    
+
+}
+h1{
+    text-align: center;
+color: #1F75FE;
+font-size: 50px;    
+}
+.input-container{
+    width: 50%; /* Set the width to 50% */
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 20px; /* Add some padding around the container */
+    display: flex;
+    flex-direction: column; /* Ensure elements inside the container are stacked vertically */
+    align-items: center; 
+    padding-right: 20px;
+    gap: 10px;
+
+}
+#username,#password{
+    border: none;
+    outline: none;
+    padding: 13px;
+    padding-left: 5px;
+    border-bottom: 1px solid rgb(118, 122, 118);
+
+background-image: linear-gradient(45deg, #000000 46.5%, #1F75FE 10%);
+background-position: bottom;
+background-repeat: no-repeat;
+background-size: 100% 2px; /* Gradient height */
+    width: 100%;
+    font-size: 15px;
+
+
+    
+
+}
+
+#username:focus,#password:focus{
+    box-shadow: 0px 4px 10px rgba(14, 116, 212, 0.11)
+}
+.btn-container{
+margin-top: 10px;
+display: flex;
+width: 50%; /* Set the width to 50% */
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 20px; /* Add some padding around the container */
+    flex-direction: column; /* Ensure elements inside the container are stacked vertically */
+    align-items: center; 
+
+}
+#login-btn{
+padding: 10px;
+border: none;
+background-color:#1F75FE ;
+color: white;
+width: 100%;
+}
+#signup{
+    color: #1F75FE;
+
+}
+#forgot-password{
+    color: #000000;
+}
+.text-container{
+    width: 50%; /* Set the width to 50% */
+    margin: 0 auto; /* Center the div horizontally */
+    display: flex;
+    flex-direction: column; /* Ensure elements inside the container are stacked vertically */
+    align-items: center; 
+}
+p{
+    color: #1F75FE;
+
+}
