@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "style.css" rel = "stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Login Page</title>
 </head>
+
 <body>
-    <h1>Login</h1>
-    <div class = "login-form">
-        <div class = "input-container">
-        <input type = "text" id = "username" placeholder="User Name">
-        <input type = "text" id = "password" placeholder="Password">
-    </div>
-    <div class = "btn-container">
-        <button type = "submit" id = "login-btn">Login</button>
+    <div class="main">
+        <div class="heading-container">
+            <h1 id="login-header">Login - </h1>
+            <h1 id="signup-header">Signup</h1>
+        </div>
+        <div class="login-form">
+            <div class="input-container">
+                <input type="text" id="username" placeholder="User Name">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="btn-container">
+                <button type="submit" id="login-btn">Login</button>
 
-    </div>
-    <div class = "text-container">
-        <p id = "forgot-password">Forgot Password?</p>
-        <p id = "signup">Sign Up</p>
+            </div>
+            <div class="text-container">
+                <p id="forgot-password">Forgot Password?</p>
 
-    </div>
+            </div>
+        </div>
     </div>
     <script src="script.js">
     </script>
 </body>
+
 </html>

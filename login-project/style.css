@@ -1,82 +1,169 @@
-body{
-
+body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #1F75FE;
+    color: #ffffff;
+    background-color: #000000;
+    margin: 0;
 }
-.login-form{
-    
-
+.main{
+    margin-top: 60px;
 }
-h1{
-    text-align: center;
-color: #1F75FE;
-font-size: 50px;    
-}
-.input-container{
-    width: 50%; /* Set the width to 50% */
-    margin: 0 auto; /* Center the div horizontally */
-    padding: 20px; /* Add some padding around the container */
+.heading-container {
     display: flex;
-    flex-direction: column; /* Ensure elements inside the container are stacked vertically */
-    align-items: center; 
-    padding-right: 20px;
+    text-align: center;
+    justify-content: center;
     gap: 10px;
+}
+
+#login-header {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+#signup-header {
+    text-align: center;
+    background-color: white;
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    font-size: 40px;
+}
+
+@keyframes glassAnimation {
+    0% {
+        background-color: rgba(194, 194, 206, 0.2);
+        backdrop-filter: blur(5px);
+    }
+
+    50% {
+        background-color: rgba(178, 178, 187, 0.4);
+        backdrop-filter: blur(10px);
+    }
+
+    100% {
+        background-color: rgba(175, 175, 185, 0.3);
+        backdrop-filter: blur(8px);
+    }
+}
+
+.login-form {
+    background-color: rgba(14, 14, 236, 0.3);
+    padding: 50px;
+    border-radius: 10px;
+    width: 30%;
+    margin: 0 auto;
+    max-width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.07);
+    background: linear-gradient(45deg, rgba(13, 77, 214, 0.219), rgba(0, 0, 0, 0.808));
+    /* Gradient background */
+
+    backdrop-filter: blur(10px);
+
+    animation: glassAnimation 3s ease-in-out infinite;
+    /* Animation applied */
+}
+
+@media (max-width: 768px) {
+    .login-form {
+        width: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        width: 90%;
+    }
+}
+
+.input-container {
+    padding: 0px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+
 
 }
-#username,#password{
+
+#username,
+#password {
+    color: white;
     border: none;
     outline: none;
     padding: 13px;
     padding-left: 5px;
-    border-bottom: 1px solid rgb(118, 122, 118);
-
-background-image: linear-gradient(45deg, #000000 46.5%, #1F75FE 10%);
-background-position: bottom;
-background-repeat: no-repeat;
-background-size: 100% 2px; /* Gradient height */
+    border-bottom: 1px solid rgb(252, 252, 252);
+    background-color: transparent;
     width: 100%;
     font-size: 15px;
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    /* Adding transition effect to border and background */
 
+}
 
-    
+#username::placeholder,
+#password::placeholder {
+    color: #ffffff9a;
+}
+
+#username:focus,
+#password:focus {
+    box-shadow: 0px 4px 10px rgba(14, 116, 212, 0.11);
+    border-bottom: 1px solid rgb(0, 0, 0);
 
 }
 
-#username:focus,#password:focus{
-    box-shadow: 0px 4px 10px rgba(14, 116, 212, 0.11)
-}
-.btn-container{
-margin-top: 10px;
-display: flex;
-width: 50%; /* Set the width to 50% */
-    margin: 0 auto; /* Center the div horizontally */
-    padding: 20px; /* Add some padding around the container */
-    flex-direction: column; /* Ensure elements inside the container are stacked vertically */
-    align-items: center; 
+.btn-container {
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
+
 
 }
-#login-btn{
-padding: 10px;
-border: none;
-background-color:#1F75FE ;
-color: white;
-width: 100%;
-}
-#signup{
-    color: #1F75FE;
+
+#login-btn {
+    padding: 10px;
+    margin-top: 30px;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 100%;
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    /* Adding transition effect to border and background */
 
 }
-#forgot-password{
+
+#login-btn:hover {
+    background-color: white;
     color: #000000;
-}
-.text-container{
-    width: 50%; /* Set the width to 50% */
-    margin: 0 auto; /* Center the div horizontally */
-    display: flex;
-    flex-direction: column; /* Ensure elements inside the container are stacked vertically */
-    align-items: center; 
-}
-p{
-    color: #1F75FE;
+    cursor: pointer;
 
+}
+
+.text-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+
+}
+
+#signup {
+    color: white;
+
+}
+
+#forgot-password {
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: pointer;
 }
