@@ -330,3 +330,12 @@ body {
     justify-content: flex-start;
     padding-left: 0px;
 }
+.error {
+    color: rgb(250, 49, 49);
+    display: none;
+    background-color: black;
+    padding: 5px;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}

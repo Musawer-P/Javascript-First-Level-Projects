@@ -18,6 +18,23 @@ function generateRandomPassword() {
 }
 
 
+function checkLogin() {
+    // Set your desired username & password
+    const correctUsername = "admin";
+    const correctPassword = "12345";
+
+    // Get entered values
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === correctUsername && password === correctPassword) {
+        alert("Login successful!");
+        document.getElementById("loginBox").style.display = "none"; // Close the box
+    } else {
+        document.getElementById("errorMessage").style.display = "block";
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     let loginForm = document.getElementById("login-container");
     let signupForm = document.getElementById("signup-container");
