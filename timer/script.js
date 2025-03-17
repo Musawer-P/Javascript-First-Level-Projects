@@ -2,8 +2,7 @@ let countdown;
 let timeInSeconds = 0;
 
 document.getElementById("set").addEventListener("click", function () {
-    let hours = parseInt(document.getElementById("timeSelect").value);
-    timeInSeconds = hours * 3600; // Convert hours to seconds
+    timeInSeconds = parseInt(document.getElementById("timeSelect").value);
     updateDisplay(timeInSeconds);
 });
 
@@ -17,6 +16,8 @@ function startTimer() {
     countdown = setInterval(() => {
         if (timeInSeconds <= 0) {
             clearInterval(countdown);
+            document.getElementById("timerDisplay").style.backgroundColor = "green";
+            document.getElementById("timerDisplay").style.color = "white"; 
             alert("Time is up!");
             return;
         }
@@ -27,10 +28,9 @@ function startTimer() {
 }
 
 function updateDisplay(seconds) {
-    let hrs = Math.floor(seconds / 3600);
-    let mins = Math.floor((seconds % 3600) / 60);
+    let mins = Math.floor(seconds  / 60);
     let secs = seconds % 60;
 
     document.getElementById("timerDisplay").innerText =
-        `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 }
