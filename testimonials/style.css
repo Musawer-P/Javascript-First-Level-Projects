@@ -4,8 +4,10 @@ body{
 .container{
     margin: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Makes children stack vertically */
+    align-items: ;
     justify-content: center;
+    gap: 10px;
     background-color: hsl(0, 0%, 8%);
     color: white;
     border-radius: 5px;
@@ -15,8 +17,15 @@ body{
 }
 .text{
     margin-left: 10px;
+    
 }
 .image{
+    padding-left: 5px;
+}
+.image1{
+    padding-left: 5px;
+}
+.image2{
     padding-left: 5px;
 }
 #image{
