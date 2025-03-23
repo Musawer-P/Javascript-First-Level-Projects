@@ -2,18 +2,47 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .container{
+
     margin: auto;
     display: flex;
     flex-direction: column; /* Makes children stack vertically */
-    align-items: ;
     justify-content: center;
     gap: 10px;
-    background-color: hsl(0, 0%, 8%);
+    background-color: hsla(0, 0%, 8%, 0);
     color: white;
     border-radius: 5px;
-    width: 80vh;
+    width: 90vh;
     padding: 10px;
-    margin-top: 190px;
+    margin-top: 75px;
+}
+.merge{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(0, 0%, 8%);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+.merge-second{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 5px;
+
+    padding: 10px;
+
+}
+.merge-third{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(0, 0%, 8%);
+    padding: 10px;
+    border-radius: 5px;
+
 }
 .text{
     margin-left: 10px;
@@ -24,9 +53,11 @@ body{
 }
 .image1{
     padding-left: 5px;
+
 }
 .image2{
     padding-left: 5px;
+
 }
 #image{
     width: 80px;
