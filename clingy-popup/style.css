@@ -19,21 +19,24 @@ h1{
     background-color: rgb(12, 150, 241);
     padding: 10px;
     border-radius: 5px;
+    display: none;
 
 
 }
 #close-btn{
+    padding: 10px;
     background-color: transparent;
     color: white;
     font-size: 20px;
     border: none;
-    cursor: pointer;
-
-}
-
-#close-btn {
     float: right;
+    
+
 }
+#close-btn:hover{
+    color: red;
+}
+
 
 .popup-text {
     padding: 20px;
@@ -55,12 +58,17 @@ h1{
     border-radius: 5px;
 }
 
-#name,
-#email:focus {}
+
 
 .button {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
     padding: 10px;
     margin-top: 10px;
+}
+.reverse{
+    flex-direction: row-reverse;
 }
 
 #accept-btn {
