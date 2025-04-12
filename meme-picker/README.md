@@ -1,2 +1,2 @@
 Link of the App : 
-famous-manatee-3b574a.netlify.app
+https://ubiquitous-madeleine-3ce58c.netlify.app/
