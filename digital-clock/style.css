@@ -1,24 +1,29 @@
-/* style.css */
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: #111;
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
   }
   
   .clock-container {
-    background: #222;
+    background: #181818;
     padding: 40px 60px;
     border-radius: 10px;
-    box-shadow: 0 0 20px #00ffcc;
+    box-shadow: 0 0 15px rgba(98, 0, 255, 0.6), 0 0 40px rgba(98, 0, 255, 0.3);
+    border: 1px solid white;
   }
   
   #clock {
-    color: #00ffcc;
-    font-size: 48px;
+    color: #6200ff;
+    font-size: 80px;
     letter-spacing: 2px;
+  }
+  h1{
+    color: #6200ff;
+    font-size: 80px;
   }
   
