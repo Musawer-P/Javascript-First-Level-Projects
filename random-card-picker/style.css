@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+height: 100vh;
+background: linear-gradient(135deg, #ced7e9, #11c054);
+font-family: sans-serif;
+}
+.button-container{
+    text-align: center; padding-top: 20px;
+}
+#button{
+    padding: 15px; margin: 10px; border: none;  border-radius: 5px; color: #413f3f; justify-content: center; align-items: center;
+}
+.first{
+    height: 200px; width: 200px; background: rgba(255, 255, 255, 0.1); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); transform: translateY(0px);
+}
+.card-container{
+    display: flex; justify-content: center; gap: 10px; margin-top: 10px;
+}
