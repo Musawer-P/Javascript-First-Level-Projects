@@ -14,6 +14,7 @@ body {
 }
 
 #button {
+  font-size: 18px;
   padding: 15px;
   margin: 10px;
   border: none;
@@ -28,6 +29,11 @@ body {
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
+  perspective: 1500px;
+}
+
+.card-container.second{
+  margin-top: 30px;
 }
 
 .first {
@@ -95,6 +101,8 @@ body {
 }
 p{
   padding: 10px;
+  color: #1f914a;
+  font-size: 15px;
 }
 h2{
   font-size: 50px;
