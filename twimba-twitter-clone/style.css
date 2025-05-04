@@ -4,6 +4,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* typography and icons */
 
 h1{
     color: #0F8CDF;
@@ -28,6 +29,7 @@ i{
   color: limegreen;
 }
 
+/* layout */
 
 main, header{
     width: 290px;
@@ -44,6 +46,7 @@ header{
     gap: 10px;
 }
 
+/* textareas + btn */
 
 textarea{
     border: none;
@@ -115,6 +118,7 @@ button{
     line-height: 20px;
 }
 
+/* images */
 
 .profile-pic{
     border: 1px solid lightgray;
@@ -122,6 +126,7 @@ button{
     width: 48px;
 }
 
+/* utility */
 .hidden{
     display: none;
 }
