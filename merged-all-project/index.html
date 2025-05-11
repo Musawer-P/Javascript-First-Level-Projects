@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href = "style.css" rel = "stylesheet">
-    <title>Merging All Projects</title>
+    <title>Merging of Projects</title>
 </head>
 <body>
-    <div class = "header" id = "div"></div>
-    <div class = "main" id = "div1">
-        <button onclick="swapDivs()">Swap Divs</button>
-
+    <div class = "header">
+        <h1>MERGE OF PROJECTS</h1>
     </div>
-    <div class = "footer" id = "div2"></div>
+ 
+<div class="carousel-container">
+    
+  <button class="nav-arrow nav-left" onclick="navigate(-1)">&#8592;</button>
+
+  <div class="card first"></div>
+  <div class="card second active"></div>
+  <div class="card third"></div>
+
+  <button class="nav-arrow nav-right" onclick="navigate(1)">&#8594;</button>
+</div>
+
+
+
     <script src = "script.js"></script>
 </body>
 </html>

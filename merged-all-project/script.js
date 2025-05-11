@@ -1,18 +1,16 @@
-function swapDivs() {
+ const cards = document.querySelectorAll('.card');
+  let currentIndex = 1; // Start with center one active
 
-    var div1 = document.getElementById('div1');
-    var div2 = document.getElementById('div2');
+  function updateCards() {
+    cards.forEach((card, index) => {
+      card.classList.remove('active');
+      if (index === currentIndex) {
+        card.classList.add('active');
+      }
+    });
+  }
 
-
-    var temp = document.createElement('div');
-    temp.innerHTML = div1.innerHTML;
-
-
-    div1.innerHTML = div2.innerHTML;
-    div2.innerHTML = temp.innerHTML;
-
-
-    var tempStyle = div1.style.cssText;
-    div1.style.cssText = div2.style.cssText;
-    div2.style.cssText = tempStyle;
-}
+  function navigate(direction) {
+    currentIndex = (currentIndex + direction + cards.length) % cards.length;
+    updateCards();
+  }
