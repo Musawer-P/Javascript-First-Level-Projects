@@ -1,3 +1,5 @@
+/* Main Style */
+
 body{
     background-color: rgb(247, 247, 247);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -5,7 +7,7 @@ body{
     padding: 0px;
     
 }
-h1{
+#main-id{
     font-size: 40px;
     color: rgb(19, 19, 19);
 }
@@ -41,6 +43,8 @@ h1{
 
     .first {
       background-color: rgb(253, 190, 16);
+      padding-right: 30px;
+      padding-bottom: 30px;
     }
 
     .second {
@@ -94,3 +98,149 @@ h1{
         right: 10px;
       }
     }
+    /* Done */
+
+
+    /* Clingy popuop style */
+    .main {
+    width: 350px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+h1{
+    color: rgb(12, 150, 241);
+    font-size: 55px;
+}
+.popup {
+    background-color: rgb(12, 150, 241);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+
+
+}
+#close-btn{
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+    float: right;
+    
+
+}
+#close-btn:hover{
+    color: red;
+}
+
+
+.popup-text {
+    padding: 20px;
+    color: white;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#name,
+#email {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+.button {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+.reverse{
+    flex-direction: row-reverse;
+}
+
+#accept-btn {
+    padding: 7px 15px 7px 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+#decline-btn {
+    padding: 7px 15px 7px 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#accept-btn:hover,#decline-btn:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+/*Done*/
+
+
+/* Counter App */
+#counter-h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(20, 20, 20);
+    font-weight: 10;
+}
+
+#count-el {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgb(20, 20, 20);
+    
+}
+
+#save-el{
+    color: rgb(59, 58, 58);
+    padding-top: 10px;
+}
+
+
+
+#increment-btn {
+   border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 2px 2px 2px 2px #8888882a;
+}
+
+#save-btn {
+    background: rgba(16, 197, 16, 0.678);
+        border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+   
+}
+
+/*Done*/

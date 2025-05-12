@@ -8,15 +8,48 @@
 </head>
 <body>
     <div class = "header">
-        <h1>MERGE OF PROJECTS</h1>
+        <h1 id = "main-id">MERGE OF PROJECTS</h1>
     </div>
  
 <div class="carousel-container">
     
   <button class="nav-arrow nav-left" onclick="navigate(-1)">&#8592;</button>
 
-  <div class="card first"></div>
-  <div class="card second active"></div>
+  <!--Clingy Popup-->
+  <div class="card first">
+<div class="main" id="main">
+        <h1>Clingy Popup</h1>
+
+        <button type="button" id="close-btn" disabled >x</button>
+        <div class="popup" id="popup">
+            <br>
+            <div class="popup-text">
+                <p id = "inside-text">This website uses cookies to ensure you get the best experience. and your data is more important to
+                    us than you think. </p>
+            </div>
+            <form id="login-form">
+                <div class="input-container">
+                    <input type="text" id="name" name="name" placeholder="John" aria-label="name" required>
+                    <input type="email" id="email" placeholder="John@gmail.com" aria-label="email" required>
+                </div>
+                <div class="button" id = "button">
+                    <button type="submit" id="accept-btn">Accept</button>
+                    <button type="button" id="decline-btn">Decline</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <!--Done-->
+  <!--Counter App-->
+  <div class="card second active">
+     <h1 id = "counter-h1">People Entered</h1>
+        <h2 id="count-el">0</h2>
+        <button id="increment-btn" onclick="increment()">INCREMENT</button>
+        <button id="save-btn" onclick="save()">SAVE</button>
+        <p id="save-el">Previous Entries: </p>
+  </div>
   <div class="card third"></div>
 
   <button class="nav-arrow nav-right" onclick="navigate(1)">&#8594;</button>
