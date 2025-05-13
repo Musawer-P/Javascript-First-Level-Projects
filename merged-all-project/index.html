@@ -18,7 +18,7 @@
   <!--Clingy Popup-->
   <div class="card first">
 <div class="main" id="main">
-        <h1>Clingy Popup</h1>
+        <h1 id = "clingy-h1">Clingy Popup</h1>
 
         <button type="button" id="close-btn" disabled >x</button>
         <div class="popup" id="popup">
@@ -46,11 +46,24 @@
   <div class="card second active">
      <h1 id = "counter-h1">People Entered</h1>
         <h2 id="count-el">0</h2>
+            <div class = "counter-body">
+
         <button id="increment-btn" onclick="increment()">INCREMENT</button>
         <button id="save-btn" onclick="save()">SAVE</button>
         <p id="save-el">Previous Entries: </p>
   </div>
-  <div class="card third"></div>
+  </div>
+  <!--Emoji Face off-->
+  <div class="card third">
+      <h1 id = "emoji-h1">Emoji<br>Fighter</h1>
+        <div id="stage"></div>
+        <div class = "btn-class">
+        <button id="fightButton">Pick Fighters!</button>
+        </div>
+  </div>
+<!--Done-->
+
+
 
   <button class="nav-arrow nav-right" onclick="navigate(1)">&#8594;</button>
 </div>

@@ -22,6 +22,8 @@ body{
       align-items: center;
       gap: 20px;
       margin-left: 60px;
+
+      
     }
 
     .card {
@@ -52,6 +54,10 @@ body{
     }
 
     .third {
+      background-color: rgb(241, 31, 31);
+    }
+
+       .fourth {
       background-color: rgb(241, 31, 31);
     }
 
@@ -108,8 +114,8 @@ body{
     margin-top: 30px;
     padding: 20px;
 }
-h1{
-    color: rgb(12, 150, 241);
+#clingy-h1{
+    color: rgb(255, 255, 255);
     font-size: 55px;
 }
 .popup {
@@ -194,6 +200,14 @@ h1{
 
 
 /* Counter App */
+#counter-h1{
+  text-align: center;
+  color: white;
+  font-size: 55px;
+}
+.counter-body{
+  margin-left: 90px;
+}
 #counter-h2 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -205,12 +219,12 @@ h1{
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 20px;
-    color: rgb(20, 20, 20);
-    
+    color: rgb(255, 255, 255);
+text-align: center;    
 }
 
 #save-el{
-    color: rgb(59, 58, 58);
+    color: rgb(255, 255, 255);
     padding-top: 10px;
 }
 
@@ -243,4 +257,50 @@ h1{
    
 }
 
+/*Done*/
+
+/*Emoji Face off*/
+
+
+
+#stage {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 40px; /* Make emojis bigger */
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+#emoji-h1 {
+  text-align: center;
+    text-shadow: 0px 3px 0px black;
+    line-height: 24px;
+    transform: rotate(-9deg);
+}
+
+#stage {
+    width: 100%;
+    height: 60px;
+    padding: 30px 0;
+    font-size: 50px;
+    margin: 0;
+}
+.btn-class{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#fightButton {
+   
+    margin: 20px;
+    cursor: pointer;
+    border: 0;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    color: red;
+    font-family: inherit;
+    font-size: 20px;
+}
 /*Done*/
