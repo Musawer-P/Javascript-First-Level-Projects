@@ -62,7 +62,82 @@
         </div>
   </div>
 <!--Done-->
+<!--Login Project-->
+  <div class="card second third">
+ <div class="login-container" id="login-container">
+            <div class="heading-container" id="header-container-login">
+                <h1 id="login-header">Login</h1>
+                <h1 id="signup-header">Signup</h1>
+            </div>
+            <div class="login-form">
+                <p class="error" id="errorMessage">Incorrect username or password!</p>
 
+                <div class = "user-hint" style = "text-align: start; font-size: 13px;">
+                <span>User:</span> <span class="user">Admin</span>
+                </div>
+                <div class = "user-hint" style = "text-align: start; font-size: 13px; margin-top: 10px; padding-bottom: 20px;">
+
+                <span>Password:</span> <span class="user">12345</span>
+
+</div>
+       
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="User Name">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="btn-container">
+                    <button type="submit" id="login-btn" onclick = "checkLogin()">Login</button>
+
+                </div>
+                <div class="text-container">
+                    <p id="forgot-password">Forgot Password?</p>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="signup-container" style="display: none;" id="signup-container">
+            <div class="heading-container" id="header-container-signup">
+                <h1 id="login-header-signup">Login</h1>
+                <h1 id="signup-header-signup">Signup</h1>
+            </div>
+            <div class="signup-form">
+                <div class="input-container-signup">
+                    <input type="text" id="name" placeholder="First name">
+                    <input type="text" id="lastname" placeholder="Last name">
+                </div>
+                <div class="input-container-signup">
+                    <input type="text" id="phone" placeholder="Phone">
+                    <input type="text" id="email" placeholder="E-mail">
+                </div>
+                <div class="input-container-signup">
+                    <input type="text" id="create-password" placeholder="Password">
+                    <input type="text" id="retype-password" placeholder="Retype Password">
+                </div>
+                <div class="password-generator-container">
+                    <button type="button" id="random-password" onclick="generateRandomPassword()">Random
+                        Password</button>
+                </div>
+                <button type="submit" id="signup-btn">Signup</button>
+            </div>
+        </div>
+    </div>
+    </div>
+<!--Done-->
+
+<!--Digital Clock-->
+<div class = "fourth">
+      <h1>Digital <span style = "color: white;">Clock</span></h1>
+  <div class="clock-container">
+    <h1 id="clock">00:00:00</h1>
+  </div>
+</div>
+<!--Done-->
 
 
   <button class="nav-arrow nav-right" onclick="navigate(1)">&#8594;</button>
