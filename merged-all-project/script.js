@@ -191,3 +191,100 @@ function updateClock() {
   updateClock();
   
 //Done
+
+//Black jack game is on another js file
+//Done
+
+
+//Random card picker js is on another file 
+//Done
+
+//Random password generator is on another js file
+//Done
+
+//Basketball counter app 
+//first section
+let section_one_button_one = document.getElementById("button_submit_one")
+let section_one_button_two = document.getElementById("button_submit_two")
+let section_one_button_three = document.getElementById("button_submit_three")
+//second section 
+let section_two_button_one = document.getElementById("button_submit_one_two")
+let section_two_button_two = document.getElementById("button_submit_two_two")
+let section_two_button_three = document.getElementById("button_submit_three_two")
+
+let section_one_number = document.getElementById("first_section_number")
+//second section 
+let section_two_number = document.getElementById("second_section_number")
+
+
+let section_one_increase = 0
+//second section 
+let section_two_increase = 0
+
+//first section
+function button_one() {
+    section_one_increase += 1
+    section_one_number.textContent = section_one_increase
+    console.log("hi")
+}
+
+
+function button_two() {
+    section_one_increase += 2
+    section_one_number.textContent = section_one_increase
+    console.log("hi")
+}
+
+
+function button_three() {
+    section_one_increase += 3
+    section_one_number.textContent = section_one_increase
+    console.log("hi")
+}
+
+//second section 
+
+function button_one_two() {
+    section_two_increase += 1
+    section_two_number.textContent = section_two_increase
+    console.log("hi")
+}
+
+
+function button_two_two() {
+    section_two_increase += 2
+    section_two_number.textContent = section_two_increase
+    console.log("hi")
+}
+
+
+function button_three_two() {
+    section_two_increase += 3
+    section_two_number.textContent = section_two_increase
+    console.log("hi")
+}
+
+
+//Done
+
+//Unit converter
+ let buttonConvert = document.getElementById("button-convert")
+ let inputMain = document.getElementById("input-main")
+ let lenghtEl = document.getElementById("lenght-el")
+ let volumeEl = document.getElementById("volume-el")
+ let massEl = document.getElementById("mass-el")
+
+
+ const meterToFeet = 3.281
+ const literToGallon = 0.264
+ const kiloToPound = 2.204
+
+ buttonConvert.addEventListener("click" , function(){
+    let baseValue = inputMain.value
+
+    lenghtEl.textContent = `${baseValue} meter = ${baseValue * meterToFeet.toFixed(3)} feet | ${baseValue} feet = ${baseValue / meterToFeet.toFixed(3)} meter`
+    volumeEl.textContent = `${baseValue} liter = ${baseValue * literToGallon.toFixed(3)} gallon | ${baseValue} gallon = ${baseValue / literToGallon.toFixed(3)} liter`
+    massEl.textContent = `${baseValue} kilo = ${baseValue * kiloToPound.toFixed(3)} pound | ${baseValue} pound = ${baseValue / kiloToPound.toFixed(3)} kilo`
+
+ }) 
+//Done
