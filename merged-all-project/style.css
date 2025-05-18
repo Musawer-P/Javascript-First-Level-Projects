@@ -1061,3 +1061,201 @@ border-bottom-right-radius: 5px;
     border-left: 0px;
 }
 /*done*/
+
+/*notes-app*/
+
+#main{
+    margin-left: 170px;
+}
+
+#head-container{
+    display: flex;
+}
+h1{
+    color: blueviolet;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+
+    
+}
+
+#notes-submit{
+    background-color: blueviolet;
+    width: 37.7%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-weight: bold;
+
+}
+
+#delete-btn{
+    background-color: rgb(238, 41, 58);
+    width: 37.7%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-weight: bold;
+
+}
+#notes-date{
+    padding-top: 35px;
+    color: blueviolet;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}#notes-place {
+    display: flex;
+    flex-wrap: wrap;  /* Ensures new notes wrap onto the next line */
+    gap: 20px;  /* Adds space between each note */
+    color: rgba(226, 217, 217, 0.788);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.note-card {
+    background-color: blueviolet;
+    width: calc(33.33% - 20px);  /* Each card takes up one-third of the width with space between */
+    border-left: 10px solid rgba(49, 13, 78, 0.87);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.note-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.note-date {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+#add-notes {
+    margin-top: 5vh; 
+    padding: 10px 15px;
+    width: 95.5%;
+    border: 2px solid #ddd;
+    border-radius: 8px; 
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+img{
+    width: 60%;
+  
+}
+#button-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns buttons to the left */
+    align-items: center; /* Vertically aligns the buttons in the center */
+    gap: 10px; /* Adds space between the buttons */
+    margin-top: 20px; /* Adds margin to separate from the input */
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-box {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 0px 90px 0px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    font-size: 16px;
+    border: none;
+    outline: none;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #413e3e;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.close-btn:hover {
+    color: #f00;
+}
+
+.search-box.show {
+    display: block;
+}
+
+.search-input:focus {
+    border-color: #900;
+    box-shadow: 0 0 10px rgba(156, 27, 161, 0.5);
+}
+
+
+#add-notes:focus {
+    border-color: blueviolet; 
+    box-shadow: 0 4px 8px rgba(156, 27, 161, 0.445);
+    outline: none;
+}
+
+
+#theme-toggle{
+    padding: 5px 30px 5px 30px;
+    width: 15%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color:white;
+    color: white;
+    font-size: 16px;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #f7f7f7;
+    color: #ffffff;
+}
+
+
+
+.dark-mode #theme-toggle {
+    background-color: #1d2024;
+}
+/*done*/
