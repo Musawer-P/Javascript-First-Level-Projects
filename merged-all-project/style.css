@@ -979,3 +979,85 @@ p{
 
 }
 /*Done*/
+
+/*timer*/
+
+.main{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 50vw;
+    max-width: 300px;
+    padding: 10px;
+    margin: auto;  
+    border-radius: 5px;
+
+}
+.place{
+text-align: center;
+background-color: black;
+color: white;
+padding: 5px;
+padding-top:50px;
+padding-bottom:50px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+font-size: 70px;
+}
+#timeSelect{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    border: none;
+    border-bottom-left-radius: 5px;
+    padding-left: 5px;
+
+}
+#timeSelect:focus{
+    outline: none;
+}
+.buttons{
+    text-align: center;
+    display: flex;
+
+}
+
+#set{
+
+    background-color: rgb(34, 34, 34);
+    color: white;
+    padding: 10px;
+    border-radius: 0px;
+    margin: 0px;
+    border: none;
+    width: 50%;
+    border-right: 1px solid rgb(102, 101, 101);
+    cursor: pointer;
+
+
+
+}
+#start{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    padding: 10px;
+    border-radius: 0px;
+    margin: 0px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+
+border-bottom-right-radius: 5px;
+
+}
+
+#start:hover, #set:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    
+}
+#set:hover{
+    border-right: 0px;
+}
+#start:hover{
+    border-left: 0px;
+}
+/*done*/
