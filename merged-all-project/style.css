@@ -1062,7 +1062,7 @@ border-bottom-right-radius: 5px;
 }
 /*done*/
 
-/*notes-app*/
+/*Notes-app*/
 
 #main{
     margin-left: 170px;
@@ -1259,3 +1259,223 @@ img{
     background-color: #1d2024;
 }
 /*done*/
+
+/*Dynamic world clock*/
+#h-main{
+    text-transform: capitalize;
+    color: white;
+    font-size: 40px;
+    font-weight: 10;
+}
+.main{
+display: flex;
+gap: 20px;
+}
+.main-two{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+
+}
+.madina,.dubai,.new-york,.brazil,.madrid,.alaska{
+    background-color: rgba(0, 0, 0, 0.89); padding: 10px; border-radius: 5px;
+    color: white;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.473);
+
+}
+p{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.705);
+    padding-bottom: 10px;
+}
+/*Done*/
+
+/*Expense Tracker*/
+main{
+  padding: 20px;  /* Optional: Adds space around the content */
+  border-radius: 8px; /* Optional: Rounded corners */
+  width: 80%;      /* Adjust the width as needed */
+  max-width: 800px;
+}
+
+h1{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 100;
+font-size: clamp(1rem, 2.5vw, 1.5rem);
+color: white;
+background-color: rgb(235, 160, 48);
+width: 25%;
+padding: 5px 0px 5px 12px;
+border-radius: 5px;
+}
+
+#expense-name, #amount, #date, #category{
+    padding: 10px 10px 10px 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border: none;
+    border-bottom: 3px solid rgb(235, 160, 48); 
+    margin-top: 10px;
+}
+#category{
+    width: 26%;
+}
+#submit-add{
+    padding: 10px 50px 10px 50px;
+    border: none;
+    background-color: rgb(235, 160, 48);
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 50%;
+}
+#submit-add:hover{
+    background-color:  rgb(241, 238, 233);
+    color: rgb(235, 160, 48);
+    border: 1px solid rgb(235, 160, 48);
+}
+
+.button-section{
+text-align: start;
+width: 100%;
+margin-top: 20px;
+
+}
+
+#expense-name:focus, 
+#amount:focus, 
+#date:focus, 
+#category:focus{
+border-bottom: 2px solid rgba(0, 0, 0, 0.623);
+outline: none;
+color: rgba(0, 0, 0, 0.623);
+}  
+
+#search{
+    padding: 10px 50px 10px 5px;
+    border: none;
+    border-bottom: 1px solid rgb(235, 160, 48);
+    background-color:  rgb(241, 238, 233);
+    color: rgb(235, 160, 48);
+    border-radius: 0px;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 33%;
+}
+
+    #search:focus {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.623); /* Make border thicker on focus */
+        outline: none;  /* Remove default focus outline */
+        color: rgba(0, 0, 0, 0.623); /* Optional: Change text color on focus */
+    }
+
+
+#search::placeholder{
+    color: rgb(235, 160, 48);
+    
+}
+#search-icon{
+    color:rgb(235, 160, 48);
+    margin-left: -30px;
+}
+thead{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(235, 160, 48);
+    color: white;
+    border-radius: 5px;
+}
+
+#table-section{
+    margin-top: 20px;
+    width: 100%;
+}
+#expense-table{
+    width: 96%;
+    margin-top: 40px;
+
+}
+#table-body td{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid rgb(235, 160, 48);
+}
+
+/*Done*/
+
+/*Localstorage project*/
+#quantity{
+    padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; border-radius: 5px; border: none;
+}
+#item{
+    padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; border-radius: 5px; border: none;
+}
+#price{
+    padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; border-radius: 5px; border: none;
+}
+
+#submit{
+    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(0, 0, 0, 0.753); border: none; border-radius: 5px; color: white;
+}
+#submit-delete{
+    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(218, 17, 17, 0.753); border: none; border-radius: 5px; color: white;
+}
+
+
+h1{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+}
+
+/* Table Styling */
+#table {
+    margin: auto;
+  text-align: center;
+  margin-top: 50px;
+    width: 57%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+  }
+  
+  /* Header Styling */
+  #table thead tr {
+    background-color:#1f2022;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Cell Padding and Borders */
+  #table th, #table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  /* Hover Effect for Rows */
+  #table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Alternate Row Colors */
+  #table tbody tr:nth-child(odd) {
+    background-color: #fdfdfd;
+  }
+  
+  #table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    #table {
+      font-size: 14px;
+    }
+  }
+/*Done*/

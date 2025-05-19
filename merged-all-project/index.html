@@ -287,97 +287,253 @@
 
 
     <!--Random password generator-->
-    <div class = "seventh">
-         <h1>Generate a</h1>
-    <h2>Random Password</h2>
-    <p>Never use an insecure password again.</p>
-    <button onclick="displayPasswords()">Generate Passwords</button>
-    <div class="row">
-        <div id="div-one">?</div>
-        <div id="div-two">?</div>
-    </div>
+    <div class="seventh">
+        <h1>Generate a</h1>
+        <h2>Random Password</h2>
+        <p>Never use an insecure password again.</p>
+        <button onclick="displayPasswords()">Generate Passwords</button>
+        <div class="row">
+            <div id="div-one">?</div>
+            <div id="div-two">?</div>
+        </div>
     </div>
     <!--Done-->
 
     <!--Basketball counter app-->
-    <div class = "eight">
-     <div class="container">
+    <div class="eight">
+        <div class="container">
             <div>
                 <h3>HOME</h3>
-                <p id = "first_section_number">0</p>
-                <button type = "submit" id = "button_submit_one" onclick = "button_one()">+1</button>
-                <button type = "submit" id = "button_submit_two" onclick = "button_two()">+2</button>
-                <button type = "submit" id = "button_submit_three" onclick = "button_three()">+3</button>
-           
+                <p id="first_section_number">0</p>
+                <button type="submit" id="button_submit_one" onclick="button_one()">+1</button>
+                <button type="submit" id="button_submit_two" onclick="button_two()">+2</button>
+                <button type="submit" id="button_submit_three" onclick="button_three()">+3</button>
+
             </div>
             <div>
                 <h3>GUEST</h3>
-                <p id = "second_section_number">0</p>
-                <button type = "submit" id = "button_submit_one_two" onclick = "button_one_two()">+1</button>
-                <button type = "submit" id = "button_submit_two_two" onclick = "button_two_two()">+2</button>
-                <button type = "submit" id = "button_submit_three_two" onclick = "button_three_two()">+3</button>
+                <p id="second_section_number">0</p>
+                <button type="submit" id="button_submit_one_two" onclick="button_one_two()">+1</button>
+                <button type="submit" id="button_submit_two_two" onclick="button_two_two()">+2</button>
+                <button type="submit" id="button_submit_three_two" onclick="button_three_two()">+3</button>
             </div>
         </div>
-        </div>
+    </div>
     <!--Done-->
 
     <!--Unit converter-->
-    <div class = "ninth">
-          <h1 id = "hone">
+    <div class="ninth">
+        <h1 id="hone">
             Metric/Imperial Unit Conversion
         </h1>
-        <input type = "text" id = "input-main"/>
-        <button type = "submit" id = "button-convert">Convert</button>
+        <input type="text" id="input-main" />
+        <button type="submit" id="button-convert">Convert</button>
     </div>
- 
-    <div class = "col-md-12" style = "text-align: center;">
-        <div class = "col-md-6" style = "background-color:  rgb(208, 214, 214);">
-            <p id = "pone">Lenght (Meter/Feet)</p>
-            <p id = "lenght-el"></p>
+
+    <div class="col-md-12" style="text-align: center;">
+        <div class="col-md-6" style="background-color:  rgb(208, 214, 214);">
+            <p id="pone">Lenght (Meter/Feet)</p>
+            <p id="lenght-el"></p>
 
         </div>
-        <div class = "col-md-6" style = "background-color:  rgb(208, 214, 214);">
-            <p id = "pone">Volume (Liters/Gallons)</p>
-            <p id = "volume-el"></p>
+        <div class="col-md-6" style="background-color:  rgb(208, 214, 214);">
+            <p id="pone">Volume (Liters/Gallons)</p>
+            <p id="volume-el"></p>
         </div>
-        <div class = "col-md-6" style = "background-color: rgb(208, 214, 214);">
-            <p id = "pone">Mass (Kilograms/Pounds)</p>
-            <p id = "mass-el"></p>
+        <div class="col-md-6" style="background-color: rgb(208, 214, 214);">
+            <p id="pone">Mass (Kilograms/Pounds)</p>
+            <p id="mass-el"></p>
         </div>
     </div>
     <!--Done-->
 
     <!--timer-->
-<div class = "ten">
-     <div class="main">
-        <div class="place" id="timerDisplay">
-            <span>00:00</span>
-        </div>
+    <div class="ten">
+        <div class="main">
+            <div class="place" id="timerDisplay">
+                <span>00:00</span>
+            </div>
 
-        <div class="buttons">
-            <select id="timeSelect">
-                <option value="10">10 Second</option>
-                <option value="30">30 Second</option>
-                <option value="60">1 Minutes</option>
-                <option value="120">2 Minutes</option>
-            </select>
-            <button type="button" id="set">Set</button>
-            <button type="button" id="start" onclick="startTimer()">Start</button>
+            <div class="buttons">
+                <select id="timeSelect">
+                    <option value="10">10 Second</option>
+                    <option value="30">30 Second</option>
+                    <option value="60">1 Minutes</option>
+                    <option value="120">2 Minutes</option>
+                </select>
+                <button type="button" id="set">Set</button>
+                <button type="button" id="start" onclick="startTimer()">Start</button>
+            </div>
         </div>
     </div>
-</div>
     <!--Done-->
 
-    <button class="nav-arrow nav-right" onclick="navigate(1)">&#8594;</button>
+    <!--Notes app-->
+
+    <div class="eleven">
+
+        <div class="main" id="main">
+            <div class="container" id="head-container">
+                <h1>Notes</h1>
+                <p id="notes-date"></p>
+            </div>
+
+            <!-- Dark theme toggle button -->
+
+            <div class="container" id="input-container">
+                <input type="text" id="add-notes" placeholder="Add your note here">
+            </div>
+
+            <div class="container" id="button-container">
+                <!-- Use 'type="button"' to avoid form submission -->
+                <button type="button" id="notes-submit">Add</button>
+                <button type="button" id="delete-btn">Delete</button>
+
+                <!-- Search functionality -->
+                <div class="search-container">
+                    <button id="search-icon" class="search-btn">
+                        <img src="search-icon.png" alt="Search" />
+                    </button>
+                    <div id="search-box" class="search-box">
+                        <input type="text" id="search-input" class="search-input" placeholder="Search..." />
+                        <button id="close-btn" class="close-btn">×</button>
+                    </div>
+                </div>
+                <button type="button" id="theme-toggle">☀️</button>
+
+            </div>
+
+            <div class="container" id="notes-place">
+
+            </div>
+        </div>
+
     </div>
 
-    
+    <!--done-->
+
+
+    <!--Dynamic World Clock-->
+    <div class="twelve">
+        <h1 id="h-main">
+            24 Hour World Clock
+        </h1>
+        <div class="main">
+            <div class="madina">
+                <p>Madina</p>
+                <h1 id="madina">11:00 PM</h1>
+            </div>
+            <div class="dubai">
+                <p>dubai</p>
+                <h1 id="dubai">1:00 PM</h1>
+            </div>
+            <div class="new-york">
+                <p>New York</p>
+                <h1 id="newyork">12:00 PM</h1>
+            </div>
+        </div>
+        <div class="main-two">
+            <div class="brazil">
+                <p>brazil</p>
+                <h1 id="brazil">15:00 PM</h1>
+            </div>
+            <div class="madrid">
+                <p>Madrid</p>
+                <h1 id="madrid">22:00 PM</h1>
+            </div>
+            <div class="alaska">
+                <p>alaska</p>
+                <h1 id="alaska">18:00 PM</h1>
+            </div>
+
+        </div>
+        <!--Done-->
+
+
+        <!--Expense tracker-->
+        <div class="thirteen">
+            <main>
+                <h1>Expense Tracker</h1>
+                <div class="input-section">
+                    <input type="text" id="expense-name" placeholder="Expense">
+
+                    <input type="text" id="amount" placeholder="Amount">
+
+                    <input type="date" id="date" placeholder="">
+                    <select id="category" name="category">
+                        <option value="" disabled selected>Category</option>
+                        <option value="Food">Food</option>
+                        <option value="Office">Office</option>
+                        <option value="Vehicle">Vehicle</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+                <div class="button-section">
+                    <button type="submit" id="submit-add">Add</button>
+                    <input type="text" id="search" placeholder="Search...">
+                    <i class="fa fa-search" id="search-icon"></i>
+
+                </div>
+                <div class="table-section">
+                    <table id="expense-table">
+                        <thead>
+                            <th style="padding: 10px; border: none;">Expense</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
+                        </thead>
+                        <tbody id="table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+        <!--Done-->
+
+        <!--Localstorage project-->
+        <h1>Local Storage RUD Project</h1>
+        <div class="col-md-12" style="text-align: center;">
+            <form id="save-form">
+                <input type="text" placeholder="Quantity" class="form-control" id="quantity">
+                <input type="text" placeholder="Item" class="form-control" id="item">
+                <input type="text" placeholder="Price" class="form-control" id="price">
+
+                <button type="submit" id="submit">Submit</button>
+
+
+                <button type="submit" id="submit-delete" onclick="sbtDelte()">Delete</button>
+
+        </div>
+        <table id="table" border="1">
+            <thead>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+        <!--Done-->
+        <button class="nav-arrow nav-right" onclick="navigate(1)">&#8594;</button>
+    </div>
+
+
 
 
     <script src="script.js"></script>
     <script src="black-jack-game.js"></script>
     <script src="random-card.js"></script>
     <script src="random-password.js"></script>
+    <script src="localstorage-project.js"></script>
+
 
 
 </body>
