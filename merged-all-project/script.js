@@ -328,158 +328,180 @@ function updateDisplay(seconds) {
 }
 
 
-//notes app
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-import { 
-    getDatabase,
-    ref,
-    push,
-    onValue,
-    remove
-} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js"; 
+//Notes app is on another js file
+//done
 
-const firebaseConfig = {
-    databaseURL: "https://notes-app-187cd-default-rtdb.firebaseio.com/",
-};
+//Dynamic world clock
+function updateClock() {
+    // dubai's time offset (GMT+4:30) and Medina's time offset (GMT+3)
+    const utcTime = new Date();
+    const dubaiOffset = 4.5 * 60 * 60 * 1000; // dubai (GMT +4:30)
+    const madinaOffset = 3 * 60 * 60 * 1000;  // Medina (GMT +3)
+    const newyorkOffset = -4 * 60 * 60 * 1000;  // Medina (GMT +3)
+    const brazilOffset = -3 * 60 * 60 * 1000;  // Medina (GMT +3)
+    const madridOffset = 2 * 60 * 60 * 1000;  // Medina (GMT +3)
+    const alaskaOffset = -9 * 60 * 60 * 1000  // Medina (GMT +3)
 
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-const referenceInDB = ref(database, "notes");
+    const dubaiTime = new Date(utcTime.getTime() + dubaiOffset);
+    const madinaTime = new Date(utcTime.getTime() + madinaOffset);
+    const newyorkTime = new Date(utcTime.getTime() + newyorkOffset);
+    const brazilTime = new Date(utcTime.getTime() + brazilOffset);
+    const madridTime = new Date(utcTime.getTime() + madridOffset);
+    const alaskaTime = new Date(utcTime.getTime() + alaskaOffset);
 
-const addNotes = document.getElementById("add-notes");
-const notesPlace = document.getElementById("notes-place");
-const themeToggleBtn = document.getElementById("theme-toggle");
-const notesDate = document.getElementById("notes-date");
-const notesSubmit = document.getElementById("notes-submit");
-const deleteBtn = document.getElementById("delete-btn");
-const searchIcon = document.getElementById("search-icon");
-const searchBox = document.getElementById("search-box");
-const searchInput = document.getElementById("search-input");
-const closeBtn = document.getElementById("close-btn");
+    // Extract hour and minute for dubai
+    const dubaiHours = dubaiTime.getUTCHours().toString().padStart(2, "0");
+    const dubaiMinutes = dubaiTime.getUTCMinutes().toString().padStart(2, "0");
 
-let allNotes = []; // Store all notes for searching
+    // Extract hour and minute for Medina
+    const madinaHours = madinaTime.getUTCHours().toString().padStart(2, "0");
+    const madinaMinutes = madinaTime.getUTCMinutes().toString().padStart(2, "0");
 
-// Function to get current date and time (YYYY-MM-DD HH:MM:SS)
-function getFormattedDateTime() {
-    const now = new Date();
-    return now.toISOString().split("T")[0] + " " + now.toLocaleTimeString();
+    const newyorkHours = newyorkTime.getUTCHours().toString().padStart(2, "0");
+    const newyorkMinutes = newyorkTime.getUTCMinutes().toString().padStart(2, "0");
+
+    const brazilHours = brazilTime.getUTCHours().toString().padStart(2, "0");
+    const brazilMinutes = brazilTime.getUTCMinutes().toString().padStart(2, "0");
+
+    const madridHours = madridTime.getUTCHours().toString().padStart(2, "0");
+    const madridMinutes = madridTime.getUTCMinutes().toString().padStart(2, "0");
+
+    const alaskaHours = alaskaTime.getUTCHours().toString().padStart(2, "0");
+    const alaskaMinutes = alaskaTime.getUTCMinutes().toString().padStart(2, "0");
+
+    // Display the time for dubai and Medina in the format HH:MM
+    document.getElementById("dubai").innerText = `${dubaiHours}:${dubaiMinutes}`;
+    document.getElementById("madina").innerText = `${madinaHours}:${madinaMinutes}`;
+    document.getElementById("newyork").innerText = `${newyorkHours}:${newyorkMinutes}`;
+    document.getElementById("brazil").innerText = `${brazilHours}:${brazilMinutes}`;
+    document.getElementById("madrid").innerText = `${madridHours}:${madridMinutes}`;
+    document.getElementById("alaska").innerText = `${alaskaHours}:${alaskaMinutes}`;
+
 }
 
-// Update date-time display every second
-function updateDateTimeDisplay() {
-    notesDate.textContent = getFormattedDateTime(); // Show current time in UI
-}
-setInterval(updateDateTimeDisplay, 1000); // Update time every second
+// Update every minute without API delay
+setInterval(updateClock, 60000);
+updateClock();
+//Done
 
-// Function to render notes with date-time
-function render(notes) {
-    let listNotes = "";
-    notes.forEach((noteObj) => {
-        listNotes += `
-            <div class="note-card">
-                <p class="note-text">${noteObj.note}</p>
-                <p class="note-date">${noteObj.date}</p>
-            </div>
-        `;
+//Expense tracker
+let expenseName = document.getElementById("expense-name")
+let amountName = document.getElementById("amount")
+let dateSelect = document.getElementById("date")
+let categoryName = document.getElementById("category")
+let addBtn = document.getElementById("submit-add")
+let tableBody = document.getElementById("table-body")
+let currentEditingIndex = null; // Track which expense is being edited
+
+document.addEventListener("DOMContentLoaded", () => {
+    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    expenses.forEach((expense, index) => addToTable(expense, index)); // Pass index to addToTable
+});
+
+addBtn.addEventListener('click', () => {
+    let expenseData = {
+        name: expenseName.value,
+        amount: amountName.value,
+        date: dateSelect.value,
+        category: categoryName.value
+    };
+
+    if (currentEditingIndex === null) {
+        // Add new expense if no expense is being edited
+        addToTable(expenseData);
+        saveToLocalStorage(expenseData);
+    } else {
+        // Update existing expense
+        updateExpenseInStorage(expenseData);
+        updateExpenseInTable(expenseData, currentEditingIndex);
+    }
+
+    // Clear the form and reset the currentEditingIndex
+    expenseName.value = "";
+    amountName.value = "";
+    dateSelect.value = "";
+    categoryName.value = "";
+    currentEditingIndex = null; // Reset editing index after update
+});
+
+function addToTable(expense, index) {
+    let row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${expense.name}</td>
+        <td>${expense.amount}</td>
+        <td>${expense.date}</td>
+        <td>${expense.category}</td>
+        <td><button style="padding: 7px 20px 7px 20px; border: none; color: white; background-color: rgb(44, 206, 84);" onclick="editExpense(${index})">Edit</button></td>
+        <td><button style="padding: 7px 20px 7px 20px; border: none; color: white; background-color: rgb(243, 64, 19);" onclick="removeExpense(this)">Delete</button></td>
+    `;
+
+    tableBody.appendChild(row);
+}
+
+function saveToLocalStorage(expense) {
+    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    expenses.push(expense);
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+}
+
+function removeExpense(button) {
+    let row = button.parentElement.parentElement;
+    let name = row.cells[0].textContent;
+
+    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    expenses = expenses.filter(exp => exp.name !== name);
+
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+
+    row.remove();
+}
+
+function editExpense(index) {
+    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    let expenseToEdit = expenses[index];
+
+    // Populate the form with existing data
+    expenseName.value = expenseToEdit.name;
+    amountName.value = expenseToEdit.amount;
+    dateSelect.value = expenseToEdit.date;
+    categoryName.value = expenseToEdit.category;
+
+    // Set the currentEditingIndex to the index of the expense being edited
+    currentEditingIndex = index;
+}
+
+function updateExpenseInStorage(updatedExpense) {
+    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    expenses[currentEditingIndex] = updatedExpense; // Update the expense at the index
+    localStorage.setItem("expenses", JSON.stringify(expenses)); // Save it back to localStorage
+}
+
+function updateExpenseInTable(updatedExpense, index) {
+    let rows = tableBody.querySelectorAll("tr");
+    let row = rows[index];
+
+    row.cells[0].textContent = updatedExpense.name;
+    row.cells[1].textContent = updatedExpense.amount;
+    row.cells[2].textContent = updatedExpense.date;
+    row.cells[3].textContent = updatedExpense.category;
+}
+
+document.getElementById("search").addEventListener("input", function() {
+    let mysearchQuery = this.value.toLowerCase();
+    let mytableRows = document.querySelectorAll("#expense-table tbody tr");
+
+    mytableRows.forEach(row => {
+        let rowText = row.textContent.toLowerCase();
+        if (rowText.includes(mysearchQuery)) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
     });
-
-    notesPlace.innerHTML = listNotes; // Insert all notes into the container
-}
-
-
-
-// Fetch notes from Firebase
-onValue(referenceInDB, (snapshot) => {
-    if (snapshot.exists()) {
-        allNotes = Object.values(snapshot.val()); // Store all notes
-        render(allNotes);
-    } else {
-        notesPlace.innerHTML = "<p>No Notes Yet.</p>";
-        allNotes = []; // Reset stored notes
-    }
 });
 
-// Add note event
-notesSubmit.addEventListener("click", function (event) {
-    event.preventDefault(); 
+//Done
 
-    const note = addNotes.value.trim();
-    const date = notesDate.textContent; // Use displayed time
-
-    if (note) {
-        push(referenceInDB, { note, date })
-            .then(() => {
-                addNotes.value = "";
-                console.log("Note added:", note, "Date:", date);
-            })
-            .catch((error) => {
-                console.error("Error adding note:", error);
-            });
-    } else {
-        alert("Please enter a note.");
-    }
-});
-
-// Delete all notes on double-click
-deleteBtn.addEventListener("dblclick", function () {
-    remove(referenceInDB)
-        .then(() => {
-            notesPlace.innerHTML = "<p style='color: blueviolet;' >No Notes Yet.</p>";
-        })
-        .catch((error) => { 
-            console.error("Error deleting notes:", error);
-        });
-});
-
-// Initialize time display
-updateDateTimeDisplay();
-
-/* SEARCH FUNCTIONALITY */
-searchInput.addEventListener("input", function () {
-    const searchTerm = searchInput.value.toLowerCase();
-
-    // Filter notes based on search term
-    const filteredNotes = allNotes.filter(noteObj =>
-        noteObj.note.toLowerCase().includes(searchTerm) ||
-        noteObj.date.toLowerCase().includes(searchTerm)
-    );
-
-    render(filteredNotes); // Display only matching notes
-});
-
-// Show search box
-searchIcon.addEventListener("click", function () {
-    searchBox.classList.add("show");
-    searchInput.focus(); // Focus on the input field
-});
-
-// Hide search box
-closeBtn.addEventListener("click", function () {
-    searchBox.classList.remove("show");
-    searchInput.value = ""; // Clear input
-    render(allNotes); // Show all notes again
-});
-
-// THEME TOGGLE FUNCTIONALITY
-themeToggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-        themeToggleBtn.innerHTML = "🌙"; // Change to sun icon
-    } else {
-        localStorage.setItem("theme", "light");
-        themeToggleBtn.innerHTML = "☀️"; // Change to moon icon
-    }
-});
-
-// Apply saved theme and correct icon on page load
-window.addEventListener("load", function () {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        themeToggleBtn.innerHTML = "🌙"; // Show sun icon in dark mode
-    } else {
-        themeToggleBtn.innerHTML = "☀️"; // Show moon icon in light mode
-    }
-});
+//Localstorage Project is on another js file
+//Done
