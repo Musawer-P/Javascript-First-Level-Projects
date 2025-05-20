@@ -496,6 +496,7 @@
         <!--Done-->
 
         <!--Localstorage project-->
+        <div class = "fourteen">
         <h1>Local Storage RUD Project</h1>
         <div class="col-md-12" style="text-align: center;">
             <form id="save-form">
@@ -521,7 +522,152 @@
                 <!-- Rows will be dynamically added here -->
             </tbody>
         </table>
+        </div>
         <!--Done-->
+
+        <!--Click to copy-->
+        <div class = "fifteen">
+               <div class="container">
+            <h1>Click To Copy</h1>
+            <div>
+                <input type="text" class = "input-txt" placeholder="Enter text to Copy">
+                <button class = "btn">Copy</button>
+            </div>
+        </div>
+        </div>
+        <!--Done-->
+
+        <!--Instagram post design-->
+        <div class = "sixteen">
+            <main>
+            <div class = "first-container">
+                <h1>Oldagram</h1>
+                <img src="images/oldagram-images/first-profile.png" id = "first-profile">
+            </div>
+
+            <div class = "second-section">
+                <img src = "images/oldagram-images/self-portrait.jpg" id= "second-profile">
+                <p id= "p1">Vincent van Gogh</p>
+            </div>
+
+            <p id= "p2">Zudert, Netherlands</p>
+
+            <img src = "images/oldagram-images/self-portrait.jpg" id = "third-profile">
+
+            <div class = "third-section">
+                <i class="far fa-heart" id = "love-icon"></i> 
+                 <div class="icon-container">
+                    <i class="far fa-comment disabled-icon" id="message-icon"></i>
+                    <i class="far fa-paper-plane" id = "send-icon"></i>
+                    <div class="tooltip">This feature is disabled try like feature</div>
+                </div>
+            </div>            
+
+            <p id = "like-section">21.492 likes</p>    
+            <p id = "comment"><span id = first-comment>vincey1853</span> just took a few mushrooms lol</p>    
+
+            <div class = "second-container">
+            </div>
+
+            <div class = "second-section">
+                <img src = "images/oldagram-images/Gustave-Courbet-4.jpg" id= "second-profile">
+                <p id= "p1">Gustave Courbet</p>
+            </div>
+
+            <p id= "p2-second-container">Ornans, France</p>
+            <img src = "images/oldagram-images/Gustave-Courbet.jpg" id = "third-profile">
+
+            <div class = "third-section">
+                <i class="far fa-heart" id = "love-icon-two"></i> 
+                <div class="icon-container">
+                    <i class="far fa-comment disabled-icon" id="message-icon"></i>
+                    <i class="far fa-paper-plane" id = "send-icon"></i>
+                    <div class="tooltip">This feature is disabled try like feature</div>
+                </div>
+            </div>            
+
+            <p id = "like-section-two">12.502 likes</p>    
+            <p id = "comment"><span id = "second-comment">gus1819</span> i am feelin a bit stressed tbh</p>    
+
+            <div class = "third-container">
+            </div>
+
+            <div class = "second-section">
+                <img src = "images/oldagram-images/joseph-decreux-profile..jpg" id= "second-profile">
+                <p id= "p1">Joseph Ducreux</p>
+            </div>
+
+            <p id= "p2">Paris, France</p>
+            <img src = "images/oldagram-images/Joseph-Ducreux.jpg" id = "third-profile">
+
+            <div class = "third-section">
+                <i class="far fa-heart" id = "love-icon-three"></i>
+                <div class="icon-container">
+                    <i class="far fa-comment disabled-icon" id="message-icon"></i>
+                    <i class="far fa-paper-plane" id = "send-icon"></i>
+                    <div class="tooltip">This feature is disabled try like feature</div>
+                </div>
+            </div>            
+
+            <p id = "like-section-three">15.137 likes</p>    
+            <p id = "comment"><span id = "third-comment">jd1735</span> gm friends! which coin are YOU stacking up today?? post below and WAGMI!</p>    
+    </main>
+
+        </div>
+        <!--Done-->
+
+        <!--Popup random background-->
+        <div class = "seventeen">
+              <button id="openPopup">Open Popup for New Color</button>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Random Background Popup</h2>
+            <p>The background color of this popup changes randomly each time you open it!</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+        </div>
+        <!--Done-->
+
+        <!--To do list app-->
+        <div class = "eighteen">
+                <h1 id = "head-one">WHATS YOUR NEXT MOVE.</h1>
+        <div class="col-md-10">
+        <input type = "text" id = "input-todo" placeholder="Enter Task">
+    </div>
+    <div class="col-md-2" id = "button-div">
+        <button  type = "submit" id = "submit-todo">Submit</button> 
+        <button type = "submit" id = "delete-btn">Delete</button>
+        </div>
+    </div>
+    <div class="col-md-12" id = "table-div">
+        <table id="todo-table" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody id="insertplace-todo">
+                <!-- Tasks will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+        </div>
+        <!--Done-->
+
+        <!--Chrome extension-->
+        <div class = "ninteen">
+             <input type="text" id="input-el">
+        <button id="input-btn">SAVE INPUT</button>
+        <button id="tab-btn">SAVE TAB</button>
+        <button id="delete-btn">DELETE ALL</button>
+        <ul id="ul-el">
+        </ul>
+        </div>
+        <!--Done-->
+
         <button class="nav-arrow nav-right" onclick="navigate(1)">&#8594;</button>
     </div>
 
@@ -533,6 +679,8 @@
     <script src="random-card.js"></script>
     <script src="random-password.js"></script>
     <script src="localstorage-project.js"></script>
+    <script src="instagram-post-design.js"></script>
+    <script src="chrome-extension.js"></script>
 
 
 
