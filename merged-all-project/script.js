@@ -505,3 +505,138 @@ document.getElementById("search").addEventListener("input", function() {
 
 //Localstorage Project is on another js file
 //Done
+
+//Click to copy
+
+const btn = document.querySelector(".btn");
+const input = document.querySelector(".input-txt");
+
+btn.addEventListener("click", copyText);
+
+function copyText () {
+    input.select();
+    //input.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(input.value);
+    alert("Copied to Clipboard");
+}
+//Done
+
+//Instagram post design is on another js file
+//Done
+
+//Popup random background
+const openPopupBtn = document.getElementById("openPopup");
+const closePopupBtn = document.getElementById("closePopup");
+const popup = document.getElementById("popup");
+const popupContent = document.querySelector(".popup-content");
+
+// Function to generate a random hex color
+function getRandomColor() {
+    const characters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += characters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Open popup and set random background color
+openPopupBtn.addEventListener("click", () => {
+    const randomColor = getRandomColor();
+    popupContent.style.backgroundColor = randomColor;
+    popup.classList.add("visible");
+    popup.classList.remove("hidden");
+});
+
+// Close popup
+closePopupBtn.addEventListener("click", () => {
+    popup.classList.remove("visible");
+    setTimeout(() => {
+        popup.classList.add("hidden");
+    }, 300); // Matches the transition duration for smooth hiding
+});
+
+//Done
+
+//To do list app
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+import { 
+    getDatabase, ref, push, onValue, remove, update 
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
+
+const firebaseConfig = {
+    databaseURL: "https://to-do-list-70f83-default-rtdb.firebaseio.com/"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const referenceInDB = ref(database, "todo");
+
+const inputTodo = document.getElementById("input-todo");
+const submitTodo = document.getElementById("submit-todo");
+const insertplaceTodo = document.getElementById("insertplace-todo");
+const deleteBtn = document.getElementById("delete-btn");
+
+// Function to render the todo list with checkboxes
+function render(todoList) {
+    insertplaceTodo.innerHTML = ""; // Clear the list before rendering
+
+    Object.keys(todoList).forEach((key) => {
+        const todoItem = todoList[key];
+
+        // Create a table row
+        let row = document.createElement("tr");
+
+        // Create checkbox column
+        let checkboxTd = document.createElement("td");
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = todoItem.checked || false;
+        checkbox.addEventListener("change", function () {
+            update(ref(database, `todo/${key}`), { checked: checkbox.checked });
+        });
+
+        checkboxTd.appendChild(checkbox);
+
+        // Create text column
+        let textTd = document.createElement("td");
+        textTd.textContent = todoItem.text;
+
+        // Append columns to row
+        row.appendChild(textTd);
+        row.appendChild(checkboxTd);
+
+
+        // Append row to table
+        insertplaceTodo.appendChild(row);
+    });
+}
+
+// Load data from Firebase and render it
+onValue(referenceInDB, function (snapshot) {
+    if (snapshot.exists()) {
+        render(snapshot.val());
+    } else {
+        insertplaceTodo.innerHTML = "<tr><td colspan='2'>No tasks found</td></tr>";
+    }
+});
+
+// Submit new todo
+submitTodo.addEventListener("click", function () {
+    if (inputTodo.value.trim() !== "") {
+        push(referenceInDB, { text: inputTodo.value, checked: false });
+        inputTodo.value = "";
+    }
+});
+
+// Delete all todos
+deleteBtn.addEventListener("dblclick", function () {
+    remove(referenceInDB);
+    insertplaceTodo.innerHTML = "";
+});
+
+//Done
+
+//Chrome extension is on another js file
+//Done
