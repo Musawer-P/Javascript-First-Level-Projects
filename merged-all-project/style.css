@@ -1943,3 +1943,53 @@ i{
   }
 
 /*Done*/
+
+/*Leads tracker app*/
+
+label {
+    color: #e21111;
+    font-weight: 100;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e21111;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+
+button {
+    background: #e21111;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #e21111;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+#delete-btn {
+    background: white;
+    color: #e21111;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 5px;
+}
+
+a {
+    color: #e21111;
+}
+
+
+/*Done*/
