@@ -1,0 +1,68 @@
+
+/*Unit converter*/
+#hone{
+    color: white;
+    font-size: 22px;
+    padding-top : 33px;
+    padding-left : 51px;
+    padding-right : 51px;
+    padding-bottom : 33px;
+}
+#input-main{
+    width: 80px;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid #B295FF 2px;
+    border-radius: 5px;
+    background-color: #6943FF;
+    font-size: 60px;
+    color: white;
+    font-weight: 800;
+
+}
+
+#button-convert{
+
+        display: block;
+        background-color: white;
+        color: #3D3D3D;
+        margin: 35px auto; /* Center horizontally */
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+    }
+
+
+#pone{
+    color: #5A537B;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+
+}
+
+#lenght-el{
+    color:#353535;
+    font-weight: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+
+}
+
+#volume-el{
+    color: #353535;
+    font-weight: 10px;
+    padding-bottom: 20px;
+    font-size: 15px;
+
+}
+
+#mass-el{
+    color:#353535;
+    font-weight: 10px;
+    padding-bottom: 20px;
+    font-size: 15px;
+
+}
+/*Done*/

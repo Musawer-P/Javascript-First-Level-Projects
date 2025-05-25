@@ -1,0 +1,55 @@
+
+
+/*To do list app*/
+#head-one{
+color: rgb(26, 23, 23);
+padding-bottom:50px;
+}
+#input-todo{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+#main-div{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+#button-div{
+    margin-top: -7px;
+}
+#submit-todo{
+background-color: rgba(57, 179, 57, 0);
+color:  rgb(57, 179, 57);
+border: none;
+padding-top: px;
+padding-right: 20px;
+padding-bottom: 5px;
+padding-left: 20px;
+border-radius: 0px;
+border: none;
+border-bottom: 1px solid  rgb(57, 179, 57); 
+}
+#delete-btn{
+    background-color: rgba(204, 33, 33, 0);
+color: rgb(204, 33, 33);
+border: none;
+padding-top: 5px;
+padding-right: 20px;
+padding-bottom: 5px;
+padding-left: 20px;
+border-radius: 0px;
+border: none;
+border-bottom: 1px solid rgb(204, 33, 33); 
+
+}
+#table-div{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 37px;
+}
+#todo-table{
+   width: 100%;
+   text-align: center
+}
+
+/*Done*/

@@ -1,0 +1,56 @@
+#counter-h1{
+  text-align: center;
+  color: white;
+  font-size: 55px;
+}
+.counter-body{
+  margin-left: 90px;
+}
+#counter-h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(20, 20, 20);
+    font-weight: 10;
+}
+
+#count-el {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+text-align: center;    
+}
+
+#save-el{
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+}
+
+
+
+#increment-btn {
+   border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 2px 2px 2px 2px #8888882a;
+}
+
+#save-btn {
+    background: rgba(16, 197, 16, 0.678);
+        border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+   
+}

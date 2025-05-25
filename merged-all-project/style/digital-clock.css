@@ -1,0 +1,45 @@
+
+/*Digital Clock*/
+
+  .clock-container {
+    background: #181818;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(98, 0, 255, 0.6), 0 0 40px rgba(98, 0, 255, 0.3);
+    border: 1px solid white;
+  }
+  
+  #clock {
+    color: #6200ff;
+    font-size: 80px;
+    letter-spacing: 2px;
+  }
+  h1{
+    color: #6200ff;
+    font-size: 80px;
+  }
+  /*Done*/
+
+  /*Black jack game*/
+  
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+  /*Done*/
