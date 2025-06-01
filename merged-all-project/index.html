@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/style.css" rel="stylesheet">
     <link href="style/basketball-counter-app.css" rel="stylesheet">
+        <link href="style/blackjack-game.css" rel="stylesheet">
     <link href="style/chrome-extension.css" rel="stylesheet">
     <link href="style/click-to-copy.css" rel="stylesheet">
     <link href="style/clingy-popuop.css" rel="stylesheet">
@@ -31,8 +32,10 @@
 
 <body>
 
+ 
   <div class="main">
     <div class="first">
+      <!--Clingy popup-->
       <h1 id="clingy-h1">Clingy Popup</h1>
 
       <button type="button" id="close-btn" disabled>x</button>
@@ -48,7 +51,7 @@
             <input type="text" id="name" name="name" placeholder="John" aria-label="name" required>
             <input type="email" id="email" placeholder="John@gmail.com" aria-label="email" required>
           </div>
-          <div class="button" id="button">
+          <div class="clingy-button" id="clingy-button">
             <button type="submit" id="accept-btn">Accept</button>
             <button type="button" id="decline-btn">Decline</button>
 
@@ -56,200 +59,137 @@
         </form>
       </div>
     </div>
+    <!--Done-->
 
-  <div class = "second">
+    <!--Counter app-->
+    <div class="second">
       <h1 id="counter-h1">People Entered</h1>
-            <h2 id="count-el">0</h2>
-            <div class="counter-body">
-                <button id="increment-btn" onclick="increment()">INCREMENT</button>
-                <button id="save-btn" onclick="save()">SAVE</button>
-                <p id="save-el">Previous Entries: </p>
-            </div>
-  </div>
-  
-   <div class="third">
-          <h1 id="counter-h1">Emoji face off</h1>
-            <h1 id="emoji-h1">Emoji<br>Fighter</h1>
-            <div id="stage"></div>
-            <div class="btn-class">
-                <button id="fightButton">Pick Fighters!</button>
-            </div>
-        </div>
-
-
-
-          <!--Login Project-->
-          <div class = "fourth">
-        <div class="login-project">
-            <div class="login-container" id="login-container">
-                <div class="heading-container" id="header-container-login">
-                    <h1 id="login-header">Login</h1>
-                    <h1 id="signup-header">Signup</h1>
-                </div>
-                <div class="login-form">
-                    <p class="error" id="errorMessage">Incorrect username or password!</p>
-
-                    <div class="user-hint" style="text-align: start; font-size: 13px;">
-                        <span>User:</span> <span class="user">Admin</span>
-                    </div>
-                    <div class="user-hint"
-                        style="text-align: start; font-size: 13px; margin-top: 10px; padding-bottom: 20px;">
-
-                        <span>Password:</span> <span class="user">12345</span>
-
-                    </div>
-
-                    <div class="input-container">
-                        <input type="text" id="username" placeholder="User Name">
-                        <input type="password" id="password" placeholder="Password">
-                    </div>
-                    <div class="btn-container">
-                        <button type="submit" id="login-btn" onclick="checkLogin()">Login</button>
-
-                    </div>
-                    <div class="text-container">
-                        <p id="forgot-password">Forgot Password?</p>
-
-                    </div>
-
-
-
-
-
-
-                </div>
-            </div>
-            <div class="signup-container" style="display: none;" id="signup-container">
-                <div class="heading-container" id="header-container-signup">
-                    <h1 id="login-header-signup">Login</h1>
-                    <h1 id="signup-header-signup">Signup</h1>
-                </div>
-                <div class="signup-form">
-                    <div class="input-container-signup">
-                        <input type="text" id="name" placeholder="First name">
-                        <input type="text" id="lastname" placeholder="Last name">
-                    </div>
-                    <div class="input-container-signup">
-                        <input type="text" id="phone" placeholder="Phone">
-                        <input type="text" id="email" placeholder="E-mail">
-                    </div>
-                    <div class="input-container-signup">
-                        <input type="text" id="create-password" placeholder="Password">
-                        <input type="text" id="retype-password" placeholder="Retype Password">
-                    </div>
-                    <div class="password-generator-container">
-                        <button type="button" id="random-password" onclick="generateRandomPassword()">Random
-                            Password</button>
-                    </div>
-                    <button type="submit" id="signup-btn">Signup</button>
-                </div>
-            </div>
-        </div>
-    </div>
+      <h2 id="count-el">0</h2>
+      <div class="counter-body">
+        <button id="increment-btn" onclick="increment()">INCREMENT</button>
+        <button id="save-btn" onclick="save()">SAVE</button>
+        <p id="save-el">Previous Entries: </p>
+      </div>
     </div>
     <!--Done-->
 
+    <!--Emoji face off-->
+    <div class="third">
+      <h1 id="emoji-faceoff-h1">Emoji face off</h1>
+      <h1 id="emoji-h1">Emoji<br>Fighter</h1>
+      <div id="stage"></div>
+      <div class="btn-class">
+        <button id="fightButton">Pick Fighters!</button>
+      </div>
+    </div>
+    <!--Done-->
+
+
+
+    <!--Login Project-->
+    <div class="fourth">
+      <div class="login-project">
+        <div class="login-container" id="login-container">
+          <div class="heading-container" id="header-container-login">
+            <h1 id="login-header">Login</h1>
+            <h1 id="signup-header">Signup</h1>
+          </div>
+          <div class="login-form">
+            <p class="error" id="errorMessage">Incorrect username or password!</p>
+
+            <div class="user-hint" style="text-align: start; font-size: 13px;">
+              <span>User:</span> <span class="user">Admin</span>
+            </div>
+            <div class="user-hint" style="text-align: start; font-size: 13px; margin-top: 10px; padding-bottom: 20px;">
+
+              <span>Password:</span> <span class="user">12345</span>
+
+            </div>
+
+            <div class="input-container">
+              <input type="text" id="username" placeholder="User Name">
+              <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="btn-container">
+              <button type="submit" id="login-btn" onclick="checkLogin()">Login</button>
+
+            </div>
+            <div class="text-container">
+              <p id="forgot-password">Forgot Password?</p>
+
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+        <div class="signup-container" style="display: none;" id="signup-container">
+          <div class="heading-container" id="header-container-signup">
+            <h1 id="login-header-signup">Login</h1>
+            <h1 id="signup-header-signup">Signup</h1>
+          </div>
+          <div class="signup-form">
+            <div class="input-container-signup">
+              <input type="text" id="name" placeholder="First name">
+              <input type="text" id="lastname" placeholder="Last name">
+            </div>
+            <div class="input-container-signup">
+              <input type="text" id="phone" placeholder="Phone">
+              <input type="text" id="email" placeholder="E-mail">
+            </div>
+            <div class="input-container-signup">
+              <input type="text" id="create-password" placeholder="Password">
+              <input type="text" id="retype-password" placeholder="Retype Password">
+            </div>
+            <div class="password-generator-container">
+              <button type="button" id="random-password" onclick="generateRandomPassword()">Random
+                Password</button>
+            </div>
+            <button type="submit" id="signup-btn">Signup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--Done-->
+
   </div>
-  
-  <div class = "main-second-row">
-    
+
+  <div class="main-second-row">
     <!--Digital Clock-->
     <div class="fifth">
-        <h1>Digital <span style="color: white;">Clock</span></h1>
-        <div class="clock-container">
-            <h1 id="clock">00:00:00</h1>
-        </div>
+      <h1 id = "digital-clock-h1">Digital <span style="color: white;">Clock</span></h1>
+      <div class="clock-container">
+        <h1 id="clock">00:00:00</h1>
+      </div>
     </div>
     <!--Done-->
-  </div>
-<style>
 
-</style>
-
+    
     <!--Black jack game-->
-    <div class="fifth">
-        <h1>Blackjack</h1>
+    <div class="sixth">
+        <h1 id = "blackjack-h1">Blackjack</h1>
         <p id="message-el">Want to play a round?</p>
         <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
-        <button onclick="startGame()">START GAME</button>
-        <button onclick="newCard()">NEW CARD</button>
+        <button id = "blackjack-btn" onclick="startGame()">START GAME</button>
+        <button id = "blackjack-btn" onclick="newCard()">NEW CARD</button>
         <p id="player-el"></p>
     </div>
     <!--Done-->
 
-    <!--Random card picker-->
-    <div class="sixth">
-        <main>
-            <div class="button-container">
-                <button type="submit" id="button">Motivate me</button>
+     <!--Random card picker-->
+    <div class="seven">
+            <div class="button-container" id = "randomcard-btn-container">
+                <button type="submit" id="randomcard-btn">Motivate me</button>
             </div>
 
-            <div class="card-container">
+          
+            <div class="card-container-first">
 
-                <div class="first">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h2>?</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Success does not come from talent alone, but from relentless hard work, the courage to
-                                keep
-                                moving forward when others would give up, and the refusal to accept anything less than
-                                the
-                                greatness you are destined for.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="first">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h2>?</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Even when the journey feels endless and your strength seems small, remember that every
-                                small
-                                step forward, every effort you make today, is silently building the future you have
-                                prayed
-                                and worked so hard for.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="first">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h2>?</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>You were not created to live a life of mediocrity but to rise above fear, defeat
-                                limitations,
-                                and build a story so inspiring that even you will one day look back and be amazed at the
-                                person you dared to become.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="first">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h2>?</h2>
-                        </div>
-                        <div class="card-back">
-                            <p>Growth is not comfortable and dreams are not cheap, but if you are willing to endure the
-                                challenges, face your fears, and keep your heart fixed on the goal, then no force in
-                                this
-                                world can stop you from reaching your highest potential.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="card-container second">
-
-                <div class="first">
+                <div class="first-randomcard-container">
                     <div class="card-inner">
                         <div class="card-front">
                             <h2>?</h2>
@@ -262,7 +202,7 @@
                     </div>
                 </div>
 
-                <div class="first">
+                <div class="first-randomcard-container">
                     <div class="card-inner">
                         <div class="card-front">
                             <h2>?</h2>
@@ -274,8 +214,10 @@
                         </div>
                     </div>
                 </div>
+</div>
+            <div class="card-container-second">
 
-                <div class="first">
+                <div class="first-randomcard-container">
                     <div class="card-inner">
                         <div class="card-front">
                             <h2>?</h2>
@@ -288,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="first">
+                <div class="first-randomcard-container">
                     <div class="card-inner">
                         <div class="card-front">
                             <h2>?</h2>
@@ -302,12 +244,15 @@
                 </div>
 
             </div>
-
-
-        </main>
     </div>
     <!--Done-->
 
+
+    
+  </div>
+  </div>
+
+  <!--Mark-->
 
     <!--Random password generator-->
     <div class="seventh">

@@ -70,18 +70,35 @@ body {
     height: 500px;
     width: 320px;
     border-radius: 5px;
-    padding-left: 0px;
+    padding-left: px;
     padding-right: 0px;
     padding-bottom: 50px;
   }
   
+    .sixth{
+     background-color: #181818;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 50px;
+  }
+      .seven{
+     background-color: #181818;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 50px;
+  }
+
+
 #main-id {
     font-size: 40px;
     color: rgb(19, 19, 19);
 }
 
-.header {
-    margin-left: 19vh;
-}
 
 /* Done */

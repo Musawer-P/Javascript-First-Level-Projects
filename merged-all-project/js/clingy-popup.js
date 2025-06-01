@@ -8,7 +8,7 @@ const closeBtn = document.getElementById("close-btn")
 const emailI = document.getElementById("email")
 const acceptBtn = document.getElementById("accept-btn")
 const declineBtn = document.getElementById("decline-btn")
-const button = document.getElementById("button")
+const clingyButton = document.getElementById("clingy-button");
 
 setTimeout(function(){
 popupModal.style.display = 'block'
@@ -46,7 +46,8 @@ loginForm.addEventListener('submit', function(e) {
 const fullName = formData.get('name')
 });
 
+
 declineBtn.addEventListener('mouseenter', function(){
-    button.classList.toggle('reverse')
-})
+    clingyButton.classList.toggle('reverse');
+});
 // Done

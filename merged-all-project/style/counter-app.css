@@ -1,10 +1,10 @@
 #counter-h1{
   text-align: center;
   color: white;
-  font-size: 55px;
+  font-size: 40px;
 }
 .counter-body{
-  margin-left: 90px;
+  margin-top: 0px;
 }
 #counter-h2 {
     margin-top: 10px;
@@ -15,7 +15,7 @@
 
 #count-el {
     font-size: 50px;
-    margin-top: 0;
+    margin-top: 100px;
     margin-bottom: 20px;
     color: rgb(255, 255, 255);
 text-align: center;    

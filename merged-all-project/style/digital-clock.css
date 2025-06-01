@@ -7,23 +7,22 @@
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(98, 0, 255, 0.6), 0 0 40px rgba(98, 0, 255, 0.3);
     border: 1px solid white;
+    margin-top: 100px;
   }
   
   #clock {
     color: #6200ff;
-    font-size: 80px;
+    font-size: 50px;
     letter-spacing: 2px;
   }
-  h1{
-    color: #6200ff;
-    font-size: 80px;
-  }
+
   /*Done*/
 
   /*Black jack game*/
   
-h1 {
-    color: goldenrod;
+#digital-clock-h1 {
+    color: white;
+    font-size: 50px;
 }
 
 #message-el {
