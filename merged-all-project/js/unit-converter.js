@@ -1,10 +1,10 @@
 
 //Unit converter
  let buttonConvert = document.getElementById("button-convert")
- let inputMain = document.getElementById("input-main")
- let lenghtEl = document.getElementById("lenght-el")
- let volumeEl = document.getElementById("volume-el")
- let massEl = document.getElementById("mass-el")
+ let inputMain = document.getElementById("input-main-converter")
+ let lenghtEl = document.getElementById("length-el-converter")
+ let volumeEl = document.getElementById("volume-el-converter")
+ let massEl = document.getElementById("mass-el-converter")
 
 
  const meterToFeet = 3.281

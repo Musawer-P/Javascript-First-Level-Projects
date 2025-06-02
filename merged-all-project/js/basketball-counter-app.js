@@ -1,13 +1,13 @@
 
 //Basketball counter app 
 //first section
-let section_one_button_one = document.getElementById("button_submit_one")
-let section_one_button_two = document.getElementById("button_submit_two")
-let section_one_button_three = document.getElementById("button_submit_three")
+let section_one_button_one = document.getElementById("button_submit_one-basket")
+let section_one_button_two = document.getElementById("button_submit_two-basket")
+let section_one_button_three = document.getElementById("button_submit_three-basket")
 //second section 
-let section_two_button_one = document.getElementById("button_submit_one_two")
-let section_two_button_two = document.getElementById("button_submit_two_two")
-let section_two_button_three = document.getElementById("button_submit_three_two")
+let section_two_button_one = document.getElementById("button_submit_one_two-basket")
+let section_two_button_two = document.getElementById("button_submit_two_two-basket")
+let section_two_button_three = document.getElementById("button_submit_three_two-basket")
 
 let section_one_number = document.getElementById("first_section_number")
 //second section 

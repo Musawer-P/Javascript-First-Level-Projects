@@ -1,14 +1,20 @@
 
   /*Basketball counter app*/
-  .container {
+  #basket-container {
     display: flex;
     justify-content: space-around;
     background-color: #1B244A;
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: 70px;
 }
 
-button{
+#basket-h1{
+    color: white;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.basket-btn{
     font-family: 'Cursed Timer ULiL', sans-serif;;
     padding: 10 10 10 10;
     border: 2px solid #9AABD8;
@@ -18,7 +24,7 @@ button{
     background-color: #1B244A;
     
 }
-h3{
+#basket-h3{
     font-family: 'verdana', sans-serif;
     text-align : center;
     color: #EEEEEE;
@@ -27,7 +33,7 @@ h3{
     font-style: bold;
 }
 
-p{
+#first_section_number , #second_section_number{
     text-align : center;
     font-family: 'Cursed Timer ULiL', sans-serif;
     font-size: 90px ;
@@ -37,6 +43,8 @@ p{
     border-radius: 5px;
     margin-bottom: 26px;
     margin-top: 19px;
+    margin-left: 10px;
+    margin-right: 10px;
     
 
 }
