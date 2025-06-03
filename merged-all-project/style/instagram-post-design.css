@@ -1,33 +1,11 @@
-
-
 /*Instagram post design*/
 
 #first-comment{
     font-weight: bold;
     
 }
-#second-comment{
-    font-weight: bold;
-    
-}
-#third-comment{
-    font-weight: bold;
-    
-}
-main{
 
-    border-radius: 5px;
-    display: flex; 
-    flex-direction: column; 
-    background-color: white;
-    width: 30%;
-    max-width: 400px;  
-    min-width: 400px;
-    padding:0px;
-    margin: 0 auto;
-
-}
-.first-container{
+.ig-first-container{
     display: flex;
     justify-content: space-between;
     font-family: 'Pacifico';
@@ -35,38 +13,24 @@ main{
     border-bottom: solid 3px rgb(236, 240, 241);
     padding: 0px 10px 0px 10px;
 }
-.second-container{
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Pacifico';
-    border:none;
-    border-bottom: solid 10px rgb(236, 240, 241);
-    
-}
-.third-container{
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Pacifico';
-    border:none;
-    border-bottom: solid 10px rgb(236, 240, 241);
-    
-}
 
-.second-section{
+.ig-second-section{
     display: flex;
     background-color: white;
     padding: 0px 10px 0px 10px;
 
 
 }
-.third-section{
+.ig-third-section{
+    display: flex;
     margin-top: 20px;
     padding: 0px 10px 0px px;
   
 }
 
-#like-section, #like-section-two, #like-section-three{
+#like-section{
     color: black;
+    display: flex;
     font-weight: bold;
     margin-top: 10px;
     padding: 0px 10px 0px 10px;
@@ -77,10 +41,11 @@ main{
 #comment{
     font-size: 13;
     padding: 0px 10px 0px 10px;
-    margin-top: 0px;
-
+    display: flex;
+    
+    
 }
-#first-profile{
+#ig-first-profile{
     margin-top: 30px;
     width: 10%;
     height: 10%;
@@ -88,37 +53,32 @@ main{
     
 
 }
-#second-profile {
+#ig-second-profile {
 margin-top: 10px;
 margin-right: 10px;
 width: 10%;
 border-radius: 50px;
 }
-#third-profile{
+#ig-third-profile{
     width:100%;
     margin-top: 10px;
 }
-#p1 {
+#ig-p1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 13px;
     font-weight: bold;
 
 }
-#p2{
-    margin-top: -17px;
-    margin-left: clamp(58px, 4.3vw, 100px);
+#ig-p2{
+    margin-top: -10px;
+    display: flex;
+    margin-left: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 12px; 
     line-height: 1.4;  
 
 }
-#p2-second-container{
-    margin-top: -17px;
-    margin-left: clamp(58px, 4.3vw, 100px);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 12px; 
-    line-height: 1.4;  
-}
+
 #love-icon, #message-icon , #send-icon{
     font-size: 25px; color: black;
     margin-left: 10px;
@@ -128,11 +88,8 @@ border-radius: 50px;
     font-size: 25px; color: black;
     margin-left: 10px;
 }
-#love-icon-two, #love-icon-three{
-    font-size: 25px; color: black;
-    margin-left: 10px;
-}
-.icon-container {
+
+.ig-icon-container {
     position: relative;
     display: inline-block;
 }
@@ -153,7 +110,7 @@ border-radius: 50px;
     transition: opacity 0.3s ease-in-out;
 }
 
-.icon-container:hover .tooltip {
+.ig-icon-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }

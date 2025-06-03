@@ -1,24 +1,17 @@
 
 /*Expense Tracker*/
-main{
+#expense-main{
   padding: 20px;  /* Optional: Adds space around the content */
   border-radius: 8px; /* Optional: Rounded corners */
   width: 80%;      /* Adjust the width as needed */
   max-width: 800px;
 }
-
-h1{
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 100;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-color: white;
-background-color: rgb(235, 160, 48);
-width: 25%;
-padding: 5px 0px 5px 12px;
-border-radius: 5px;
+#expense-h1{
+    color: white;
+    font-size: 30px;
 }
 
-#expense-name, #amount, #date, #category{
+#expense-name, #amount, #expense-date, #expense-category{
     padding: 10px 10px 10px 10px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -26,10 +19,10 @@ border-radius: 5px;
     border-bottom: 3px solid rgb(235, 160, 48); 
     margin-top: 10px;
 }
-#category{
+#expense-category{
     width: 26%;
 }
-#submit-add{
+#expense-submit-add{
     padding: 10px 50px 10px 50px;
     border: none;
     background-color: rgb(235, 160, 48);
@@ -38,13 +31,13 @@ border-radius: 5px;
     margin-top: 15px;
     width: 50%;
 }
-#submit-add:hover{
+#expense-submit-add:hover{
     background-color:  rgb(241, 238, 233);
     color: rgb(235, 160, 48);
     border: 1px solid rgb(235, 160, 48);
 }
 
-.button-section{
+.expense-button-section{
 text-align: start;
 width: 100%;
 margin-top: 20px;
@@ -53,14 +46,14 @@ margin-top: 20px;
 
 #expense-name:focus, 
 #amount:focus, 
-#date:focus, 
-#category:focus{
+#expense-date:focus, 
+#expense-category:focus{
 border-bottom: 2px solid rgba(0, 0, 0, 0.623);
 outline: none;
 color: rgba(0, 0, 0, 0.623);
 }  
 
-#search{
+#expense-search{
     padding: 10px 50px 10px 5px;
     border: none;
     border-bottom: 1px solid rgb(235, 160, 48);
@@ -72,18 +65,18 @@ color: rgba(0, 0, 0, 0.623);
     width: 33%;
 }
 
-    #search:focus {
+    #expense-search:focus {
         border-bottom: 2px solid rgba(0, 0, 0, 0.623); /* Make border thicker on focus */
         outline: none;  /* Remove default focus outline */
         color: rgba(0, 0, 0, 0.623); /* Optional: Change text color on focus */
     }
 
 
-#search::placeholder{
+#expense-search::placeholder{
     color: rgb(235, 160, 48);
     
 }
-#search-icon{
+#expense-search-icon{
     color:rgb(235, 160, 48);
     margin-left: -30px;
 }
@@ -94,7 +87,7 @@ thead{
     border-radius: 5px;
 }
 
-#table-section{
+#expense-table-section{
     margin-top: 20px;
     width: 100%;
 }
@@ -103,7 +96,7 @@ thead{
     margin-top: 40px;
 
 }
-#table-body td{
+#expense-table-body td{
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px 10px 10px 10px;
     border-bottom: 1px solid rgb(235, 160, 48);

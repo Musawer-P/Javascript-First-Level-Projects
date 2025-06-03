@@ -2,10 +2,10 @@
 //Expense tracker
 let expenseName = document.getElementById("expense-name")
 let amountName = document.getElementById("amount")
-let dateSelect = document.getElementById("date")
-let categoryName = document.getElementById("category")
-let addBtn = document.getElementById("submit-add")
-let tableBody = document.getElementById("table-body")
+let dateSelect = document.getElementById("expense-date")
+let categoryName = document.getElementById("expense-category")
+let addBtn = document.getElementById("expense-submit-add")
+let tableBody = document.getElementById("expense-table-body")
 let currentEditingIndex = null; // Track which expense is being edited
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,8 +45,8 @@ function addToTable(expense, index) {
     row.innerHTML = `
         <td>${expense.name}</td>
         <td>${expense.amount}</td>
-        <td>${expense.date}</td>
-        <td>${expense.category}</td>
+        <td>${expense.expense-date}</td>
+        <td>${expense.expense-category}</td>
         <td><button style="padding: 7px 20px 7px 20px; border: none; color: white; background-color: rgb(44, 206, 84);" onclick="editExpense(${index})">Edit</button></td>
         <td><button style="padding: 7px 20px 7px 20px; border: none; color: white; background-color: rgb(243, 64, 19);" onclick="removeExpense(this)">Delete</button></td>
     `;
@@ -102,7 +102,7 @@ function updateExpenseInTable(updatedExpense, index) {
     row.cells[3].textContent = updatedExpense.category;
 }
 
-document.getElementById("search").addEventListener("input", function() {
+document.getElementById("expense-search").addEventListener("input", function() {
     let mysearchQuery = this.value.toLowerCase();
     let mytableRows = document.querySelectorAll("#expense-table tbody tr");
 

@@ -3,8 +3,8 @@ const saveForm = document.getElementById("save-form");
 const quantityInput = document.getElementById("quantity");
 const itemInput = document.getElementById("item");
 const priceInput = document.getElementById("price");
-const tableBody = document.getElementById("table-body");
-const submitDelete = document.getElementById("submit-delete");
+const tableBody = document.getElementById("ls-table-body");
+const submitDelete = document.getElementById("ls-submit-delete");
 
 
 // Function to populate the table with data from localStorage

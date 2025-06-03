@@ -17,14 +17,14 @@ const referenceInDB = ref(database, "notes");
 
 const addNotes = document.getElementById("add-notes");
 const notesPlace = document.getElementById("notes-place");
-const themeToggleBtn = document.getElementById("theme-toggle");
+const themeToggleBtn = document.getElementById("notes-theme-toggle");
 const notesDate = document.getElementById("notes-date");
 const notesSubmit = document.getElementById("notes-submit");
-const deleteBtn = document.getElementById("delete-btn");
-const searchIcon = document.getElementById("search-icon");
-const searchBox = document.getElementById("search-box");
-const searchInput = document.getElementById("search-input");
-const closeBtn = document.getElementById("close-btn");
+const deleteBtn = document.getElementById("notes-delete-btn");
+const searchIcon = document.getElementById("notes-search-icon");
+const searchBox = document.getElementById("notes-search-box");
+const searchInput = document.getElementById("notes-search-input");
+const closeBtn = document.getElementById("notes-close-btn");
 
 let allNotes = []; // Store all notes for searching
 

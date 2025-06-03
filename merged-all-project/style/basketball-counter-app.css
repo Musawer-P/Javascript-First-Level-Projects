@@ -3,7 +3,7 @@
   #basket-container {
     display: flex;
     justify-content: space-around;
-    background-color: #1B244A;
+    background-color: #6943FF;
     padding-top: 30px;
     padding-bottom: 70px;
 }
@@ -21,7 +21,7 @@
     border-radius: 5px;
     color: #9AABD8;
     font-size: 18px ;
-    background-color: #1B244A;
+    background-color: #6943FF;
     
 }
 #basket-h3{

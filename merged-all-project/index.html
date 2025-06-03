@@ -254,18 +254,20 @@
 
   <!--Mark-->
 
+
     <!--Random password generator-->
-    <div class="seventh">
-        <h1>Generate a</h1>
-        <h2>Random Password</h2>
-        <p>Never use an insecure password again.</p>
-        <button onclick="displayPasswords()">Generate Passwords</button>
-        <div class="row">
-            <div id="div-one">?</div>
-            <div id="div-two">?</div>
-        </div>
+    <div class="eight">
+      <h1 id="random-pass-h1">Generate a</h1>
+      <h2 id="random-pass-h2">Random Password</h2>
+      <p id="random-pass-p">Never use an insecure password again.</p>
+      <button id="random-pass-btn" onclick="displayPasswords()">Generate Passwords</button>
+      <div class="row" id="random-pass-row">
+        <div id="div-one">?</div>
+        <div id="div-two">?</div>
+      </div>
     </div>
     <!--Done-->
+  </div>
 
   <div class="main-third-row">
 
@@ -318,19 +320,20 @@
             <p id="mass-el-converter"></p>
         </div>
     </div>
-        <!--Done-->
-    </div>
   </div>
+  <!--Done-->
+
 
   
     <!--timer-->
-    <div class="ten">
-        <div class="main">
-            <div class="place" id="timerDisplay">
-                <span>00:00</span>
+    <div class="eleven">
+      <h1 id = "timer-h1">Timer</h1>
+      <div class = "timer-container">
+            <div class="timer-place" id="timerDisplay">
+                <span id = "timer-span">00:00</span>
             </div>
 
-            <div class="buttons">
+            <div class="buttons" id = "timer-buttons">
                 <select id="timeSelect">
                     <option value="10">10 Second</option>
                     <option value="30">30 Second</option>
@@ -340,103 +343,106 @@
                 <button type="button" id="set">Set</button>
                 <button type="button" id="start" onclick="startTimer()">Start</button>
             </div>
-        </div>
+            </div>
     </div>
+
+
     <!--Done-->
+        <div class="tweleve">
 
-    <!--Notes app-->
-
-    <div class="eleven">
-
-        <div class="main" id="main">
-            <div class="container" id="head-container">
-                <h1>Notes</h1>
+          <h1 style = "color: white;">Notes App</h1>
+    <!--Notes app 
+        <div class="main" id="notes-main">
+            <div class="container" id="notes-head-container">
+                <h1 id = "notes-h1">Notes</h1>
                 <p id="notes-date"></p>
             </div>
 
-            <!-- Dark theme toggle button -->
 
-            <div class="container" id="input-container">
+            <div class="container" id="notes-input-container">
                 <input type="text" id="add-notes" placeholder="Add your note here">
             </div>
 
-            <div class="container" id="button-container">
-                <!-- Use 'type="button"' to avoid form submission -->
+            <div class="container" id="notes-button-container">
                 <button type="button" id="notes-submit">Add</button>
-                <button type="button" id="delete-btn">Delete</button>
+                <button type="button" id="notes-delete-btn">Delete</button>
 
-                <!-- Search functionality -->
-                <div class="search-container">
-                    <button id="search-icon" class="search-btn">
+                <div class="notes-search-container" id = "notes-search-container">
+                    <button id="notes-search-icon" class="notes-search-btn">
                         <img src="search-icon.png" alt="Search" />
                     </button>
-                    <div id="search-box" class="search-box">
-                        <input type="text" id="search-input" class="search-input" placeholder="Search..." />
-                        <button id="close-btn" class="close-btn">×</button>
+                    <div id="notes-search-box" class="notes-search-box">
+                        <input type="text" id="notes-search-input" class="notes-search-input" placeholder="Search..." />
+                        <button id="notes-close-btn" class="notes-close-btn">×</button>
                     </div>
                 </div>
-                <button type="button" id="theme-toggle">☀️</button>
+                <button type="button" id="notes-theme-toggle">☀️</button>
 
             </div>
 
-            <div class="container" id="notes-place">
+            <div class="notes-container" id="notes-place">
 
             </div>
         </div>
 
+    -->
+    <!--Done-->
     </div>
+  </div>
 
-    <!--done-->
 
 
+    <div class="main-fourth-row">
     <!--Dynamic World Clock-->
-    <div class="twelve">
-        <h1 id="h-main">
+    <div class="thirteen">
+        <h1 id="wclock-h1">
             24 Hour World Clock
         </h1>
-        <div class="main">
+        <div class="wclock-main" id = "wclock-main">
             <div class="madina">
-                <p>Madina</p>
+                <p id = "wclock-p">Madina</p>
                 <h1 id="madina">11:00 PM</h1>
             </div>
             <div class="dubai">
-                <p>dubai</p>
+                <p id = "wclock-p">dubai</p>
                 <h1 id="dubai">1:00 PM</h1>
             </div>
             <div class="new-york">
-                <p>New York</p>
+                <p id = "wclock-p">New York</p>
                 <h1 id="newyork">12:00 PM</h1>
             </div>
         </div>
-        <div class="main-two">
+        <div class="wclock-main-two">
             <div class="brazil">
-                <p>brazil</p>
+                <p id = "wclock-p">brazil</p>
                 <h1 id="brazil">15:00 PM</h1>
             </div>
             <div class="madrid">
-                <p>Madrid</p>
+                <p id = "wclock-p">Madrid</p>
                 <h1 id="madrid">22:00 PM</h1>
             </div>
             <div class="alaska">
-                <p>alaska</p>
+                <p id = "wclock-p">alaska</p>
                 <h1 id="alaska">18:00 PM</h1>
             </div>
 
+            
+          </div>
+          <p id = "wclock-bottom-p">Refresh the page for new Time!</p>
         </div>
         <!--Done-->
 
-
-        <!--Expense tracker-->
-        <div class="thirteen">
-            <main>
-                <h1>Expense Tracker</h1>
-                <div class="input-section">
+                <div class="fourteen">
+<h1 id = "expense-h1">Expense Tracker</h1>
+        <!--Expense tracker
+            <main id = "expense-main">
+                <div class="expense-input-section">
                     <input type="text" id="expense-name" placeholder="Expense">
 
                     <input type="text" id="amount" placeholder="Amount">
 
-                    <input type="date" id="date" placeholder="">
-                    <select id="category" name="category">
+                    <input type="date" id="expense-date" placeholder="">
+                    <select id="expense-category" name="expense-category">
                         <option value="" disabled selected>Category</option>
                         <option value="Food">Food</option>
                         <option value="Office">Office</option>
@@ -445,13 +451,13 @@
                     </select>
 
                 </div>
-                <div class="button-section">
-                    <button type="submit" id="submit-add">Add</button>
-                    <input type="text" id="search" placeholder="Search...">
-                    <i class="fa fa-search" id="search-icon"></i>
+                <div class="expense-button-section">
+                    <button type="submit" id="expense-submit-add">Add</button>
+                    <input type="text" id="expense-search" placeholder="Search...">
+                    <i class="fa fa-search" id="expense-search-icon"></i>
 
                 </div>
-                <div class="table-section">
+                <div class="expense-table-section">
                     <table id="expense-table">
                         <thead>
                             <th style="padding: 10px; border: none;">Expense</th>
@@ -462,31 +468,32 @@
                             <th>Delete</th>
 
                         </thead>
-                        <tbody id="table-body">
+                        <tbody id="expense-table-body">
 
                         </tbody>
                     </table>
                 </div>
             </main>
-        </div>
+        -->
         <!--Done-->
+        </div>
 
-        <!--Localstorage project-->
-        <div class="fourteen">
-            <h1>Local Storage RUD Project</h1>
+        <div class="fifteen">
+          <h1 id = "ls-h1">LocalStorage Project</h1>
+        <!--Localstorage project
             <div class="col-md-12" style="text-align: center;">
                 <form id="save-form">
                     <input type="text" placeholder="Quantity" class="form-control" id="quantity">
                     <input type="text" placeholder="Item" class="form-control" id="item">
                     <input type="text" placeholder="Price" class="form-control" id="price">
 
-                    <button type="submit" id="submit">Submit</button>
+                    <button type="submit" id="ls-submit">Submit</button>
 
 
-                    <button type="submit" id="submit-delete" onclick="sbtDelte()">Delete</button>
+                    <button type="submit" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
 
             </div>
-            <table id="table" border="1">
+            <table id="ls-table" border="1">
                 <thead>
                     <tr>
                         <th>Quantity</th>
@@ -494,45 +501,34 @@
                         <th>Price</th>
                     </tr>
                 </thead>
-                <tbody id="table-body">
-                    <!-- Rows will be dynamically added here -->
+                <tbody id="ls-table-body">
                 </tbody>
             </table>
-        </div>
-        <!--Done-->
+            -->
+            <!--Done-->
+            
+          </div>
 
-        <!--Click to copy-->
-        <div class="fifteen">
-            <div class="container">
-                <h1>Click To Copy</h1>
-                <div>
-                    <input type="text" class="input-txt" placeholder="Enter text to Copy">
-                    <button class="btn">Copy</button>
-                </div>
-            </div>
-        </div>
-        <!--Done-->
-
-        <!--Instagram post design-->
+          <!--Instagram post design-->
         <div class="sixteen">
-            <main>
-                <div class="first-container">
+            <main id = "ig-main">
+                <div class="ig-first-container">
                     <h1>Oldagram</h1>
-                    <img src="images/oldagram-images/first-profile.png" id="first-profile">
+                    <img src="images/first-profile.png" id="ig-first-profile">
                 </div>
 
-                <div class="second-section">
-                    <img src="images/oldagram-images/self-portrait.jpg" id="second-profile">
-                    <p id="p1">Vincent van Gogh</p>
+                <div class="ig-second-section">
+                    <img src="images/self-portrait.jpg" id="ig-second-profile">
+                    <p id="ig-p1">Vincent van Gogh</p>
                 </div>
 
-                <p id="p2">Zudert, Netherlands</p>
+                <p id="ig-p2">Zudert, Netherlands</p>
 
-                <img src="images/oldagram-images/self-portrait.jpg" id="third-profile">
+                <img src="images/self-portrait.jpg" id="ig-third-profile">
 
-                <div class="third-section">
+                <div class="ig-third-section">
                     <i class="far fa-heart" id="love-icon"></i>
-                    <div class="icon-container">
+                    <div class="ig-icon-container">
                         <i class="far fa-comment disabled-icon" id="message-icon"></i>
                         <i class="far fa-paper-plane" id="send-icon"></i>
                         <div class="tooltip">This feature is disabled try like feature</div>
@@ -541,58 +537,12 @@
 
                 <p id="like-section">21.492 likes</p>
                 <p id="comment"><span id=first-comment>vincey1853</span> just took a few mushrooms lol</p>
-
-                <div class="second-container">
-                </div>
-
-                <div class="second-section">
-                    <img src="images/oldagram-images/Gustave-Courbet-4.jpg" id="second-profile">
-                    <p id="p1">Gustave Courbet</p>
-                </div>
-
-                <p id="p2-second-container">Ornans, France</p>
-                <img src="images/oldagram-images/Gustave-Courbet.jpg" id="third-profile">
-
-                <div class="third-section">
-                    <i class="far fa-heart" id="love-icon-two"></i>
-                    <div class="icon-container">
-                        <i class="far fa-comment disabled-icon" id="message-icon"></i>
-                        <i class="far fa-paper-plane" id="send-icon"></i>
-                        <div class="tooltip">This feature is disabled try like feature</div>
-                    </div>
-                </div>
-
-                <p id="like-section-two">12.502 likes</p>
-                <p id="comment"><span id="second-comment">gus1819</span> i am feelin a bit stressed tbh</p>
-
-                <div class="third-container">
-                </div>
-
-                <div class="second-section">
-                    <img src="images/oldagram-images/joseph-decreux-profile..jpg" id="second-profile">
-                    <p id="p1">Joseph Ducreux</p>
-                </div>
-
-                <p id="p2">Paris, France</p>
-                <img src="images/oldagram-images/Joseph-Ducreux.jpg" id="third-profile">
-
-                <div class="third-section">
-                    <i class="far fa-heart" id="love-icon-three"></i>
-                    <div class="icon-container">
-                        <i class="far fa-comment disabled-icon" id="message-icon"></i>
-                        <i class="far fa-paper-plane" id="send-icon"></i>
-                        <div class="tooltip">This feature is disabled try like feature</div>
-                    </div>
-                </div>
-
-                <p id="like-section-three">15.137 likes</p>
-                <p id="comment"><span id="third-comment">jd1735</span> gm friends! which coin are YOU stacking up
-                    today?? post below and WAGMI!</p>
             </main>
 
         </div>
         <!--Done-->
 
+</div>
         <!--Popup random background-->
         <div class="seventeen">
             <button id="openPopup">Open Popup for New Color</button>

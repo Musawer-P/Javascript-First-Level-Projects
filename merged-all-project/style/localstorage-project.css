@@ -10,23 +10,21 @@
     padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; border-radius: 5px; border: none;
 }
 
-#submit{
+#ls-submit{
     padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(0, 0, 0, 0.753); border: none; border-radius: 5px; color: white;
 }
-#submit-delete{
+#ls-submit-delete{
     padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(218, 17, 17, 0.753); border: none; border-radius: 5px; color: white;
 }
 
 
-h1{
-    text-align: center;
+#ls-h1{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 10px;
+    font-size: 30px;
 }
 
 /* Table Styling */
-#table {
+#ls-table {
     margin: auto;
   text-align: center;
   margin-top: 50px;
@@ -40,7 +38,7 @@ h1{
   }
   
   /* Header Styling */
-  #table thead tr {
+  #ls-table thead tr {
     background-color:#1f2022;
     color: white;
     font-weight: bold;
@@ -48,30 +46,30 @@ h1{
   }
   
   /* Cell Padding and Borders */
-  #table th, #table td {
+  #ls-table th, #table td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: center;
   }
   
   /* Hover Effect for Rows */
-  #table tbody tr:hover {
+  #ls-table tbody tr:hover {
     background-color: #f1f1f1;
     cursor: pointer;
   }
   
   /* Alternate Row Colors */
-  #table tbody tr:nth-child(odd) {
+  #ls-table tbody tr:nth-child(odd) {
     background-color: #fdfdfd;
   }
   
-  #table tbody tr:nth-child(even) {
+  #ls-table tbody tr:nth-child(even) {
     background-color: #f7f7f7;
   }
   
   /* Responsive Design */
   @media screen and (max-width: 768px) {
-    #table {
+    #ls-table {
       font-size: 14px;
     }
   }
