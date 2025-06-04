@@ -13,10 +13,10 @@ const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
 const referenceInDB = ref(database, "leads")
 
-const inputEl = document.getElementById("input-el")
-const inputBtn = document.getElementById("input-btn")
-const ulEl = document.getElementById("ul-el")
-const deleteBtn = document.getElementById("delete-btn")
+const inputEl = document.getElementById("leads-tracker-input-el")
+const inputBtn = document.getElementById("leads-tracker-input-btn")
+const ulEl = document.getElementById("leads-tracker-ul-el")
+const deleteBtn = document.getElementById("leads-tracker-delete-btn")
 
 function render(leads) {
     let listItems = ""

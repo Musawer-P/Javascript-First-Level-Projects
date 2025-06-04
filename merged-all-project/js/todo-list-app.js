@@ -14,9 +14,9 @@ const database = getDatabase(app);
 const referenceInDB = ref(database, "todo");
 
 const inputTodo = document.getElementById("input-todo");
-const submitTodo = document.getElementById("submit-todo");
+const submitTodo = document.getElementById("todo-submit");
 const insertplaceTodo = document.getElementById("insertplace-todo");
-const deleteBtn = document.getElementById("delete-btn");
+const deleteBtn = document.getElementById("todo-delete-btn");
 
 // Function to render the todo list with checkboxes
 function render(todoList) {
