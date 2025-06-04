@@ -1,38 +1,52 @@
 
 /*Leads tracker app*/
-
-label {
-    color: #e21111;
+#leads-tracker-h1{
+    color: white;
+    font-size: 30px;
+}
+#leads-tracker-label {
+    color: white;
     font-weight: 100;
     font-weight: bold;
     font-family: Helvetica, sans-serif;
+    display: flex;
+    padding: 10px;
+    padding-left: 0px;
 
 }
 
-input {
+#leads-tracker-input-el {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #e21111;
+    border: 1px solid #5c3f0000;
     border-radius: 2px;
     margin-bottom: 4px;
+    border-radius: 5px;
 }
 
-button {
-    background: #e21111;
-    color: white;
+#leads-tracker-input-btn {
+    background: #ffffff;
+    color: #e21111;
     padding: 10px 20px;
     border: 1px solid #e21111;
     border-radius: 2px;
     font-weight: bold;
+    border-radius: 5px;
 }
 
-#delete-btn {
+#leads-tracker-delete-btn {
     background: white;
     color: #e21111;
+    padding: 10px 20px;
+    border: 1px solid #e21111;
+    border-radius: 2px;
+    font-weight: bold;
+    border-radius: 5px;
+
 }
 
-ul {
+#leads-tracker-ul {
     margin-top: 20px;
     list-style: none;
     padding-left: 0;
@@ -43,7 +57,7 @@ li {
 }
 
 a {
-    color: #e21111;
+    color: white;
 }
 
 

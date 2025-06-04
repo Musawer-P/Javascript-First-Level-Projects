@@ -1,12 +1,40 @@
 
 /*Popup random background*/
+#random-h1{
+     color: white;
+    font-size: 30px;
+}
+#popup-h2{
+    color: white;
 
-button {
+}
+#popup-p{
+    color: white;
+}
+.button-random-popup{
+ display: grid;
+  place-items: center;
+  height: 55vh;
+}
+#openPopup-random {   
+    width: 100%;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: #181717;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#closePopup-random{
+     padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0c0c0c;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -16,7 +44,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-.popup {
+.popup-random {
     position: fixed;
     top: 0;
     left: 0;
@@ -32,12 +60,12 @@ button:hover {
     transition: opacity 0.3s ease;
 }
 
-.popup.visible {
+.popup-random.visible {
     opacity: 1;
     pointer-events: auto;
 }
 
-.popup-content {
+.popup-content-random {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -47,7 +75,7 @@ button:hover {
     transition: background-color 0.5s ease;
 }
 
-.hidden {
+.hidden-random {
     display: none;
 }
 

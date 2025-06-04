@@ -2,29 +2,56 @@
 
 /*Chrome extension*/
 
-
-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #5f9341;
-    margin-bottom: 4px;
-}
-
-button {
-    background: #5f9341;
+#extension-h1{
     color: white;
-    padding: 10px 20px;
-    border: 1px solid #5f9341;
+    font-size: 30px;
+}
+#extension-input-el {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #5f934100;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+.extension-button-container{
+    display: flex;
+    justify-content: space-between;
+    gap:2px;
+}
+#extension-input-btn {
+    background: #111111;
+    color: white;
+        padding: 8px 0px;
+    border: 1px solid #ffffff00;
     font-weight: bold;
+    border-radius: 5px;
 }
 
-#delete-btn {
-    background: white;
-    color: #5f9341;
+#extension-delete-btn{
+     background: #111111;
+    color: white;
+        padding: 8px 0px;
+    border: 1px solid #ffffff00;
+    font-weight: bold;
+        border-radius: 5px;
+
 }
 
-ul {
+#extension-tab-btn{
+ background: #111111;
+    color: white;
+    padding: 8px 0px;
+    border: 1px solid #ffffff00;
+    font-weight: bold;
+        border-radius: 5px;
+
+}
+
+
+
+
+#extension-ul-el{
     margin-top: 20px;
     list-style: none;
     padding-left: 0;
@@ -35,7 +62,7 @@ li {
 }
 
 a {
-    color: #5f9341;
+    color: #ffffff;
 }
 
 
