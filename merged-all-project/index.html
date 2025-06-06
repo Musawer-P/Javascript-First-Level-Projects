@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="style/style.css" rel="stylesheet">
@@ -344,44 +344,46 @@
 
 
     <!--Done-->
-        <div class="tweleve">
 
+        <div class="tweleve">
+ <!--Notes app-->
           <h1 style = "color: white;">Notes App</h1>
-    <!--Notes app 
-        <div class="main" id="notes-main">
-            <div class="container" id="notes-head-container">
-                <h1 id = "notes-h1">Notes</h1>
-                <p id="notes-date"></p>
+
+        <div class="notes-main" id="notes-main">
+            <div class="notes-container" id="notes-head-container">
+                <p id="notes-date">Date</p>
             </div>
 
 
-            <div class="container" id="notes-input-container">
+            <div class="notes-container" id="notes-input-container">
                 <input type="text" id="add-notes" placeholder="Add your note here">
             </div>
 
-            <div class="container" id="notes-button-container">
+            <div class="notes-container" id="notes-button-container" style = "display: flex;">
                 <button type="button" id="notes-submit">Add</button>
                 <button type="button" id="notes-delete-btn">Delete</button>
 
                 <div class="notes-search-container" id = "notes-search-container">
                     <button id="notes-search-icon" class="notes-search-btn">
-                        <img src="search-icon.png" alt="Search" />
+                        <img src="images/search-icon.png" id = "search-notes-img" alt="Search" />
                     </button>
                     <div id="notes-search-box" class="notes-search-box">
                         <input type="text" id="notes-search-input" class="notes-search-input" placeholder="Search..." />
                         <button id="notes-close-btn" class="notes-close-btn">×</button>
                     </div>
                 </div>
-                <button type="button" id="notes-theme-toggle">☀️</button>
 
             </div>
+<div class="theme-toggle-container">
+    <button type="button" id="notes-theme-toggle">☀️</button>
+</div>
 
             <div class="notes-container" id="notes-place">
 
             </div>
         </div>
 
-    -->
+
     <!--Done-->
     </div>
   </div>
@@ -671,13 +673,13 @@
 
   <!--Mark-->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/counter-app.js"></script>
     <script src="js/graph-showing.js"></script>
     <script src="js/popup-random-background.js"></script>
       <script src="js/instagram-post-design.js"></script>
   <script src="js/random-password.js"></script>
   <script src="js/script.js"></script>
   <script src="js/clingy-popup.js"></script>
-  <script src="js/counter-app.js"></script>
   <script src="js/emoji-faceoff.js"></script>
   <script src="js/login-project.js"></script>
   <script src="js/digital-clock.js"></script>
@@ -694,6 +696,7 @@
   <script src="js/chrome-extension.js"></script>
   <script src="js/podcast-room.js"></script>
   <script src="js/leads-tracker-app.js"></script>
+
 
 
 </body>

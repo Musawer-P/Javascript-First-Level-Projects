@@ -36,6 +36,23 @@ body {
     margin-top: 20px;
     
   }
+     .main-fourth-row {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    
+  }
+
+      .main-five-row {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    
+  }
   .first {
     background-color: rgba(40, 59, 70, 0.555);
     height: 500px;
@@ -115,7 +132,7 @@ body {
   }
 
      .nine{
-     background-color: #1B244A;
+     background-color: #6943FF;
     height: 500px;
     width: 320px;
     border-radius: 5px;
@@ -125,7 +142,7 @@ body {
   }
 
       .ten{
-     background-color: #1B244A;
+     background-color: #6943FF;
     height: 500px;
     width: 320px;
     border-radius: 5px;
@@ -134,7 +151,139 @@ body {
     padding-bottom: 50px;
   }
 
-#main-id {
+      .eleven{
+     background-color: #6943FF;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+
+      .tweleve{
+     background-color: #6943FF;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+    .thirteen{
+     background-color: #262629;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+   .fourteen{
+     background-color: #262629;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+
+    .fifteen{
+     background-color: #262629;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+     .sixteen{
+     background-color: #ffffff;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+
+   .seventeen{
+     background-color: #23bd96;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+
+
+   .eighteen{
+     background-color: #23bd96;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+ .nineteen{
+     background-color: #23bd96;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+
+   .twenty{
+     background-color: #23bd96;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+ .twentyone{
+     background-color: #f52f15;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+
+   .twentytwo{
+     background-color: #f52f15;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+  .twentythree{
+     background-color: #f52f15;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }  .twentyfour{
+     background-color: #f52f15;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+  #main-id {
     font-size: 40px;
     color: rgb(19, 19, 19);
 }
