@@ -15,6 +15,11 @@
 
 }
 
+.leads-button{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
 #leads-tracker-input-el {
     width: 100%;
     padding: 10px;

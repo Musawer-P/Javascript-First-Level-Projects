@@ -2,16 +2,23 @@
 /*Expense Tracker*/
 #expense-main{
   padding: 20px;  /* Optional: Adds space around the content */
+  padding-left: 0px;
   border-radius: 8px; /* Optional: Rounded corners */
-  width: 80%;      /* Adjust the width as needed */
-  max-width: 800px;
+  width: 100%;      /* Adjust the width as needed */
+  max-width: 100%;
 }
 #expense-h1{
     color: white;
     font-size: 30px;
 }
+.expense-input-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
 
 #expense-name, #amount, #expense-date, #expense-category{
+    width: 100%;
     padding: 10px 10px 10px 10px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -20,7 +27,7 @@
     margin-top: 10px;
 }
 #expense-category{
-    width: 26%;
+    width: 100%;
 }
 #expense-submit-add{
     padding: 10px 50px 10px 50px;
@@ -38,7 +45,10 @@
 }
 
 .expense-button-section{
+    display: flex;
 text-align: start;
+justify-content: space-between;
+
 width: 100%;
 margin-top: 20px;
 
@@ -54,14 +64,16 @@ color: rgba(0, 0, 0, 0.623);
 }  
 
 #expense-search{
-    padding: 10px 50px 10px 5px;
+    padding: 5px 50px 10px 5px;
+    height: 20px;
     border: none;
     border-bottom: 1px solid rgb(235, 160, 48);
     background-color:  rgb(241, 238, 233);
     color: rgb(235, 160, 48);
     border-radius: 0px;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 0px;
+    border-radius: 5px;
     width: 33%;
 }
 
@@ -79,6 +91,7 @@ color: rgba(0, 0, 0, 0.623);
 #expense-search-icon{
     color:rgb(235, 160, 48);
     margin-left: -30px;
+    margin-top: 25px;
 }
 thead{
     font-family: Arial, Helvetica, sans-serif;
@@ -87,13 +100,16 @@ thead{
     border-radius: 5px;
 }
 
-#expense-table-section{
+.expense-table-section{
     margin-top: 20px;
-    width: 100%;
+    padding-left: 0px;
 }
 #expense-table{
-    width: 96%;
+    width: 90%;
     margin-top: 40px;
+    padding-left: 0px;
+    font-size: 15px;
+    border-collapse: collapse;
 
 }
 #expense-table-body td{

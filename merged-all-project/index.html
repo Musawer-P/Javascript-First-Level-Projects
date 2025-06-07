@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="style/style.css" rel="stylesheet">
   <link href="style/clingy-popuop.css" rel="stylesheet">
   <link href="style/counter-app.css" rel="stylesheet">
@@ -28,13 +28,17 @@
   <link href="style/podcast-room.css" rel="stylesheet">
   <link href="style/leads-tracker-app.css" rel="stylesheet">
   <link href="style/graph-showing.css" rel="stylesheet">
+  <link href="style/movie-exploler.css" rel="stylesheet">
+  <link href="style/game-exploler.css" rel="stylesheet">
 
 
   <title>Merging Projects</title>
 </head>
 
 <body>
-
+  <h1 id="main-h1">
+    Merging All Projects.
+  </h1>
   <div class="main">
     <div class="first">
       <!--Clingy popup-->
@@ -269,433 +273,504 @@
 
     <!--Basketball counter app-->
     <div class="nine">
-     <h1 id = "basket-h1">Basketball counter app</h1>
-      <div class="container" id = "basket-container">
+      <h1 id="basket-h1">Basketball counter app</h1>
+      <div class="container" id="basket-container">
         <div>
-          <h3 id = "basket-h3">HOME</h3>
+          <h3 id="basket-h3">HOME</h3>
           <p id="first_section_number">0</p>
-          <button type="submit" class = "basket-btn" id="button_submit_one-basket" onclick="button_one()">+1</button>
-          <button type="submit" class = "basket-btn" id="button_submit_two-basket" onclick="button_two()">+2</button>
-          <button type="submit" class = "basket-btn" id="button_submit_three-basket" onclick="button_three()">+3</button>
+          <button type="submit" class="basket-btn" id="button_submit_one-basket" onclick="button_one()">+1</button>
+          <button type="submit" class="basket-btn" id="button_submit_two-basket" onclick="button_two()">+2</button>
+          <button type="submit" class="basket-btn" id="button_submit_three-basket" onclick="button_three()">+3</button>
 
         </div>
         <div>
-          <h3 id = "basket-h3">GUEST</h3>
+          <h3 id="basket-h3">GUEST</h3>
           <p id="second_section_number">0</p>
-          <button type="submit" class = "basket-btn" id="button_submit_one_two-basket" onclick="button_one_two()">+1</button>
-          <button type="submit" class = "basket-btn" id="button_submit_two_two-basket" onclick="button_two_two()">+2</button>
-          <button type="submit" class = "basket-btn" id="button_submit_three_two-basket" onclick="button_three_two()">+3</button>
+          <button type="submit" class="basket-btn" id="button_submit_one_two-basket"
+            onclick="button_one_two()">+1</button>
+          <button type="submit" class="basket-btn" id="button_submit_two_two-basket"
+            onclick="button_two_two()">+2</button>
+          <button type="submit" class="basket-btn" id="button_submit_three_two-basket"
+            onclick="button_three_two()">+3</button>
         </div>
       </div>
     </div>
     <!--Done-->
 
-  
+
     <!--Unit converter-->
-    <div class = "ten">
-    <div class = "converter-heading">
+    <div class="ten">
+      <div class="converter-heading">
         <h1 id="converter-h1">
-            Metric/Imperial Unit Conversion
+          Metric/Imperial Unit Conversion
         </h1>
         <input type="number" id="input-main-converter" />
         <button type="submit" id="button-convert">Convert</button>
-    </div>
+      </div>
 
-    <div class="col-md-12" style="text-align: center;">
+      <div class="col-md-12" style="text-align: center;">
         <div class="col-md-6" style="background-color:  rgb(208, 214, 214);">
-            <p id="converter-p">Lenght (Meter/Feet)</p>
-            <p id="length-el-converter"></p>
+          <p id="converter-p">Lenght (Meter/Feet)</p>
+          <p id="length-el-converter"></p>
 
         </div>
         <div class="col-md-6" style="background-color:  rgb(208, 214, 214);">
-            <p id="converter-p">Volume (Liters/Gallons)</p>
-            <p id="volume-el-converter"></p>
+          <p id="converter-p">Volume (Liters/Gallons)</p>
+          <p id="volume-el-converter"></p>
         </div>
         <div class="col-md-6" style="background-color: rgb(208, 214, 214);">
-            <p id="converter-p">Mass (Kilograms/Pounds)</p>
-            <p id="mass-el-converter"></p>
+          <p id="converter-p">Mass (Kilograms/Pounds)</p>
+          <p id="mass-el-converter"></p>
         </div>
+      </div>
     </div>
-  </div>
-  <!--Done-->
+    <!--Done-->
 
 
-  
+
     <!--timer-->
     <div class="eleven">
-      <h1 id = "timer-h1">Timer</h1>
-      <div class = "timer-container">
-            <div class="timer-place" id="timerDisplay">
-                <span id = "timer-span">00:00</span>
-            </div>
+      <h1 id="timer-h1">Timer</h1>
+      <div class="timer-container">
+        <div class="timer-place" id="timerDisplay">
+          <span id="timer-span">00:00</span>
+        </div>
 
-            <div class="buttons" id = "timer-buttons">
-                <select id="timeSelect">
-                    <option value="10">10 Second</option>
-                    <option value="30">30 Second</option>
-                    <option value="60">1 Minutes</option>
-                    <option value="120">2 Minutes</option>
-                </select>
-                <button type="button" id="set">Set</button>
-                <button type="button" id="start" onclick="startTimer()">Start</button>
-            </div>
-            </div>
+        <div class="buttons" id="timer-buttons">
+          <select id="timeSelect">
+            <option value="10">10 Second</option>
+            <option value="30">30 Second</option>
+            <option value="60">1 Minutes</option>
+            <option value="120">2 Minutes</option>
+          </select>
+          <button type="button" id="set">Set</button>
+          <button type="button" id="start" onclick="startTimer()">Start</button>
+        </div>
+      </div>
     </div>
 
 
     <!--Done-->
 
-        <div class="tweleve">
- <!--Notes app-->
-          <h1 style = "color: white;">Notes App</h1>
+    <div class="tweleve">
+      <!--Notes app-->
+      <h1 style="color: white;">Notes App</h1>
 
-        <div class="notes-main" id="notes-main">
-            <div class="notes-container" id="notes-head-container">
-                <p id="notes-date">Date</p>
-            </div>
-
-
-            <div class="notes-container" id="notes-input-container">
-                <input type="text" id="add-notes" placeholder="Add your note here">
-            </div>
-
-            <div class="notes-container" id="notes-button-container" style = "display: flex;">
-                <button type="button" id="notes-submit">Add</button>
-                <button type="button" id="notes-delete-btn">Delete</button>
-
-                <div class="notes-search-container" id = "notes-search-container">
-                    <button id="notes-search-icon" class="notes-search-btn">
-                        <img src="images/search-icon.png" id = "search-notes-img" alt="Search" />
-                    </button>
-                    <div id="notes-search-box" class="notes-search-box">
-                        <input type="text" id="notes-search-input" class="notes-search-input" placeholder="Search..." />
-                        <button id="notes-close-btn" class="notes-close-btn">×</button>
-                    </div>
-                </div>
-
-            </div>
-<div class="theme-toggle-container">
-    <button type="button" id="notes-theme-toggle">☀️</button>
-</div>
-
-            <div class="notes-container" id="notes-place">
-
-            </div>
+      <div class="notes-main" id="notes-main">
+        <div class="notes-container" id="notes-head-container">
+          <p id="notes-date">Date</p>
         </div>
 
 
-    <!--Done-->
-    </div>
-  </div>
-
-
-
-    <div class="main-fourth-row">
-    <!--Dynamic World Clock-->
-    <div class="thirteen">
-        <h1 id="wclock-h1">
-            24 Hour World Clock
-        </h1>
-        <div class="wclock-main" id = "wclock-main">
-            <div class="madina">
-                <p id = "wclock-p">Madina</p>
-                <h1 id="madina">11:00 PM</h1>
-            </div>
-            <div class="dubai">
-                <p id = "wclock-p">dubai</p>
-                <h1 id="dubai">1:00 PM</h1>
-            </div>
-            <div class="new-york">
-                <p id = "wclock-p">New York</p>
-                <h1 id="newyork">12:00 PM</h1>
-            </div>
-        </div>
-        <div class="wclock-main-two">
-            <div class="brazil">
-                <p id = "wclock-p">brazil</p>
-                <h1 id="brazil">15:00 PM</h1>
-            </div>
-            <div class="madrid">
-                <p id = "wclock-p">Madrid</p>
-                <h1 id="madrid">22:00 PM</h1>
-            </div>
-            <div class="alaska">
-                <p id = "wclock-p">alaska</p>
-                <h1 id="alaska">18:00 PM</h1>
-            </div>
-
-            
-          </div>
-          <p id = "wclock-bottom-p">Refresh the page for new Time!</p>
-        </div>
-        <!--Done-->
-
-                <div class="fourteen">
-<h1 id = "expense-h1">Expense Tracker</h1>
-        <!--Expense tracker
-            <main id = "expense-main">
-                <div class="expense-input-section">
-                    <input type="text" id="expense-name" placeholder="Expense">
-
-                    <input type="text" id="amount" placeholder="Amount">
-
-                    <input type="date" id="expense-date" placeholder="">
-                    <select id="expense-category" name="expense-category">
-                        <option value="" disabled selected>Category</option>
-                        <option value="Food">Food</option>
-                        <option value="Office">Office</option>
-                        <option value="Vehicle">Vehicle</option>
-                        <option value="Other">Other</option>
-                    </select>
-
-                </div>
-                <div class="expense-button-section">
-                    <button type="submit" id="expense-submit-add">Add</button>
-                    <input type="text" id="expense-search" placeholder="Search...">
-                    <i class="fa fa-search" id="expense-search-icon"></i>
-
-                </div>
-                <div class="expense-table-section">
-                    <table id="expense-table">
-                        <thead>
-                            <th style="padding: 10px; border: none;">Expense</th>
-                            <th>Amount</th>
-                            <th>Date</th>
-                            <th>Category</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-
-                        </thead>
-                        <tbody id="expense-table-body">
-
-                        </tbody>
-                    </table>
-                </div>
-            </main>
-        -->
-        <!--Done-->
+        <div class="notes-container" id="notes-input-container">
+          <input type="text" id="add-notes" placeholder="Add your note here">
         </div>
 
-        <div class="fifteen">
-          <h1 id = "ls-h1">LocalStorage Project</h1>
-        <!--Localstorage project
-            <div class="col-md-12" style="text-align: center;">
-                <form id="save-form">
-                    <input type="text" placeholder="Quantity" class="form-control" id="quantity">
-                    <input type="text" placeholder="Item" class="form-control" id="item">
-                    <input type="text" placeholder="Price" class="form-control" id="price">
+        <div class="notes-container" id="notes-button-container" style="display: flex;">
+          <button type="button" id="notes-submit">Add</button>
+          <button type="button" id="notes-delete-btn">Delete</button>
 
-                    <button type="submit" id="ls-submit">Submit</button>
-
-
-                    <button type="submit" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
-
+          <div class="notes-search-container" id="notes-search-container">
+            <button id="notes-search-icon" class="notes-search-btn">
+              <img src="images/search-icon.png" id="search-notes-img" alt="Search" />
+            </button>
+            <div id="notes-search-box" class="notes-search-box">
+              <input type="text" id="notes-search-input" class="notes-search-input" placeholder="Search..." />
+              <button id="notes-close-btn" class="notes-close-btn">×</button>
             </div>
-            <table id="ls-table" border="1">
-                <thead>
-                    <tr>
-                        <th>Quantity</th>
-                        <th>Item</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody id="ls-table-body">
-                </tbody>
-            </table>
-            -->
-            <!--Done-->
-            
           </div>
 
-          <!--Instagram post design-->
-        <div class="sixteen">
-            <main id = "ig-main">
-                <div class="ig-first-container">
-                    <h1>Oldagram</h1>
-                    <img src="images/first-profile.png" id="ig-first-profile">
-                </div>
+        </div>
+        <div class="theme-toggle-container">
+          <button type="button" id="notes-theme-toggle">☀️</button>
+        </div>
 
-                <div class="ig-second-section">
-                    <img src="images/self-portrait.jpg" id="ig-second-profile">
-                    <p id="ig-p1">Vincent van Gogh</p>
-                </div>
-
-                <p id="ig-p2">Zudert, Netherlands</p>
-
-                <img src="images/self-portrait.jpg" id="ig-third-profile">
-
-                <div class="ig-third-section">
-                    <i class="far fa-heart" id="love-icon"></i>
-                    <div class="ig-icon-container">
-                        <i class="far fa-comment disabled-icon" id="message-icon"></i>
-                        <i class="far fa-paper-plane" id="send-icon"></i>
-                        <div class="tooltip">This feature is disabled try like feature</div>
-                    </div>
-                </div>
-
-                <p id="like-section">21.492 likes</p>
-                <p id="comment"><span id=first-comment>vincey1853</span> just took a few mushrooms lol</p>
-            </main>
+        <div class="notes-container" id="notes-place">
 
         </div>
-        <!--Done-->
-
-</div>
-
-    <div class="main-five-row">
-
- <!--Popup random background-->
-        <div class="seventeen">
-          <h1 id = "random-h1">Random Popup Background</h1>
-          <div class = "button-random-popup">
-            <button id="openPopup-random">Open Popup for New Color</button>
-</div>
-<div id="popup-random" class="popup-random hidden-random">
-                <div class="popup-content-random">
-                    <h2 id = "popup-h2">Random Background Popup</h2>
-                    <p id = "popup-p">The background color of this popup changes randomly each time you open it!</p>
-                    <button id="closePopup-random">Close</button>
-                </div>
-            </div>
-        </div>
-        <!--Done-->
-
-
-                <div class="eighteen">
-                  <h1 id = "todo-main-h1">Todo List App</h1>
-        <!--To do list app
-            <h1 id="todo-h1">WHATS YOUR NEXT MOVE.</h1>
-            <div class="col-md-10">
-                <input type="text" id="input-todo" placeholder="Enter Task">
-            </div>
-            <div class="col-md-2" id="todo-button-div">
-                <button type="submit" id="todo-submit">Submit</button>
-                <button type="submit" id="todo-delete-btn">Delete</button>
-            </div>
-        </div>
-        <div class="col-md-12" id="todo-table-div">
-            <table id="todo-table" class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Task</th>
-                        <th>Completed</th>
-                    </tr>
-                </thead>
-                <tbody id="insertplace-todo">
-                </tbody>
-            </table>
-        </div>
-        -->
-        <!--Done-->
-        
       </div>
 
 
-       <!--Chrome extension-->
+      <!--Done-->
+    </div>
+  </div>
+
+
+
+  <div class="main-fourth-row">
+    <!--Dynamic World Clock-->
+    <div class="thirteen">
+      <h1 id="wclock-h1">
+        24 Hour World Clock
+      </h1>
+      <div class="wclock-main" id="wclock-main">
+        <div class="madina">
+          <p id="wclock-p">Madina</p>
+          <h1 id="madina">11:00 PM</h1>
+        </div>
+        <div class="dubai">
+          <p id="wclock-p">dubai</p>
+          <h1 id="dubai">1:00 PM</h1>
+        </div>
+        <div class="new-york">
+          <p id="wclock-p">New York</p>
+          <h1 id="newyork">12:00 PM</h1>
+        </div>
+      </div>
+      <div class="wclock-main-two">
+        <div class="brazil">
+          <p id="wclock-p">brazil</p>
+          <h1 id="brazil">15:00 PM</h1>
+        </div>
+        <div class="madrid">
+          <p id="wclock-p">Madrid</p>
+          <h1 id="madrid">22:00 PM</h1>
+        </div>
+        <div class="alaska">
+          <p id="wclock-p">alaska</p>
+          <h1 id="alaska">18:00 PM</h1>
+        </div>
+
+
+      </div>
+      <p id="wclock-bottom-p">Refresh the page for new Time!</p>
+    </div>
+    <!--Done-->
+
+    <div class="fourteen">
+      <h1 id="expense-h1">Expense Tracker</h1>
+      <main id="expense-main">
+        <div class="expense-input-section">
+          <input type="text" id="expense-name" placeholder="Expense">
+
+          <input type="text" id="amount" placeholder="Amount">
+        </div>
+        <div class="expense-input-section">
+          <input type="date" id="expense-date" placeholder="">
+          <select id="expense-category" name="expense-category">
+            <option value="" disabled selected>Category</option>
+            <option value="Food">Food</option>
+            <option value="Office">Office</option>
+            <option value="Vehicle">Vehicle</option>
+            <option value="Other">Other</option>
+          </select>
+
+        </div>
+        <div class="expense-button-section">
+          <button type="submit" id="expense-submit-add">Add</button>
+          <input type="text" id="expense-search" placeholder="Search...">
+          <i class="fa fa-search" id="expense-search-icon"></i>
+
+        </div>
+        <div class="expense-table-section">
+          <table id="expense-table">
+            <thead>
+              <th style="padding: 10px; border: none;">Expense</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Category</th>
+              <th>Edit</th>
+              <th>Delete</th>
+
+            </thead>
+            <tbody id="expense-table-body">
+
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <!--Done-->
+    </div>
+
+    <div class="fifteen">
+      <h1 id="ls-h1">LocalStorage Project</h1>
+      <div class="col-md-12" style="text-align: center;">
+        <form id="save-form">
+          <div class="ls-inputs">
+            <input type="text" placeholder="Quantity" class="form-control" id="quantity">
+            <input type="text" placeholder="Item" class="form-control" id="item">
+          </div>
+          <input type="text" placeholder="Price" class="form-control" id="price">
+          <div class="ls-submit-section">
+            <button type="submit" id="ls-submit">Submit</button>
+            <button type="submit" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
+          </div>
+      </div>
+      <table id="ls-table" border="1">
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="ls-table-body">
+        </tbody>
+      </table>
+      <!--Done-->
+
+    </div>
+
+    <!--Instagram post design-->
+    <div class="sixteen">
+      <main id="ig-main">
+        <div class="ig-first-container">
+          <h1>Oldagram</h1>
+          <img src="images/first-profile.png" id="ig-first-profile">
+        </div>
+
+        <div class="ig-second-section">
+          <img src="images/self-portrait.jpg" id="ig-second-profile">
+          <p id="ig-p1">Vincent van Gogh</p>
+        </div>
+
+        <p id="ig-p2">Zudert, Netherlands</p>
+
+        <img src="images/self-portrait.jpg" id="ig-third-profile">
+
+        <div class="ig-third-section">
+          <i class="far fa-heart" id="love-icon"></i>
+          <div class="ig-icon-container">
+            <i class="far fa-comment disabled-icon" id="message-icon"></i>
+            <i class="far fa-paper-plane" id="send-icon"></i>
+            <div class="tooltip">This feature is disabled try like feature</div>
+          </div>
+        </div>
+
+        <p id="like-section">21.492 likes</p>
+        <p id="comment"><span id=first-comment>vincey1853</span> just took a few mushrooms lol</p>
+      </main>
+
+    </div>
+    <!--Done-->
+
+  </div>
+
+  <div class="main-five-row">
+
+    <!--Popup random background-->
+    <div class="seventeen">
+      <h1 id="random-h1">Random Popup Background</h1>
+      <div class="button-random-popup">
+        <button id="openPopup-random">Open Popup for New Color</button>
+      </div>
+      <div id="popup-random" class="popup-random hidden-random">
+        <div class="popup-content-random">
+          <h2 id="popup-h2">Random Background Popup</h2>
+          <p id="popup-p">The background color of this popup changes randomly each time you open it!</p>
+          <button id="closePopup-random">Close</button>
+        </div>
+      </div>
+    </div>
+    <!--Done-->
+
+
+    <div class="eighteen">
+      <h1 id="todo-main-h1">Todo List App</h1>
+      <div class="todo-input-section">
+        <input type="text" id="input-todo" placeholder="Enter Task">
+      </div>
+      <div class="todo-button-div" id="todo-button-div">
+        <button type="submit" id="todo-submit">Submit</button>
+        <button type="submit" id="todo-delete-btn">Delete</button>
+      </div>
+      <div class="todo-table-div" id="todo-table-div">
+        <table id="todo-table" class="table table-bordered">
+          <thead id="todo-th">
+            <tr>
+              <th style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">Task</th>
+              <th style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Completed</th>
+            </tr>
+          </thead>
+          <tbody id="insertplace-todo">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--Done-->
+
+
+
+    <!--Chrome extension-->
     <div class="nineteen">
-      <h1 id = "extension-h1">Chrome Extension</h1>
-        <input type="text" id="extension-input-el" placeholder="Type Here...">
-        <div class = "extension-button-container">
+      <h1 id="extension-h1">Chrome Extension</h1>
+      <input type="text" id="extension-input-el" placeholder="Type Here...">
+      <div class="extension-button-container">
         <button id="extension-input-btn">SAVE INPUT</button>
         <button id="extension-tab-btn">SAVE TAB</button>
         <button id="extension-delete-btn">DELETE ALL</button>
-        </div>
-        <ul id="extension-ul-el">
-        </ul>
+      </div>
+      <ul id="extension-ul-el">
+      </ul>
     </div>
     <!--Done-->
 
-    
+
     <!--Podcast room-->
     <div class="twenty">
-      <div class = "podcast-main">
-            <div class="podcast-first">
-                <h1 id="podcast">PODCAST</h1>
-            </div>
-
-            <div class="podcast-second">
-                <i class="fas fa-lightbulb" id="bulb"></i>
-                <img src="images/right-down.png" id="icon-img">
-                <p id="light-message">OFF</p>
-            </div>
-
-            <div class="podcast-third">
-
-                <h1 id="hosting">HOSTING</h1>
-            </div>
+      <div class="podcast-main">
+        <div class="podcast-first">
+          <h1 id="podcast">PODCAST</h1>
         </div>
 
-        <div class="podcast-background" id="podcast-background">
-            <img src="images/pod-transparent-new.png" id="podcast-img">
+        <div class="podcast-second">
+          <i class="fas fa-lightbulb" id="bulb"></i>
+          <img src="images/right-down.png" id="icon-img">
+          <p id="light-message">OFF</p>
+        </div>
+
+        <div class="podcast-third">
+
+          <h1 id="hosting">HOSTING</h1>
+        </div>
+      </div>
+
+      <div class="podcast-background" id="podcast-background">
+        <img src="images/pod-transparent-new.png" id="podcast-img">
+      </div>
+      <!--Done-->
+
     </div>
-    <!--Done-->
+  </div>
 
-</div>
-</div>
+  <div class="main-five-row">
 
-    <div class="main-five-row">
 
-      
     <!--Leads tracker App-->
     <div class="twentyone">
-      <h1 id = "leads-tracker-h1">Leads Tracker App</h1>
-        <label id = "leads-tracker-label">Enter URL</label>
-        <input type="text" id="leads-tracker-input-el" placeholder="Enter URL">
-        <button type="submit" id="leads-tracker-input-btn">SAVE INPUT</button>
-        <button id="leads-tracker-delete-btn">DELETE ALL</button>
-        <ul id="leads-tracker-ul-el">
-        </ul>
+      <h1 id="leads-tracker-h1">Leads Tracker App</h1>
+      <label id="leads-tracker-label">Enter URL</label>
+      <input type="text" id="leads-tracker-input-el" placeholder="Enter URL">
+      <div class = "leads-button">
+      <button type="submit" id="leads-tracker-input-btn">SAVE INPUT</button>
+      <button id="leads-tracker-delete-btn">DELETE ALL</button>
+      </div>
+      <ul id="leads-tracker-ul-el">
+      </ul>
     </div>
     <!--Done-->
 
 
-<!--Graph Showing-->
+    <!--Graph Showing-->
     <div class="twentytwo">
-  <h1 id = "graph-h1">Sales Graph</h1>
-    <div class = "graph-main">
+      <h1 id="graph-h1">Sales Graph</h1>
+      <div class="graph-main">
 
-  <div class="chart-container">
-    <canvas id="salesChart"></canvas>
-  </div>
+        <div class="chart-container">
+          <canvas id="salesChart"></canvas>
+        </div>
+      </div>
+      <!--Done-->
     </div>
-<!--Done-->
-</div>
 
-<div class = "twentythree">
-<h1 id = "movie-exploler-h1" style = "color: white; font-size: 30px;">Movie Exploler</h1>
-</div>
+    <div class="twentythree">
+      <h1 id="movie-exploler-h1" style="color: white; font-size: 30px;">Movie Exploler</h1>
 
-<div class = "twentyfour">
-  <h1 id = "game-exploler-h1"  style = "color: white; font-size: 30px;">Game Exploler</h1>
+      <div class="me-header">
+        <div class="me-input-icon">
+          <input type="text" id="me-search-bar" placeholder="Search...">
+          <i class="fas fa-search" id="me-icon"></i>
+        </div>
+      </div>
+      <div class="me-card">
+        <img src="images/depapel.jpg" id="me-image">
+        <div class="me-row">
+          <div class="me-genre">
+            <p id="me-genre-p">Action,Comedy</p>
+          </div>
+          <div class="me-time">
+            <p id="movie-time">1:50:20</p>
 
-</div>
-</div>
+          </div>
+          <div class="me-rating">
+            <p id="me-rating-p">IMDb - 9.8/10</p>
 
-  <!--Mark-->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="js/counter-app.js"></script>
+          </div>
+        </div>
+
+      </div>
+      <div class="me-body-container">
+
+        <div class="me-description">
+          <h2 id="h2-movie-name">La CASA DE PAPEL</h2>
+          <div class="me-white-space">
+
+          </div>
+          <p id="movie-description">La Casa de Papel (Money Heist) is a Spanish crime drama series that follows a
+            criminal mastermind known as "The Professor" who recruits eight skilled thieves to carry out a massive heist
+            on the Royal Mint of Spain.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="twentyfour">
+      <h1 id="game-exploler-h1" style="color: white; font-size: 30px;">Game Exploler</h1>
+
+      <div class="ge-header">
+        <div class="ge-input-icon">
+          <input type="text" id="ge-search-bar" placeholder="Search...">
+          <i class="fas fa-search" id="ge-icon"></i>
+        </div>
+      </div>
+      <div class="ge-card">
+        <img src="images/depapel.jpg" id="ge-image">
+        <div class="ge-row">
+          <div class="ge-genre">
+            <p id="ge-genre-p">Action,Adventure</p>
+          </div>
+          <div class="ge-time">
+            <p id="movie-time">7+</p>
+
+          </div>
+          <div class="ge-rating">
+            <p id="ge-rating-p">App Store - 4.5 - Rating</p>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="ge-body-container">
+
+        <div class="ge-description">
+          <h2 id="h2-movie-name">Pushing the Pedal</h2>
+          <div class="ge-white-space">
+
+          </div>
+          <p id="movie-description">Push the Pedal is a thrilling, fast-paced driving game where your reflexes are your
+            best weapon! Tap and hold the pedal to accelerate, drift through tight corners, dodge traffic, and race your
+            way to glory.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Mark-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/counter-app.js"></script>
     <script src="js/graph-showing.js"></script>
     <script src="js/popup-random-background.js"></script>
-      <script src="js/instagram-post-design.js"></script>
-  <script src="js/random-password.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/clingy-popup.js"></script>
-  <script src="js/emoji-faceoff.js"></script>
-  <script src="js/login-project.js"></script>
-  <script src="js/digital-clock.js"></script>
-  <script src="js/black-jack-game.js"></script>
-  <script src="js/random-card.js"></script>
-  <script src="js/basketball-counter-app.js"></script>
-  <script src="js/unit-converter.js"></script>
-  <script src="js/timer.js"></script>
-  <script src="js/notes.js"></script>
-  <script src="js/dynamic-world-clock.js"></script>
-  <script src="js/expense-tracker.js"></script>
-  <script src="js/localstorage-project.js"></script>
-  <script src="js/todo-list-app.js"></script>
-  <script src="js/chrome-extension.js"></script>
-  <script src="js/podcast-room.js"></script>
-  <script src="js/leads-tracker-app.js"></script>
+    <script src="js/instagram-post-design.js"></script>
+    <script src="js/random-password.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/clingy-popup.js"></script>
+    <script src="js/emoji-faceoff.js"></script>
+    <script src="js/login-project.js"></script>
+    <script src="js/digital-clock.js"></script>
+    <script src="js/black-jack-game.js"></script>
+    <script src="js/random-card.js"></script>
+    <script src="js/basketball-counter-app.js"></script>
+    <script src="js/unit-converter.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/dynamic-world-clock.js"></script>
+    <script src="js/expense-tracker.js"></script>
+    <script src="js/localstorage-project.js"></script>
+    <script src="js/todo-list-app.js"></script>
+    <script src="js/chrome-extension.js"></script>
+    <script src="js/podcast-room.js"></script>
+    <script src="js/leads-tracker-app.js"></script>
+    <script src="js/movie-exploler.js"></script>
+    <script src="js/game-exploler.js"></script>
 
 
 
