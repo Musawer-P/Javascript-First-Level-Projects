@@ -288,6 +288,15 @@ body {
     padding-right: 10px;
     padding-bottom: 50px;
   }
+   .about-us-section{
+     background-color: #f52f15;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
   #main-id {
     font-size: 40px;
     color: rgb(19, 19, 19);
