@@ -58,8 +58,34 @@ body {
     margin-top: 20px;
     
   }
+
+    .main-six-row {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    
+  }
+    .about-us {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    
+  }
+  #about-us-h1{
+color: white;
+font-size: 30px;
+
+  }
+  #about-us-p{
+color: white;
+font-size: 15px;
+  }
   .first {
-    background-color: rgba(40, 59, 70, 0.555);
+    background-color: rgb(15, 15, 15);
     height: 500px;
     width: 320px;
     border-radius: 5px;
@@ -69,7 +95,7 @@ body {
   }
 
   .second{
-     background-color: rgba(40, 59, 70, 0.555);
+     background-color: #6943FF;
     height: 500px;
     width: 320px;
     border-radius: 5px;
@@ -79,7 +105,7 @@ body {
   }
 
   .third{
-     background-color: rgba(40, 59, 70, 0.555);
+     background-color: #23bd96;
     height: 500px;
     width: 320px;
     border-radius: 5px;
@@ -288,8 +314,18 @@ body {
     padding-right: 10px;
     padding-bottom: 50px;
   }
+
+  .twentyfive{
+     background-color: #161515;
+    height: 500px;
+    width: 320px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
    .about-us-section{
-     background-color: #f52f15;
+     background-color: #0a0a0a;
     height: 500px;
     width: 320px;
     border-radius: 5px;

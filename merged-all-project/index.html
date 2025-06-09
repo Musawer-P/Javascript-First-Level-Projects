@@ -30,6 +30,7 @@
   <link href="style/graph-showing.css" rel="stylesheet">
   <link href="style/movie-exploler.css" rel="stylesheet">
   <link href="style/game-exploler.css" rel="stylesheet">
+  <link href="style/shopping-cart.css" rel="stylesheet">
 
 
   <title>Merging Projects</title>
@@ -58,7 +59,7 @@
             <input type="email" id="email" placeholder="John@gmail.com" aria-label="email" required>
           </div>
           <div class="clingy-button" id="clingy-button">
-            <button type="submit" id="accept-btn">Accept</button>
+            <button type="button" id="accept-btn">Accept</button>
             <button type="button" id="decline-btn">Decline</button>
 
           </div>
@@ -492,8 +493,8 @@
           </div>
           <input type="text" placeholder="Price" class="form-control" id="price">
           <div class="ls-submit-section">
-            <button type="submit" id="ls-submit">Submit</button>
-            <button type="submit" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
+            <button type="button" id="ls-submit">Submit</button>
+            <button type="button" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
           </div>
       </div>
       <table id="ls-table" border="1">
@@ -552,13 +553,13 @@
     <div class="seventeen">
       <h1 id="random-h1">Random Popup Background</h1>
       <div class="button-random-popup">
-        <button id="openPopup-random">Open Popup for New Color</button>
+        <button type = "button" id="openPopup-random">Open Popup for New Color</button>
       </div>
       <div id="popup-random" class="popup-random hidden-random">
         <div class="popup-content-random">
           <h2 id="popup-h2">Random Background Popup</h2>
           <p id="popup-p">The background color of this popup changes randomly each time you open it!</p>
-          <button id="closePopup-random">Close</button>
+          <button type = "button" id="closePopup-random">Close</button>
         </div>
       </div>
     </div>
@@ -571,8 +572,8 @@
         <input type="text" id="input-todo" placeholder="Enter Task">
       </div>
       <div class="todo-button-div" id="todo-button-div">
-        <button type="submit" id="todo-submit">Submit</button>
-        <button type="submit" id="todo-delete-btn">Delete</button>
+        <button type="button" id="todo-submit">Submit</button>
+        <button type="button" id="todo-delete-btn">Delete</button>
       </div>
       <div class="todo-table-div" id="todo-table-div">
         <table id="todo-table" class="table table-bordered">
@@ -596,9 +597,9 @@
       <h1 id="extension-h1">Chrome Extension</h1>
       <input type="text" id="extension-input-el" placeholder="Type Here...">
       <div class="extension-button-container">
-        <button id="extension-input-btn">SAVE INPUT</button>
-        <button id="extension-tab-btn">SAVE TAB</button>
-        <button id="extension-delete-btn">DELETE ALL</button>
+        <button type = "button" id="extension-input-btn">SAVE INPUT</button>
+        <button type = "button" id="extension-tab-btn">SAVE TAB</button>
+        <button type = "button" id="extension-delete-btn">DELETE ALL</button>
       </div>
       <ul id="extension-ul-el">
       </ul>
@@ -642,8 +643,8 @@
       <label id="leads-tracker-label">Enter URL</label>
       <input type="text" id="leads-tracker-input-el" placeholder="Enter URL">
       <div class = "leads-button">
-      <button type="submit" id="leads-tracker-input-btn">SAVE INPUT</button>
-      <button id="leads-tracker-delete-btn">DELETE ALL</button>
+      <button type="button" id="leads-tracker-input-btn">SAVE INPUT</button>
+      <button type = "button" id="leads-tracker-delete-btn">DELETE ALL</button>
       </div>
       <ul id="leads-tracker-ul-el">
       </ul>
@@ -743,12 +744,57 @@
         </div>
       </div>
     </div>
+    </div>
 
+<!--Shopping cart-->
+    <div class = "main-six-row">
+      <div class = "twentyfive">
+        <div class="e-cart-container">
+    <h1>Shopping Cart</h1>
+    
+    <div class="e-cart-item">
+      <img src="" alt="Product Image" />
+      <div class="item-details">
+        <h3>Product Name</h3>
+        <p>$25.00</p>
+        <div class="e-cart-quantity">
+          <button>-</button>
+          <input type="e-cart-number" value="1" min="1" />
+          <button>+</button>
+        </div>
+      </div>
+      <div class="item-total">$25.00</div>
+    </div>
+
+    <div class="e-cart-item">
+      <img src="" alt="Product Image" />
+      <div class="e-item-details">
+        <h3>Another Product</h3>
+        <p>$40.00</p>
+        <div class="e-cart-quantity">
+          <button>-</button>
+          <input type="e-cart-number" value="1" min="1" />
+          <button>+</button>
+        </div>
+      </div>
+      <div class="item-total">$40.00</div>
+    </div>
+
+    <div class="e-cart-summary">
+      <p><strong>Subtotal:</strong> $65.00</p>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+<!--Done-->
+
+      </div>
+    </div>
+    
 
     <div class = "about-us">
       <div class = "about-us-section">
-        <h1 id = "about-us-h1">About us</h1>
-        <p id = "abut-us-p">Welcome to my JavaScript Projects portfolio! I'm a passionate and creative developer with a strong focus on building practical, mid-level JavaScript applications that solve real-world problems. These projects reflect my journey of learning, experimenting, and improving my coding skills through hands-on development.
+        <h1 id = "about-us-h1">About Projects</h1>
+        <p id = "about-us-p">Welcome to my JavaScript Projects portfolio! I'm a passionate and creative developer with a strong focus on building practical, mid-level JavaScript applications that solve real-world problems. These projects reflect my journey of learning, experimenting, and improving my coding skills through hands-on development.
 
 Each project here is crafted using vanilla JavaScript and sometimes enhanced with libraries or APIs to provide interactive, dynamic user experiences. From games and calculators to to-do apps and mini dashboards, I aim to blend clean code with user-friendly design.
 
@@ -757,6 +803,7 @@ Whether you're a fellow developer, a potential client, or just someone curious a
 Thanks for visiting — and feel free to explore, interact, or reach out!</p>
       </div>
     </div>
+    
 
     <!--Mark-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
