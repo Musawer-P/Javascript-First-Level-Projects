@@ -15,10 +15,13 @@
 }
 .me-body-container{
     margin-left: 0px; 
-    margin-top: 30px; 
-    display: flex;
+    margin-top: 30px;
+     margin-left: auto;
+  margin-right: auto; 
 }
 .me-card{
+    margin-left: auto;
+  margin-right: auto;
     margin-top: 50px;
     background-color: none; 
     border: 1px solid white; 
@@ -88,7 +91,8 @@
     margin: 0px;
 }
 .me-white-space{
-    width: 310px; 
+    text-align: center;
+    width: 100%; 
     height: 1px; 
     margin-top: 10px; 
     background-color: white;

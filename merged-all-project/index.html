@@ -42,34 +42,74 @@
   </h1>
   <div class="main">
     <div class="first">
-      <!--Clingy popup-->
-      <h1 id="clingy-h1">Clingy Popup</h1>
+     <!-- Clingy Popup -->
+<h1 id="clingy-h1">Clingy Popup</h1>
 
-      <button type="button" id="close-btn" disabled>x</button>
-      <div class="popup" id="popup">
-        <br>
-        <div class="popup-text">
-          <p id="inside-text">This website uses cookies to ensure you get the best experience. and your
-            data is more important to
-            us than you think. </p>
+<button type="button" id="close-btn" disabled>x</button>
+
+<div class="popup" id="popup">
+  <br>
+  <div class="popup-text" id="inside-text">
+    <p>This website uses cookies to ensure you get the best experience. And your data is more important to us than you think.</p>
+  </div>
+
+  <form id="login-form">
+    <div class="input-container">
+      <input type="text" id="name" name="name" placeholder="John" aria-label="name" required>
+      <input type="email" id="email" name="email" placeholder="John@gmail.com" aria-label="email" required>
+    </div>
+
+    <div class="clingy-button" id="clingy-button">
+      <button type="submit" id="accept-btn">Accept</button>
+      <button type="button" id="decline-btn">Decline</button>
+    </div>
+  </form>
+</div>
+<!-- Done -->
+    </div>
+
+
+    <!--Shopping Cart-->
+    <div class="second">
+      <div class="e-cart-container">
+        <h1>Shopping Cart</h1>
+
+        <div class="e-cart-item">
+          <img src="images/applewatch.png" id="first-img" alt="Product Image" />
+          <div class="e-item-details">
+            <h3 id="product-name">Apple watch V5</h3>
+            <p id="cart-p">$400.00</p>
+            <div class="e-cart-quantity">
+              <button type="button" id="min-btn">-</button>
+              <input type="number" id="e-cart-number" value="1" min="1" />
+              <button type="button" id="sub-btn">+</button>
+            </div>
+          </div>
         </div>
-        <form id="login-form">
-          <div class="input-container">
-            <input type="text" id="name" name="name" placeholder="John" aria-label="name" required>
-            <input type="email" id="email" placeholder="John@gmail.com" aria-label="email" required>
-          </div>
-          <div class="clingy-button" id="clingy-button">
-            <button type="button" id="accept-btn">Accept</button>
-            <button type="button" id="decline-btn">Decline</button>
 
+        <div class="e-cart-item">
+          <img src="images/airpodspro.png" id="second-img" alt="Product Image" />
+          <div class="e-item-details">
+            <h3 id="product-name">Airpods pro</h3>
+            <p id="cart-p">$250.00</p>
+            <div class="e-cart-quantity">
+              <button type="button" id="min-btn">-</button>
+              <input type="number" id="e-cart-number" value="1" min="1" />
+              <button type="button" id="sub-btn">+</button>
+            </div>
           </div>
-        </form>
+        </div>
+
+        <div class="e-cart-summary">
+          <p id="total-p"><strong id="strong-p">Subtotal:</strong> $650.00</p>
+          <button type="button" class="checkout-btn">Checkout</button>
+        </div>
       </div>
     </div>
     <!--Done-->
 
     <!--Counter app-->
-    <div class="second">
+    <div class="third">
       <h1 id="counter-h1">People Entered</h1>
       <h2 id="count-el">0</h2>
       <div class="counter-body">
@@ -81,7 +121,7 @@
     <!--Done-->
 
     <!--Emoji face off-->
-    <div class="third">
+    <div class="fourth">
       <h1 id="emoji-faceoff-h1">Emoji face off</h1>
       <h1 id="emoji-h1">Emoji<br>Fighter</h1>
       <div id="stage"></div>
@@ -92,75 +132,6 @@
     <!--Done-->
 
 
-
-    <!--Login Project-->
-    <div class="fourth">
-      <div class="login-project">
-        <div class="login-container" id="login-container">
-          <div class="heading-container" id="header-container-login">
-            <h1 id="login-header">Login</h1>
-            <h1 id="signup-header">Signup</h1>
-          </div>
-          <div class="login-form">
-            <p class="error" id="errorMessage">Incorrect username or password!</p>
-
-            <div class="user-hint" style="text-align: start; font-size: 13px;">
-              <span>User:</span> <span class="user">Admin</span>
-            </div>
-            <div class="user-hint" style="text-align: start; font-size: 13px; margin-top: 10px; padding-bottom: 20px;">
-
-              <span>Password:</span> <span class="user">12345</span>
-
-            </div>
-
-            <div class="input-container">
-              <input type="text" id="username" placeholder="User Name">
-              <input type="password" id="password" placeholder="Password">
-            </div>
-            <div class="btn-container">
-              <button type="submit" id="login-btn" onclick="checkLogin()">Login</button>
-
-            </div>
-            <div class="text-container">
-              <p id="forgot-password">Forgot Password?</p>
-
-            </div>
-
-
-
-
-
-
-          </div>
-        </div>
-        <div class="signup-container" style="display: none;" id="signup-container">
-          <div class="heading-container" id="header-container-signup">
-            <h1 id="login-header-signup">Login</h1>
-            <h1 id="signup-header-signup">Signup</h1>
-          </div>
-          <div class="signup-form">
-            <div class="input-container-signup">
-              <input type="text" id="name" placeholder="First name">
-              <input type="text" id="lastname" placeholder="Last name">
-            </div>
-            <div class="input-container-signup">
-              <input type="text" id="phone" placeholder="Phone">
-              <input type="text" id="email" placeholder="E-mail">
-            </div>
-            <div class="input-container-signup">
-              <input type="text" id="create-password" placeholder="Password">
-              <input type="text" id="retype-password" placeholder="Retype Password">
-            </div>
-            <div class="password-generator-container">
-              <button type="button" id="random-password" onclick="generateRandomPassword()">Random
-                Password</button>
-            </div>
-            <button type="submit" id="signup-btn">Signup</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Done-->
 
   </div>
 
@@ -399,8 +370,125 @@
 
 
   <div class="main-fourth-row">
-    <!--Dynamic World Clock-->
+
+
+    <!--Login Project-->
     <div class="thirteen">
+      <div class="login-project">
+        <div class="login-container" id="login-container">
+          <div class="heading-container" id="header-container-login">
+            <h1 id="login-header">Login</h1>
+            <h1 id="signup-header">Signup</h1>
+          </div>
+          <div class="login-form">
+            <p class="error" id="errorMessage">Incorrect username or password!</p>
+
+            <div class="user-hint" style="text-align: start; font-size: 13px;">
+              <span>User:</span> <span class="user">Admin</span>
+            </div>
+            <div class="user-hint" style="text-align: start; font-size: 13px; margin-top: 10px; padding-bottom: 20px;">
+
+              <span>Password:</span> <span class="user">12345</span>
+
+            </div>
+
+            <div class="input-container">
+              <input type="text" id="username" placeholder="User Name">
+              <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="btn-container">
+              <button type="submit" id="login-btn" onclick="checkLogin()">Login</button>
+
+            </div>
+            <div class="text-container">
+              <p id="forgot-password">Forgot Password?</p>
+
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+        <div class="signup-container" style="display: none;" id="signup-container">
+          <div class="heading-container" id="header-container-signup">
+            <h1 id="login-header-signup">Login</h1>
+            <h1 id="signup-header-signup">Signup</h1>
+          </div>
+          <div class="signup-form">
+            <div class="input-container-signup">
+              <input type="text" id="name" placeholder="First name">
+              <input type="text" id="lastname" placeholder="Last name">
+            </div>
+            <div class="input-container-signup">
+              <input type="text" id="phone" placeholder="Phone">
+              <input type="text" id="email" placeholder="E-mail">
+            </div>
+            <div class="input-container-signup">
+              <input type="text" id="create-password" placeholder="Password">
+              <input type="text" id="retype-password" placeholder="Retype Password">
+            </div>
+            <div class="password-generator-container">
+              <button type="button" id="random-password" onclick="generateRandomPassword()">Random
+                Password</button>
+            </div>
+            <button type="submit" id="signup-btn">Signup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Done-->
+
+
+
+
+
+    <!--Podcast room-->
+    <div class="fourteen">
+      <div class="podcast-main">
+        <div class="podcast-first">
+          <h1 id="podcast">PODCAST</h1>
+        </div>
+
+        <div class="podcast-second">
+          <i class="fas fa-lightbulb" id="bulb"></i>
+          <img src="images/right-down.png" id="icon-img">
+          <p id="light-message">OFF</p>
+        </div>
+
+        <div class="podcast-third">
+
+          <h1 id="hosting">HOSTING</h1>
+        </div>
+      </div>
+
+      <div class="podcast-background" id="podcast-background">
+        <img src="images/pod-transparent-new.png" id="podcast-img">
+      </div>
+    </div>
+    <!--Done-->
+
+    <!--Popup random background-->
+    <div class="fifteen">
+      <h1 id="random-h1">Random Popup Background</h1>
+      <div class="button-random-popup">
+        <button type="button" id="openPopup-random">Open Popup for New Color</button>
+      </div>
+      <div id="popup-random" class="popup-random hidden-random">
+        <div class="popup-content-random">
+          <h2 id="popup-h2">Random Background Popup</h2>
+          <p id="popup-p">The background color of this popup changes randomly each time you open it!</p>
+          <button type="button" id="closePopup-random">Close</button>
+        </div>
+      </div>
+    </div>
+    <!--Done-->
+
+
+    <!--Dynamic World Clock-->
+    <div class="sixteen">
       <h1 id="wclock-h1">
         24 Hour World Clock
       </h1>
@@ -438,7 +526,84 @@
     </div>
     <!--Done-->
 
-    <div class="fourteen">
+  </div>
+
+  <div class="main-five-row">
+    <!--Local storage project-->
+    <div class="seventeen">
+      <h1 id="ls-h1">LocalStorage Project</h1>
+      <div class="col-md-12" style="text-align: center;">
+        <form id="save-form">
+          <div class="ls-inputs">
+            <input type="text" placeholder="Quantity" class="form-control" id="quantity">
+            <input type="text" placeholder="Item" class="form-control" id="item">
+          </div>
+          <input type="text" placeholder="Price" class="form-control" id="price">
+          <div class="ls-submit-section">
+            <button type="button" id="ls-submit">Submit</button>
+            <button type="button" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
+          </div>
+      </div>
+      <table id="ls-table" border="1">
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="ls-table-body">
+        </tbody>
+      </table>
+    </div>
+    <!--Done-->
+
+
+
+
+
+    <div class="eighteen">
+      <h1 id="todo-main-h1">Todo List App</h1>
+      <div class="todo-input-section">
+        <input type="text" id="input-todo" placeholder="Enter Task">
+      </div>
+      <div class="todo-button-div" id="todo-button-div">
+        <button type="button" id="todo-submit">Submit</button>
+        <button type="button" id="todo-delete-btn">Delete</button>
+      </div>
+      <div class="todo-table-div" id="todo-table-div">
+        <table id="todo-table" class="table table-bordered">
+          <thead id="todo-th">
+            <tr>
+              <th style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">Task</th>
+              <th style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Completed</th>
+            </tr>
+          </thead>
+          <tbody id="insertplace-todo">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--Done-->
+
+
+
+    <!--Chrome extension-->
+    <div class="nineteen">
+      <h1 id="extension-h1">Chrome Extension</h1>
+      <input type="text" id="extension-input-el" placeholder="Type Here...">
+      <div class="extension-button-container">
+        <button type="button" id="extension-input-btn">SAVE INPUT</button>
+        <button type="button" id="extension-tab-btn">SAVE TAB</button>
+        <button type="button" id="extension-delete-btn">DELETE ALL</button>
+      </div>
+      <ul id="extension-ul-el">
+      </ul>
+    </div>
+    <!--Done-->
+
+    <!--Expense tracker-->
+    <div class="twenty">
       <h1 id="expense-h1">Expense Tracker</h1>
       <main id="expense-main">
         <div class="expense-input-section">
@@ -480,161 +645,12 @@
           </table>
         </div>
       </main>
-      <!--Done-->
-    </div>
-
-    <div class="fifteen">
-      <h1 id="ls-h1">LocalStorage Project</h1>
-      <div class="col-md-12" style="text-align: center;">
-        <form id="save-form">
-          <div class="ls-inputs">
-            <input type="text" placeholder="Quantity" class="form-control" id="quantity">
-            <input type="text" placeholder="Item" class="form-control" id="item">
-          </div>
-          <input type="text" placeholder="Price" class="form-control" id="price">
-          <div class="ls-submit-section">
-            <button type="button" id="ls-submit">Submit</button>
-            <button type="button" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
-          </div>
-      </div>
-      <table id="ls-table" border="1">
-        <thead>
-          <tr>
-            <th>Quantity</th>
-            <th>Item</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody id="ls-table-body">
-        </tbody>
-      </table>
-      <!--Done-->
-
-    </div>
-
-    <!--Instagram post design-->
-    <div class="sixteen">
-      <main id="ig-main">
-        <div class="ig-first-container">
-          <h1>Oldagram</h1>
-          <img src="images/first-profile.png" id="ig-first-profile">
-        </div>
-
-        <div class="ig-second-section">
-          <img src="images/self-portrait.jpg" id="ig-second-profile">
-          <p id="ig-p1">Vincent van Gogh</p>
-        </div>
-
-        <p id="ig-p2">Zudert, Netherlands</p>
-
-        <img src="images/self-portrait.jpg" id="ig-third-profile">
-
-        <div class="ig-third-section">
-          <i class="far fa-heart" id="love-icon"></i>
-          <div class="ig-icon-container">
-            <i class="far fa-comment disabled-icon" id="message-icon"></i>
-            <i class="far fa-paper-plane" id="send-icon"></i>
-            <div class="tooltip">This feature is disabled try like feature</div>
-          </div>
-        </div>
-
-        <p id="like-section">21.492 likes</p>
-        <p id="comment"><span id=first-comment>vincey1853</span> just took a few mushrooms lol</p>
-      </main>
-
     </div>
     <!--Done-->
 
   </div>
 
-  <div class="main-five-row">
-
-    <!--Popup random background-->
-    <div class="seventeen">
-      <h1 id="random-h1">Random Popup Background</h1>
-      <div class="button-random-popup">
-        <button type = "button" id="openPopup-random">Open Popup for New Color</button>
-      </div>
-      <div id="popup-random" class="popup-random hidden-random">
-        <div class="popup-content-random">
-          <h2 id="popup-h2">Random Background Popup</h2>
-          <p id="popup-p">The background color of this popup changes randomly each time you open it!</p>
-          <button type = "button" id="closePopup-random">Close</button>
-        </div>
-      </div>
-    </div>
-    <!--Done-->
-
-
-    <div class="eighteen">
-      <h1 id="todo-main-h1">Todo List App</h1>
-      <div class="todo-input-section">
-        <input type="text" id="input-todo" placeholder="Enter Task">
-      </div>
-      <div class="todo-button-div" id="todo-button-div">
-        <button type="button" id="todo-submit">Submit</button>
-        <button type="button" id="todo-delete-btn">Delete</button>
-      </div>
-      <div class="todo-table-div" id="todo-table-div">
-        <table id="todo-table" class="table table-bordered">
-          <thead id="todo-th">
-            <tr>
-              <th style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">Task</th>
-              <th style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Completed</th>
-            </tr>
-          </thead>
-          <tbody id="insertplace-todo">
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!--Done-->
-
-
-
-    <!--Chrome extension-->
-    <div class="nineteen">
-      <h1 id="extension-h1">Chrome Extension</h1>
-      <input type="text" id="extension-input-el" placeholder="Type Here...">
-      <div class="extension-button-container">
-        <button type = "button" id="extension-input-btn">SAVE INPUT</button>
-        <button type = "button" id="extension-tab-btn">SAVE TAB</button>
-        <button type = "button" id="extension-delete-btn">DELETE ALL</button>
-      </div>
-      <ul id="extension-ul-el">
-      </ul>
-    </div>
-    <!--Done-->
-
-
-    <!--Podcast room-->
-    <div class="twenty">
-      <div class="podcast-main">
-        <div class="podcast-first">
-          <h1 id="podcast">PODCAST</h1>
-        </div>
-
-        <div class="podcast-second">
-          <i class="fas fa-lightbulb" id="bulb"></i>
-          <img src="images/right-down.png" id="icon-img">
-          <p id="light-message">OFF</p>
-        </div>
-
-        <div class="podcast-third">
-
-          <h1 id="hosting">HOSTING</h1>
-        </div>
-      </div>
-
-      <div class="podcast-background" id="podcast-background">
-        <img src="images/pod-transparent-new.png" id="podcast-img">
-      </div>
-      <!--Done-->
-
-    </div>
-  </div>
-
-  <div class="main-five-row">
+  <div class="main-six-row">
 
 
     <!--Leads tracker App-->
@@ -642,9 +658,9 @@
       <h1 id="leads-tracker-h1">Leads Tracker App</h1>
       <label id="leads-tracker-label">Enter URL</label>
       <input type="text" id="leads-tracker-input-el" placeholder="Enter URL">
-      <div class = "leads-button">
-      <button type="button" id="leads-tracker-input-btn">SAVE INPUT</button>
-      <button type = "button" id="leads-tracker-delete-btn">DELETE ALL</button>
+      <div class="leads-button">
+        <button type="button" id="leads-tracker-input-btn">SAVE INPUT</button>
+        <button type="button" id="leads-tracker-delete-btn">DELETE ALL</button>
       </div>
       <ul id="leads-tracker-ul-el">
       </ul>
@@ -744,92 +760,61 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 
-<!--Shopping cart-->
-    <div class = "main-six-row">
-      <div class = "twentyfive">
-        <div class="e-cart-container">
-    <h1>Shopping Cart</h1>
-    
-    <div class="e-cart-item">
-      <img src="images/applewatch.png" id = "first-img" alt="Product Image" />
-      <div class="e-item-details">
-        <h3 id = "product-name">Apple watch V5</h3>
-        <p id = "cart-p">$400.00</p>
-        <div class="e-cart-quantity">
-          <button type = "button" id = "min-btn">-</button>
-          <input type= "number" id = "e-cart-number" value="1" min="1" />
-          <button type = "button" id = "sub-btn">+</button>
-        </div>
-      </div>
-    </div>
+  <!--Shopping cart-->
+  <div class="main-six-row">
 
-    <div class="e-cart-item">
-      <img src="images/airpodspro.png" id = "second-img" alt="Product Image" />
-      <div class="e-item-details">
-        <h3 id = "product-name">Airpods pro</h3>
-        <p id = "cart-p">$250.00</p>
-        <div class="e-cart-quantity">
-          <button type = "button" id = "min-btn">-</button>
-          <input type= "number" id = "e-cart-number" value="1" min="1" />
-          <button type = "button" id = "sub-btn">+</button>
-        </div>
-      </div>
-    </div>
+  </div>
 
-    <div class="e-cart-summary">
-      <p id = "total-p"><strong id = "strong-p">Subtotal:</strong> $650.00</p>
-      <button class="checkout-btn">Checkout</button>
+
+  <div class="about-us">
+    <div class="about-us-section">
+      <h1 id="about-us-h1">About Projects</h1>
+      <p id="about-us-p">Welcome to my JavaScript Projects portfolio! I'm a passionate and creative developer with a
+        strong focus on building practical, mid-level JavaScript applications that solve real-world problems. These
+        projects reflect my journey of learning, experimenting, and improving my coding skills through hands-on
+        development.
+
+        Each project here is crafted using vanilla JavaScript and sometimes enhanced with libraries or APIs to provide
+        interactive, dynamic user experiences. From games and calculators to to-do apps and mini dashboards, I aim to
+        blend clean code with user-friendly design.
+
+        Whether you're a fellow developer, a potential client, or just someone curious about coding, I hope these
+        projects inspire, educate, or even entertain you.
+
+        Thanks for visiting — and feel free to explore, interact, or reach out!</p>
     </div>
   </div>
-<!--Done-->
 
-      </div>
-    </div>
-    
 
-    <div class = "about-us">
-      <div class = "about-us-section">
-        <h1 id = "about-us-h1">About Projects</h1>
-        <p id = "about-us-p">Welcome to my JavaScript Projects portfolio! I'm a passionate and creative developer with a strong focus on building practical, mid-level JavaScript applications that solve real-world problems. These projects reflect my journey of learning, experimenting, and improving my coding skills through hands-on development.
-
-Each project here is crafted using vanilla JavaScript and sometimes enhanced with libraries or APIs to provide interactive, dynamic user experiences. From games and calculators to to-do apps and mini dashboards, I aim to blend clean code with user-friendly design.
-
-Whether you're a fellow developer, a potential client, or just someone curious about coding, I hope these projects inspire, educate, or even entertain you.
-
-Thanks for visiting — and feel free to explore, interact, or reach out!</p>
-      </div>
-    </div>
-    
-
-    <!--Mark-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/counter-app.js"></script>
-    <script src="js/graph-showing.js"></script>
-    <script src="js/popup-random-background.js"></script>
-    <script src="js/instagram-post-design.js"></script>
-    <script src="js/random-password.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/clingy-popup.js"></script>
-    <script src="js/emoji-faceoff.js"></script>
-    <script src="js/login-project.js"></script>
-    <script src="js/digital-clock.js"></script>
-    <script src="js/black-jack-game.js"></script>
-    <script src="js/random-card.js"></script>
-    <script src="js/basketball-counter-app.js"></script>
-    <script src="js/unit-converter.js"></script>
-    <script src="js/timer.js"></script>
-    <script src="js/notes.js"></script>
-    <script src="js/dynamic-world-clock.js"></script>
-    <script src="js/expense-tracker.js"></script>
-    <script src="js/localstorage-project.js"></script>
-    <script src="js/todo-list-app.js"></script>
-    <script src="js/chrome-extension.js"></script>
-    <script src="js/podcast-room.js"></script>
-    <script src="js/leads-tracker-app.js"></script>
-    <script src="js/movie-exploler.js"></script>
-    <script src="js/game-exploler.js"></script>
+  <!--Mark-->
+  <script src="js/login-project.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/counter-app.js"></script>
+  <script src="js/graph-showing.js"></script>
+  <script src="js/popup-random-background.js"></script>
+  <script src="js/instagram-post-design.js"></script>
+  <script src="js/random-password.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/clingy-popup.js"></script>
+  <script src="js/emoji-faceoff.js"></script>
+  <script src="js/digital-clock.js"></script>
+  <script src="js/black-jack-game.js"></script>
+  <script src="js/random-card.js"></script>
+  <script src="js/basketball-counter-app.js"></script>
+  <script src="js/unit-converter.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/dynamic-world-clock.js"></script>
+  <script src="js/expense-tracker.js"></script>
+  <script src="js/localstorage-project.js"></script>
+  <script src="js/todo-list-app.js"></script>
+  <script src="js/chrome-extension.js"></script>
+  <script src="js/podcast-room.js"></script>
+  <script src="js/leads-tracker-app.js"></script>
+  <script src="js/movie-exploler.js"></script>
+  <script src="js/game-exploler.js"></script>
 
 
 

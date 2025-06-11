@@ -15,7 +15,9 @@
     
 }
 #notes-input-container{
+    display: flex;
     width: 100%;
+  
 }
 #add-notes {
     padding: 10px 10px;

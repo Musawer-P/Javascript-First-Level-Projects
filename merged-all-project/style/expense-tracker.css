@@ -23,7 +23,7 @@
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     border: none;
-    border-bottom: 3px solid rgb(235, 160, 48); 
+    border-bottom: 3px solid rgb(48, 135, 235); 
     margin-top: 10px;
 }
 #expense-category{
@@ -32,7 +32,7 @@
 #expense-submit-add{
     padding: 10px 50px 10px 50px;
     border: none;
-    background-color: rgb(235, 160, 48);
+    background-color: rgb(48, 135, 235);
     color: white;
     border-radius: 5px;
     margin-top: 15px;
@@ -40,8 +40,8 @@
 }
 #expense-submit-add:hover{
     background-color:  rgb(241, 238, 233);
-    color: rgb(235, 160, 48);
-    border: 1px solid rgb(235, 160, 48);
+    color: rgb(48, 135, 235);
+    border: 1px solid rgb(48, 135, 235);
 }
 
 .expense-button-section{
@@ -67,9 +67,9 @@ color: rgba(0, 0, 0, 0.623);
     padding: 5px 50px 10px 5px;
     height: 20px;
     border: none;
-    border-bottom: 1px solid rgb(235, 160, 48);
+    border-bottom: 1px solid rgb(48, 135, 235);
     background-color:  rgb(241, 238, 233);
-    color: rgb(235, 160, 48);
+    color: rgb(48, 135, 235);
     border-radius: 0px;
     margin-top: 15px;
     margin-left: 0px;
@@ -85,17 +85,17 @@ color: rgba(0, 0, 0, 0.623);
 
 
 #expense-search::placeholder{
-    color: rgb(235, 160, 48);
+    color: rgb(48, 135, 235);
     
 }
 #expense-search-icon{
-    color:rgb(235, 160, 48);
+    color:rgb(48, 135, 235);
     margin-left: -30px;
     margin-top: 25px;
 }
 thead{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(235, 160, 48);
+    background-color: rgb(48, 135, 235);
     color: white;
     border-radius: 5px;
 }
@@ -115,7 +115,7 @@ thead{
 #expense-table-body td{
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px 10px 10px 10px;
-    border-bottom: 1px solid rgb(235, 160, 48);
+    border-bottom: 1px solid rgb(48, 135, 235);
 }
 
 /*Done*/

@@ -11,10 +11,10 @@
 }
 
 #ls-submit{
-    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(0, 0, 0, 0.753); border: none; border-radius: 5px; color: white;
+    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgb(0, 0, 0); border: none; border-radius: 5px; color: white;
 }
 #ls-submit-delete{
-    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgba(218, 17, 17, 0.753); border: none; border-radius: 5px; color: white;
+    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgb(218, 17, 17); border: none; border-radius: 5px; color: white;
 }
 
 
@@ -31,8 +31,7 @@
 .ls-submit-section{
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
-  gap: 5px;
+  justify-content: space-around;
 }
 /* Table Styling */
 #ls-table {

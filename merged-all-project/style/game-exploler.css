@@ -20,6 +20,8 @@
 }
 .ge-card{
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: none; 
     border: 1px solid white; 
     border-radius: 5px; 
@@ -88,7 +90,8 @@
     margin: 0px;
 }
 .ge-white-space{
-    width: 310px; 
+    text-align: center;
+    width: 100%; 
     height: 1px; 
     margin-top: 10px; 
     background-color: white;
