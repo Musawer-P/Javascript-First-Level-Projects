@@ -38,17 +38,16 @@ addBtn.addEventListener('click', () => {
     categoryName.value = "";
     currentEditingIndex = null; // Reset editing index after update
 });
-
 function addToTable(expense, index) {
     let row = document.createElement("tr");
 
     row.innerHTML = `
         <td>${expense.name}</td>
         <td>${expense.amount}</td>
-        <td>${expense.expense-date}</td>
-        <td>${expense.expense-category}</td>
-        <td><button style="padding: 7px 20px 7px 20px; border: none; color: white; background-color: rgb(44, 206, 84);" onclick="editExpense(${index})">Edit</button></td>
-        <td><button style="padding: 7px 20px 7px 20px; border: none; color: white; background-color: rgb(243, 64, 19);" onclick="removeExpense(this)">Delete</button></td>
+        <td>${expense.date}</td>
+        <td>${expense.category}</td>
+        <td><button style="padding: 7px 5px 7px 5px; width : 100%; font-size: 10px; border: none; color: white; background-color: rgb(44, 206, 84);" onclick="editExpense(${index})">Edit</button></td>
+        <td><button style="padding: 7px 5px 7px 5px; width : 100%; font-size: 10px; border: none; color: white; background-color: rgb(243, 64, 19);" onclick="removeExpense(this)">Delete</button></td>
     `;
 
     tableBody.appendChild(row);

@@ -1,19 +1,9 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-import { 
-    getDatabase,
-    ref,
-    push,
-    onValue,
-    remove
-} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js"; 
 
-const firebaseConfig = {
-    databaseURL: "https://notes-app-187cd-default-rtdb.firebaseio.com/",
-};
+// ✅ note.js
+import { ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
+import { notesDB } from "./firebase.js";
 
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-const referenceInDB = ref(database, "notes");
+const referenceInDB = ref(notesDB, "notes");
 
 const addNotes = document.getElementById("add-notes");
 const notesPlace = document.getElementById("notes-place");
@@ -26,21 +16,18 @@ const searchBox = document.getElementById("notes-search-box");
 const searchInput = document.getElementById("notes-search-input");
 const closeBtn = document.getElementById("notes-close-btn");
 
-let allNotes = []; // Store all notes for searching
+let allNotes = [];
 
-// Function to get current date and time (YYYY-MM-DD HH:MM:SS)
 function getFormattedDateTime() {
     const now = new Date();
     return now.toISOString().split("T")[0] + " " + now.toLocaleTimeString();
 }
 
-// Update date-time display every second
 function updateDateTimeDisplay() {
-    notesDate.textContent = getFormattedDateTime(); // Show current time in UI
+    notesDate.textContent = getFormattedDateTime();
 }
-setInterval(updateDateTimeDisplay, 1000); // Update time every second
+setInterval(updateDateTimeDisplay, 1000);
 
-// Function to render notes with date-time
 function render(notes) {
     let listNotes = "";
     notes.forEach((noteObj) => {
@@ -51,104 +38,70 @@ function render(notes) {
             </div>
         `;
     });
-
-    notesPlace.innerHTML = listNotes; // Insert all notes into the container
+    notesPlace.innerHTML = listNotes;
 }
 
-
-
-// Fetch notes from Firebase
 onValue(referenceInDB, (snapshot) => {
     if (snapshot.exists()) {
-        allNotes = Object.values(snapshot.val()); // Store all notes
+        allNotes = Object.values(snapshot.val());
         render(allNotes);
     } else {
-        notesPlace.innerHTML = "<p>No Notes Yet.</p>";
-        allNotes = []; // Reset stored notes
+        notesPlace.innerHTML = "<p style='color: white; margin-left: 5px;' >No Notes Yet.</p>";
+        allNotes = [];
     }
 });
 
-// Add note event
 notesSubmit.addEventListener("click", function (event) {
-    event.preventDefault(); 
-
+    event.preventDefault();
     const note = addNotes.value.trim();
-    const date = notesDate.textContent; // Use displayed time
-
+    const date = notesDate.textContent;
     if (note) {
         push(referenceInDB, { note, date })
-            .then(() => {
-                addNotes.value = "";
-                console.log("Note added:", note, "Date:", date);
-            })
-            .catch((error) => {
-                console.error("Error adding note:", error);
-            });
+            .then(() => { addNotes.value = ""; })
+            .catch((error) => { console.error("Error adding note:", error); });
     } else {
         alert("Please enter a note.");
     }
 });
 
-// Delete all notes on double-click
 deleteBtn.addEventListener("dblclick", function () {
     remove(referenceInDB)
         .then(() => {
-            notesPlace.innerHTML = "<p style='color: blueviolet;' >No Notes Yet.</p>";
+            notesPlace.innerHTML = "<p style='color: white;'>No Notes Yet.</p>";
         })
-        .catch((error) => { 
-            console.error("Error deleting notes:", error);
-        });
+        .catch((error) => { console.error("Error deleting notes:", error); });
 });
 
-// Initialize time display
-updateDateTimeDisplay();
-
-/* SEARCH FUNCTIONALITY */
 searchInput.addEventListener("input", function () {
     const searchTerm = searchInput.value.toLowerCase();
-
-    // Filter notes based on search term
     const filteredNotes = allNotes.filter(noteObj =>
         noteObj.note.toLowerCase().includes(searchTerm) ||
         noteObj.date.toLowerCase().includes(searchTerm)
     );
-
-    render(filteredNotes); // Display only matching notes
+    render(filteredNotes);
 });
 
-// Show search box
 searchIcon.addEventListener("click", function () {
     searchBox.classList.add("show");
-    searchInput.focus(); // Focus on the input field
+    searchInput.focus();
 });
 
-// Hide search box
 closeBtn.addEventListener("click", function () {
     searchBox.classList.remove("show");
-    searchInput.value = ""; // Clear input
-    render(allNotes); // Show all notes again
+    searchInput.value = "";
+    render(allNotes);
 });
 
-// THEME TOGGLE FUNCTIONALITY
 themeToggleBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-        themeToggleBtn.innerHTML = "🌙"; // Change to sun icon
-    } else {
-        localStorage.setItem("theme", "light");
-        themeToggleBtn.innerHTML = "☀️"; // Change to moon icon
-    }
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    themeToggleBtn.innerHTML = isDark ? "🌙" : "☀️";
 });
 
-// Apply saved theme and correct icon on page load
 window.addEventListener("load", function () {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        themeToggleBtn.innerHTML = "🌙"; // Show sun icon in dark mode
-    } else {
-        themeToggleBtn.innerHTML = "☀️"; // Show moon icon in light mode
-    }
+    const isDark = savedTheme === "dark";
+    document.body.classList.toggle("dark-mode", isDark);
+    themeToggleBtn.innerHTML = isDark ? "🌙" : "☀️";
 });

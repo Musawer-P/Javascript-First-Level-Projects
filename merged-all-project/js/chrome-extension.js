@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 let myLeads = []
 const inputEl = document.getElementById("extension-input-el")
 const inputBtn = document.getElementById("extension-input-btn")
@@ -45,3 +47,4 @@ inputBtn.addEventListener("click", function() {
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     render(myLeads)
 })
+});

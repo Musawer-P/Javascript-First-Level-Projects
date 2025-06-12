@@ -1,86 +1,73 @@
-//Localstorage project
-const saveForm = document.getElementById("save-form");
-const quantityInput = document.getElementById("quantity");
-const itemInput = document.getElementById("item");
-const priceInput = document.getElementById("price");
-const tableBody = document.getElementById("ls-table-body");
-const submitDelete = document.getElementById("ls-submit-delete");
+  document.addEventListener("DOMContentLoaded", function () {
+  const quantityInput = document.getElementById("quantity");
+  const itemInput = document.getElementById("item");
+  const priceInput = document.getElementById("price");
+  const tableBody = document.getElementById("ls-table-body");
+  const submitBtn = document.getElementById("ls-submit");
+  const deleteBtn = document.getElementById("ls-submit-delete");
 
-
-// Function to populate the table with data from localStorage
-function populateTable() {
-  // Clear the table body first
-  tableBody.innerHTML = "";
-
-  // Retrieve data from localStorage
-  const savedQuantity = localStorage.getItem("quantity");
-  const savedItem = localStorage.getItem("item");
-  const savedPrice = localStorage.getItem("price");
-
-  if (savedQuantity && savedItem && savedPrice) {
-    // Create a new table row
-    const newRow = document.createElement("tr");
-
-    // Create and populate table cells
-    const quantityCell = document.createElement("td");
-    quantityCell.textContent = savedQuantity;
-
-    const itemCell = document.createElement("td");
-    itemCell.textContent = savedItem;
-
-    const priceCell = document.createElement("td");
-    priceCell.textContent = savedPrice;
-
-    newRow.appendChild(quantityCell);
-    newRow.appendChild(itemCell);
-    newRow.appendChild(priceCell);
-
-    tableBody.appendChild(newRow);
-  } else {
-    // If no data, display a message
-    const noDataRow = document.createElement("tr");
-    const noDataCell = document.createElement("td");
-    noDataCell.setAttribute("colspan", 3);
-    noDataCell.textContent = "No data found in LocalStorage.";
-    noDataRow.appendChild(noDataCell);
-    tableBody.appendChild(noDataRow);
+  // Function to get saved data from localStorage
+  function getCartData() {
+    return JSON.parse(localStorage.getItem("cartData")) || [];
   }
-}
 
-// Event listener for the form submit
-saveForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-// Identify which button was clicked
-const clickedButton = event.submitter;
+  // Function to save data to localStorage
+  function saveCartData(data) {
+    localStorage.setItem("cartData", JSON.stringify(data));
+  }
 
-if (clickedButton.id === "submit") {
-     // Save data to localStorage
-  const quantity = quantityInput.value;
-  const item = itemInput.value;
-  const price = priceInput.value;
+  // Function to populate the table
+  function populateTable() {
+    tableBody.innerHTML = "";
 
-  localStorage.setItem("quantity", quantity);
-  localStorage.setItem("item", item);
-  localStorage.setItem("price", price);
+    const savedData = getCartData();
 
-  quantityInput.value = "";
-  itemInput.value = "";
-  priceInput.value = "";
+    if (savedData.length > 0) {
+      savedData.forEach((item) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${item.quantity}</td>
+          <td>${item.item}</td>
+          <td>${item.price}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    } else {
+      const noDataRow = document.createElement("tr");
+      noDataRow.innerHTML = `<td colspan="3">No data found in LocalStorage.</td>`;
+      tableBody.appendChild(noDataRow);
+    }
+  }
 
-  
-  alert("Data saved to localStorage successfully!");
+  // Save to localStorage on Submit
+  submitBtn.addEventListener("click", () => {
+    const quantity = quantityInput.value.trim();
+    const item = itemInput.value.trim();
+    const price = priceInput.value.trim();
 
-} else if (clickedButton.id === "submit-delete") {
+    if (quantity && item && price) {
+      const newItem = { quantity, item, price };
+      const cartData = getCartData();
+      cartData.push(newItem);
+      saveCartData(cartData);
 
-    localStorage.clear()
-    alert("Data Deleted Succesfully");
+      quantityInput.value = "";
+      itemInput.value = "";
+      priceInput.value = "";
 
-}
-// Populate the table on page load
-populateTable();
+      populateTable();
+    } else {
+      alert("Please fill in all fields!");
+    }
+  });
 
+  // Delete all data
+  deleteBtn.addEventListener("click", () => {
+    localStorage.removeItem("cartData");
+    populateTable();
+    alert("All data deleted.");
+  });
+
+  // On page load
+  populateTable();
 });
-
-// Populate the table on page load
-populateTable();
-//Done
