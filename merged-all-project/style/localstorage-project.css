@@ -33,19 +33,45 @@
   display: flex;
   justify-content: space-around;
 }
-/* Table Styling */
+
+.table-div{
+    overflow-y: scroll;        
+  overflow-x: scroll;  
+  height: 320px;
+}
+
+
+.table-div::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.table-div::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffffff, #ffffff); /* green gradient */
+  border-radius: 10px;
+}
+
+
 #ls-table {
+
+
     margin: auto;
   text-align: center;
   margin-top: 50px;
-    width: 57%;
+    width: 100%;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: #333;
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    border: 1px solid #707070;
+  
+    
   }
+
+   #ls-table tbody td{
+    padding: 10px;
+   }
   
   /* Header Styling */
   #ls-table thead tr {
@@ -58,8 +84,9 @@
   /* Cell Padding and Borders */
   #ls-table th, #table td {
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #707070;
     text-align: center;
+    
   }
   
   /* Hover Effect for Rows */
@@ -70,11 +97,15 @@
   
   /* Alternate Row Colors */
   #ls-table tbody tr:nth-child(odd) {
-    background-color: #fdfdfd;
+    background-color: #1f2022;
+    color: white;
+    border: 1px solid #707070;
   }
   
   #ls-table tbody tr:nth-child(even) {
     background-color: #f7f7f7;
+        padding: 50px;
+
   }
   
   /* Responsive Design */

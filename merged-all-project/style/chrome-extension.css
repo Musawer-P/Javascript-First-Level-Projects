@@ -1,11 +1,15 @@
-
-
 /*Chrome extension*/
 
-#extension-h1{
+#extension-h1 {
     color: white;
     font-size: 30px;
+
 }
+
+#p-extension{
+     color: white; font-size: 20px; text-align: center;
+}
+
 #extension-input-el {
     width: 100%;
     padding: 8px;
@@ -14,44 +18,79 @@
     margin-bottom: 4px;
     border-radius: 5px;
 }
-.extension-button-container{
+
+#extension-label {
+    color: white;
+    display: flex;
+    padding: 10px;
+    padding-left: 0px;
+    font-weight: bold;
+}
+
+.table-extension {
+    overflow-y: scroll;
+    height: 400PX;
+
+}
+
+
+
+
+.table-extension::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.table-extension::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ffffff, #ffffff);
+    /* green gradient */
+    border-radius: 10px;
+}
+
+
+.extension-button-container {
     display: flex;
     justify-content: space-between;
-    gap:2px;
+    gap: 2px;
 }
+
 #extension-input-btn {
-    background: #111111;
-    color: white;
-        padding: 8px 0px;
-    border: 1px solid #ffffff00;
+    background: white;
+    color: #111111;
+    padding: 8px 0px;
+    border: 1px solid white;
     font-weight: bold;
     border-radius: 5px;
+    width: 100%;
+
 }
 
-#extension-delete-btn{
-     background: #111111;
-    color: white;
-        padding: 8px 0px;
-    border: 1px solid #ffffff00;
+#extension-delete-btn {
+    background: white;
+    color: #111111;
+    padding: 8px 10px;
+    border: 1px solid white;
     font-weight: bold;
-        border-radius: 5px;
-
+    border-radius: 5px;
+width: 100%;
 }
 
-#extension-tab-btn{
- background: #111111;
-    color: white;
+#extension-tab-btn {
+    background: white;
+    color: #111111;
     padding: 8px 0px;
-    border: 1px solid #ffffff00;
+    border: 1px solid white;
     font-weight: bold;
-        border-radius: 5px;
+    border-radius: 5px;
+    width: 100%;
+
 
 }
 
 
 
 
-#extension-ul-el{
+#extension-ul-el {
     margin-top: 20px;
     list-style: none;
     padding-left: 0;

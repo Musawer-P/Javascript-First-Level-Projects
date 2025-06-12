@@ -9,7 +9,7 @@ body {
 
 #main-h1 {
   text-align: center;
-  font-size: 80px;
+  font-size: 7vw;
   font-weight: bold;
   color: #6943FF;
 }
@@ -228,6 +228,13 @@ body {
 #about-us-p {
   color: white;
   font-size: 15px;
+}
+
+#dev-name{
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(197, 197, 197);
 }
 
 /* Done */

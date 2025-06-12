@@ -7,15 +7,27 @@
     padding: 10px;
 }
 #input-todo {
+    background-color: rgba(255, 255, 255, 0);
     width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 10px;
     padding-right: 0px;
     margin-left: -5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
+    color: white;
+}
+#insertplace-todo td{
+padding: 10px;
+}
+#input-todo:focus{
+    outline: none;
 }
 
+#input-todo::placeholder{
+    color: white;
+    
+}
 #todo-button-div {
     margin-top: 10px;
     display: flex;
@@ -52,12 +64,30 @@
     padding-top: 50px;
     padding-left: 0px;
     padding-right: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 300px;
 }
+
+
+
+#todo-table-div::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+#todo-table-div::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffffff, #ffffff); /* green gradient */
+  border-radius: 10px;
+}
+
+
 
 #todo-table {
     width: 100%;
     text-align: center;
     border-collapse: collapse;
+    color: white;
 
 }
 
