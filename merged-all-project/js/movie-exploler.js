@@ -30,7 +30,5 @@
 
     // Also allow pressing Enter to search
     document.getElementById("me-search-bar").addEventListener("keydown", function(e) {
-      if (e.key === "Enter") {
-        searchMovie();
-      }
+    
     });
