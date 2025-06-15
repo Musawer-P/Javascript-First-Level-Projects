@@ -327,7 +327,7 @@
 
     <div class="tweleve">
       <!--Notes app-->
-      
+
       <h1 style="color: white;">Notes App</h1>
 
       <div class="notes-main" id="notes-main">
@@ -341,11 +341,11 @@
         </div>
 
         <div class="notes-container" id="notes-button-container" style="display: flex;">
-                      <button type="button" id="notes-submit">Add</button>
-<div class="tooltip-container">
-  <button type="button" id="notes-delete-btn">Delete</button>
-  <div class="tooltip">Double click for Deleting !</div>
-</div>
+          <button type="button" id="notes-submit">Add</button>
+          <div class="tooltip-container">
+            <button type="button" id="notes-delete-btn">Delete</button>
+            <div class="tooltip">Double click for Deleting !</div>
+          </div>
           <div class="notes-search-container" id="notes-search-container">
             <button id="notes-search-icon" class="notes-search-btn">
               <img src="images/search-icon.png" id="search-notes-img" alt="Search" />
@@ -357,7 +357,7 @@
           </div>
 
         </div>
-      
+
 
         <div class="notes-container" id="notes-place">
 
@@ -545,22 +545,22 @@
             <button type="button" id="ls-submit">Submit</button>
             <div class="tooltip-container">
               <button type="button" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
-  <div class="tooltip">Double click for Deleting !</div>
-</div>
+              <div class="tooltip">Double click for Deleting !</div>
+            </div>
           </div>
       </div>
-      <div class = "table-div">
-      <table id="ls-table" border="1">
-        <thead>
-          <tr>
-            <th>Quantity</th>
-            <th>Item</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody id="ls-table-body">
-        </tbody>
-      </table>
+      <div class="table-div">
+        <table id="ls-table" border="1">
+          <thead>
+            <tr>
+              <th>Quantity</th>
+              <th>Item</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="ls-table-body">
+          </tbody>
+        </table>
       </div>
     </div>
     <!--Done-->
@@ -578,8 +578,8 @@
         <button type="button" id="todo-submit">Submit</button>
         <div class="tooltip-container">
           <button type="button" id="todo-delete-btn">Delete</button>
-  <div class="tooltip">Double click for Deleting !</div>
-</div>
+          <div class="tooltip">Double click for Deleting !</div>
+        </div>
       </div>
       <div class="todo-table-div" id="todo-table-div">
         <table id="todo-table" class="table table-bordered">
@@ -601,21 +601,21 @@
     <!--Chrome extension-->
     <div class="nineteen">
       <h1 id="extension-h1">Chrome Extension</h1>
-      <p id = "p-extension">Save tab works on extension</p>
-      <label id = "extension-label">Enter URL</label>
+      <p id="p-extension">Save tab works on extension</p>
+      <label id="extension-label">Enter URL</label>
       <input type="text" id="extension-input-el" placeholder="Enter URL...">
       <div class="extension-button-container">
         <button type="button" id="extension-input-btn">SAVE INPUT</button>
-                <button type="button" id="extension-tab-btn">SAVE TAB</button>
-                <div class="tooltip-container">
-                  <button type="button" id="extension-delete-btn">DELETE</button>
-  <div class="tooltip">Double click for Deleting !</div>
-</div>
-        
+        <button type="button" id="extension-tab-btn">SAVE TAB</button>
+        <div class="tooltip-container">
+          <button type="button" id="extension-delete-btn">DELETE</button>
+          <div class="tooltip">Double click for Deleting !</div>
+        </div>
+
       </div>
-      <div class = "table-extension">
-      <ul id="extension-ul-el">
-      </ul>
+      <div class="table-extension">
+        <ul id="extension-ul-el">
+        </ul>
       </div>
     </div>
     <!--Done-->
@@ -648,7 +648,7 @@
         </div>
         <div class="expense-table-section">
           <table id="expense-table">
-            <thead id = "expense-thead">
+            <thead id="expense-thead">
               <th style="padding: 10px; border: none;">Expense</th>
               <th>Amount</th>
               <th>Date</th>
@@ -680,8 +680,8 @@
         <button type="button" id="leads-tracker-input-btn">SAVE INPUT</button>
         <div class="tooltip-container">
           <button type="button" id="leads-tracker-delete-btn">DELETE ALL</button>
-  <div class="tooltip">Double click for Deleting !</div>
-</div>
+          <div class="tooltip">Double click for Deleting !</div>
+        </div>
       </div>
       <ul id="leads-tracker-ul-el">
       </ul>
@@ -710,8 +710,13 @@
           <i class="fas fa-search" id="me-icon"></i>
         </div>
       </div>
-      <div class="me-card">
-        <img src="images/depapel.jpg" id="me-image">
+      <div class = "movie-description">
+        <img src="images/poster.jpg" id="me-image">
+         <p id="movie-description">La Casa de Papel (Money Heist) is a Spanish crime drama series that follows a
+            criminal mastermind known as "The Professor" who recruits eight skilled thieves to carry out a massive heist
+            on the Royal Mint of Spain.</p>
+        </div>
+        
         <div class="me-row">
           <div class="me-genre">
             <p id="me-genre-p">Action,Comedy</p>
@@ -723,7 +728,6 @@
           <div class="me-rating">
             <p id="me-rating-p">IMDb - 9.8/10</p>
 
-          </div>
         </div>
 
       </div>
@@ -734,9 +738,7 @@
           <div class="me-white-space">
 
           </div>
-          <p id="movie-description">La Casa de Papel (Money Heist) is a Spanish crime drama series that follows a
-            criminal mastermind known as "The Professor" who recruits eight skilled thieves to carry out a massive heist
-            on the Royal Mint of Spain.</p>
+         
         </div>
 
       </div>
@@ -748,8 +750,9 @@
       <div class="ge-header">
         <div class="ge-input-icon">
           <input type="text" id="ge-search-bar" placeholder="Search...">
-          <i class="fas fa-search" id="ge-icon"></i>
-        </div>
+<button id="me-icon" style="background: none; border: none; color: #999; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+  <i class="fas fa-search"></i>
+</button>        </div>
       </div>
       <div class="ge-card">
         <img src="images/depapel.jpg" id="ge-image">
@@ -803,44 +806,43 @@
 
         Whether you're a fellow developer, a potential client, or just someone curious about coding, I hope these
         projects inspire, educate, or even entertain you.
-        
+
         Thanks for visiting — and feel free to explore, interact, or reach out!</p>
-        <p id = "dev-name">Musawer Popalzai</p>
-      </div>
+      <p id="dev-name">Musawer Popalzai</p>
     </div>
-    
-  </body>
+  </div>
 
-  <!--Mark-->
-  <script src="js/chrome-extension.js"></script>
-  <script type="module" src="js/todo-list-app.js"></script>
-  <script type="module" src="js/notes.js"></script>
-  <script src="js/localstorage-project.js"></script>
-  <script src="js/expense-tracker.js"></script>
+</body>
 
-  <script src="js/login-project.js"></script>
-  <script src="js/random-password.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/counter-app.js"></script>
-  <script src="js/graph-showing.js"></script>
-  <script src="js/popup-random-background.js"></script>
-  <script src="js/instagram-post-design.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/clingy-popup.js"></script>
-  <script src="js/emoji-faceoff.js"></script>
-  <script src="js/digital-clock.js"></script>
-  <script src="js/black-jack-game.js"></script>
-  <script src="js/random-card.js"></script>
-  <script src="js/basketball-counter-app.js"></script>
-  <script src="js/unit-converter.js"></script>
-  <script src="js/timer.js"></script>
-  <script src="js/dynamic-world-clock.js"></script>
-  <script src="js/expense-tracker.js"></script>
-  <script src="js/podcast-room.js"></script>
-  <script src="js/leads-tracker-app.js"></script>
-  <script src="js/movie-exploler.js"></script>
-  <script src="js/game-exploler.js"></script>
-  <script src="js/shopping-cart.js"></script>
+<!--Mark-->
+<script src="js/chrome-extension.js"></script>
+<script type="module" src="js/todo-list-app.js"></script>
+<script type="module" src="js/notes.js"></script>
+<script src="js/localstorage-project.js"></script>
+<script src="js/expense-tracker.js"></script>
+<script src="js/login-project.js"></script>
+<script src="js/random-password.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/counter-app.js"></script>
+<script src="js/graph-showing.js"></script>
+<script src="js/popup-random-background.js"></script>
+<script src="js/instagram-post-design.js"></script>
+<script src="js/script.js"></script>
+<script src="js/clingy-popup.js"></script>
+<script src="js/emoji-faceoff.js"></script>
+<script src="js/digital-clock.js"></script>
+<script src="js/black-jack-game.js"></script>
+<script src="js/random-card.js"></script>
+<script src="js/basketball-counter-app.js"></script>
+<script src="js/unit-converter.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/dynamic-world-clock.js"></script>
+<script src="js/expense-tracker.js"></script>
+<script src="js/podcast-room.js"></script>
+<script type="module" src="js/leads-tracker-app.js"></script>
+<script src="js/movie-exploler.js"></script>
+<script src="js/game-exploler.js"></script>
+<script src="js/shopping-cart.js"></script>
 
 
 
