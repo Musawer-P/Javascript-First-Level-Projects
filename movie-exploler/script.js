@@ -28,7 +28,9 @@
     // Trigger search on clicking the search icon
     document.getElementById("icon").addEventListener("click", searchMovie);
 
-    // Also allow pressing Enter to search
-    document.getElementById("search-bar").addEventListener("keydown", function(e) {
-    
+  document.getElementById("search-bar").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    searchMovie();
+  }
+
     });
