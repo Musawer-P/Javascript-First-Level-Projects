@@ -1,34 +1,34 @@
-const searchBar = document.getElementById("search-bar");
-const searchIcon = document.querySelector(".fa-search");
+ const apiKey = "72a12e1";
 
-// My api key will be add in there
-const API_KEY = "YOUR_OMDB_API_KEY";
+    async function searchMovie() {
+      const input = document.getElementById("search-bar").value.trim();
+      if (!input) return alert("Please enter a movie name!");
 
-searchIcon.addEventListener("click", () => {
-    const movieTitle = searchBar.value.trim();
-    if (movieTitle) {
-        fetchMovie(movieTitle);
+      const title = encodeURIComponent(input);
+
+      try {
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${title}`);
+        const data = await response.json();
+
+        if (data.Response === "True") {
+          document.getElementById("image").src = data.Poster !== "N/A" ? data.Poster : "https://via.placeholder.com/150x225?text=No+Image";
+          document.getElementById("h2-movie-name").textContent = data.Title;
+          document.getElementById("genre-p").textContent = data.Genre;
+          document.getElementById("movie-time").textContent = data.Runtime;
+          document.getElementById("rating-p").textContent = `IMDb - ${data.imdbRating}/10`;
+          document.getElementById("movie-description").textContent = data.Plot;
+        } else {
+          alert(`❌ Movie not found: ${data.Error}`);
+        }
+      } catch (error) {
+        alert(`⚠️ Error fetching data: ${error.message}`);
+      }
     }
-});
 
-function fetchMovie(title) {
-    const url = `https://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${API_KEY}`;
+    // Trigger search on clicking the search icon
+    document.getElementById("icon").addEventListener("click", searchMovie);
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.Response === "True") {
-                document.getElementById("image").src = data.Poster !== "" ? data.Poster : "";
-                document.getElementById("genre").textContent = data.Genre;
-                document.getElementById("movie-time").textContent = data.Runtime;
-                document.getElementById("rating").textContent = `IMDb - ${data.imdbRating}/10`;
-                document.getElementById("h2-movie-name").textContent = data.Title;
-                document.getElementById("movie-description").textContent = data.Plot;
-            } else {
-                alert("Movie not found. Try again.");
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching movie:", error);
-        });
-}
+    // Also allow pressing Enter to search
+    document.getElementById("search-bar").addEventListener("keydown", function(e) {
+    
+    });

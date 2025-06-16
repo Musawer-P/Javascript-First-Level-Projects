@@ -21,6 +21,11 @@ body{
     color: white; 
     outline: none;
 }
+#image{
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 250px;
+}
 i{
     color: rgb(255, 255, 255); 
     font-size: 30px; 
@@ -33,7 +38,6 @@ i{
 }
 .card{
     background-color: none; 
-    border: 1px solid white; 
     border-radius: 5px; 
     height: 280px; 
     width: 512px;
@@ -44,7 +48,7 @@ i{
     padding-left: 5px; 
     padding-right: 5px;
 }
-#genre{
+#genre-p{
     color: rgb(0, 0, 0); 
     background-color: white; 
     width: fit-content; 
@@ -59,7 +63,7 @@ i{
     border-radius: 5px; 
     font-weight: bold;
 }
-#rating{
+#rating-p{
     color: rgb(0, 0, 0); 
     background-color: white; 
     width: fit-content; 
@@ -68,8 +72,8 @@ i{
     font-weight: bold;
 }
 .description{
-    width: 35%; 
-    padding-left: 10px;
+    width: 50%; 
+    padding-left: 0px;
 }
 #h2-movie-name{
     color: white; 
