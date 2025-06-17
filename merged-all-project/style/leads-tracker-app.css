@@ -57,12 +57,32 @@
     padding-left: 0;
 }
 
+
 li {
     margin-top: 5px;
 }
 
 a {
     color: white;
+}
+
+
+.leads-ul-div{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 300px;
+}
+
+
+
+.leads-ul-div::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.leads-ul-div::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffffff, #ffffff); /* green gradient */
+  border-radius: 10px;
 }
 
 

@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="style/style.css" rel="stylesheet">
   <link href="style/clingy-popuop.css" rel="stylesheet">
   <link href="style/counter-app.css" rel="stylesheet">
@@ -31,6 +34,7 @@
   <link href="style/movie-exploler.css" rel="stylesheet">
   <link href="style/game-exploler.css" rel="stylesheet">
   <link href="style/shopping-cart.css" rel="stylesheet">
+  <link href="style/twimba.css" rel="stylesheet">
 
 
   <title>Merging Projects</title>
@@ -545,7 +549,7 @@
             <button type="button" id="ls-submit">Submit</button>
             <div class="tooltip-container">
               <button type="button" id="ls-submit-delete" onclick="sbtDelte()">Delete</button>
-              <div class="tooltip">Double click for Deleting !</div>
+              <div class="tooltip">click for Deleting !</div>
             </div>
           </div>
       </div>
@@ -601,12 +605,14 @@
     <!--Chrome extension-->
     <div class="nineteen">
       <h1 id="extension-h1">Chrome Extension</h1>
-      <p id="p-extension">Save tab works on extension</p>
       <label id="extension-label">Enter URL</label>
       <input type="text" id="extension-input-el" placeholder="Enter URL...">
       <div class="extension-button-container">
         <button type="button" id="extension-input-btn">SAVE INPUT</button>
+         <div class="tooltip-container">
         <button type="button" id="extension-tab-btn">SAVE TAB</button>
+              <div class="tooltip"> Save tab works on extension!</div>
+            </div>
         <div class="tooltip-container">
           <button type="button" id="extension-delete-btn">DELETE</button>
           <div class="tooltip">Double click for Deleting !</div>
@@ -683,8 +689,10 @@
           <div class="tooltip">Double click for Deleting !</div>
         </div>
       </div>
+      <div class = "leads-ul-div">
       <ul id="leads-tracker-ul-el">
       </ul>
+      </div>
     </div>
     <!--Done-->
 
@@ -719,14 +727,14 @@
         
         <div class="me-row">
           <div class="me-genre">
-            <p id="me-genre-p">Action,Comedy</p>
+            <p id="me-genre-p">Action, Crime, Drama</p>
           </div>
           <div class="me-time">
-            <p id="movie-time">1:50:20</p>
+            <p id="movie-time">70 min</p>
 
           </div>
           <div class="me-rating">
-            <p id="me-rating-p">IMDb - 9.8/10</p>
+            <p id="me-rating-p">IMDb - 8.2/10</p>
 
         </div>
 
@@ -742,48 +750,19 @@
     </div>
 
     <div class="twentyfour">
-      <h1 id="game-exploler-h1" style="color: white; font-size: 30px;">Game Exploler</h1>
+      <h1 id="twimba-h1">Twitter Clone</h1>
 
-      <div class="ge-header">
-       <div class="me-input-icon">
-          <input type="text" id="ge-search-bar" placeholder="Search...">
-          <i class="fas fa-search" id="me-icon"></i>
-        </div>
-      </div>
-      <div class = "game-description">
-        <img src="images/poster-game.jpg" id="ge-image">
-            <p id="movie-description">Push the Pedal is a thrilling, fast-paced driving game where your reflexes are your
-            best weapon! Tap and hold the pedal to accelerate, drift through tight corners, dodge traffic, and race your
-            way to glory.</p>
-        </div>
-        <div class="ge-row">
-          <div class="ge-genre">
-            <p id="ge-genre-p">Action,Adventure</p>
-          </div>
-          <div class="ge-time">
-            <p id="movie-time">7+</p>
-
-          </div>
-          <div class="ge-rating">
-            <p id="ge-rating-p">App Store - 4.5 - Rating</p>
-
-          </div>
-        </div>
-
-
-        <div class="ge-description">
-          <h2 id="h2-movie-name">Pushing the Pedal</h2>
-          <div class="ge-white-space">
-
-      
-        </div>
-      </div>
+<div class="tweet-input-area">
+			<img src="images/profile.jpg" class="profile-pic">
+			<textarea placeholder="What's happening?" id="tweet-input"></textarea>
+		</div>
+		<button type = "button" id="tweet-btn">Tweet</button>
+		<div class="feed" id="feed">
+			<!-- Tweets here!! -->
+		</div>
     </div>
   </div>
 
-  <div class="main-six-row">
-
-  </div>
 
 
   <div class="about-us">
@@ -809,6 +788,7 @@
 </body>
 
 <!--Mark-->
+<script src="js/twimba.js" type="module"></script>
 <script src="js/chrome-extension.js"></script>
 <script type="module" src="js/todo-list-app.js"></script>
 <script type="module" src="js/notes.js"></script>
