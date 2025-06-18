@@ -45,10 +45,10 @@
 }
 
 .expense-button-section{
-    display: flex;
+display: flex;
 text-align: start;
-justify-content: space-between;
-
+justify-content: center;
+gap: 5px;
 width: 100%;
 margin-top: 20px;
 
@@ -67,32 +67,27 @@ color: rgba(0, 0, 0, 0.623);
     padding: 5px 50px 10px 5px;
     height: 20px;
     border: none;
-    border-bottom: 1px solid rgb(48, 135, 235);
-    background-color:  rgb(241, 238, 233);
-    color: rgb(48, 135, 235);
-    border-radius: 0px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color:  rgba(241, 238, 233, 0);
+    color: rgb(255, 255, 255);
     margin-top: 15px;
     margin-left: 0px;
-    border-radius: 5px;
-    width: 30%;
+    border-radius: 0px;
+    width: 50%;
 }
 
     #expense-search:focus {
         border-bottom: 2px solid rgba(0, 0, 0, 0.623); /* Make border thicker on focus */
         outline: none;  /* Remove default focus outline */
-        color: rgba(0, 0, 0, 0.623); /* Optional: Change text color on focus */
+        color: rgb(255, 255, 255); /* Optional: Change text color on focus */
     }
 
 
 #expense-search::placeholder{
-    color: rgb(48, 135, 235);
+    color: rgb(255, 255, 255);
     
 }
-#expense-search-icon{
-    color:rgb(48, 135, 235);
-    margin-left: -30px;
-    margin-top: 25px;
-}
+
 #expense-thead{
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;

@@ -1,16 +1,21 @@
 
 #me-search-bar{
-    width: 70%; 
+    width: 80%; 
     padding: 15px; 
     border: 1px solid white; 
     background-color: rgba(27, 27, 27, 0.493); 
     border-radius: 5px; 
     color: white; 
     outline: none;
+    margin-left: 5px;
+}
+.me-header{
+    display: flex;
+
 }
 #me-icon{
     color: rgb(255, 255, 255); 
-    font-size: 30px; 
+    font-size: 25px; 
     padding: 10px;
 }
 

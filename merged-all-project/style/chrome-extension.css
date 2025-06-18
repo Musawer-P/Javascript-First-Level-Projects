@@ -14,7 +14,10 @@
     border: 1px solid #5f934100;
     margin-bottom: 4px;
     border-radius: 5px;
+    outline: none;
 }
+
+
 
 #extension-label {
     color: white;
@@ -47,41 +50,49 @@
 
 .extension-button-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     gap: 2px;
 }
 
 #extension-input-btn {
+    padding: 8px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     background: white;
     color: #111111;
-    padding: 8px 0px;
+    border: 1px solid white;
+    font-weight: bold;
+    width: fit-content;
+
+}
+
+#extension-tab-btn {
+        padding: 8px;
+
+    background: white;
+    color: #111111;
     border: 1px solid white;
     font-weight: bold;
     border-radius: 0px;
-    width: 50%;
+    width: fit-content;
+
 
 }
 
 #extension-delete-btn {
+        padding: 8px;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     background: white;
     color: #111111;
-    padding: 8px 10px;
     border: 1px solid white;
     font-weight: bold;
-    border-radius: 0px;
-width: 100%;
-}
-
-#extension-tab-btn {
-    background: white;
-    color: #111111;
-    padding: 8px 5px;
-    border: 1px solid white;
-    font-weight: bold;
-    border-radius: 0px;
-    width: 100%;
-
-
+    width: fit-content;
 }
 
 

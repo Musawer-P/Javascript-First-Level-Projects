@@ -1,42 +1,80 @@
-
 /*Localstorage project*/
-#quantity{
-    padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; border-radius: 5px; border: none; width: 95%;
-}
-#item{
-    padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; border-radius: 5px; border: none; width: 95%;
-}
-#price{
-    padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; border-radius: 5px; border: none; width: 95%; margin-top: 10px;
+#quantity {
+  width: 95%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
 }
 
-#ls-submit{
-    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgb(0, 0, 0); border: none; border-radius: 5px; color: white;
-}
-#ls-submit-delete{
-    padding-top: 9px;padding-right: 30px;padding-bottom: 9px;padding-left: 30px; background-color: rgb(218, 17, 17); border: none; border-radius: 5px; color: white;
-}
-
-
-#ls-h1{
-    color: white;
-    font-size: 30px;
+#item {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
 }
 
-.ls-inputs{
+.item-div {
   display: flex;
-  justify-content: space-between;
-  gap: 5px;
 }
-.ls-submit-section{
+
+#price {
+  width: 95%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+#item:focus,#quantity:focus,#price:focus{
+outline: none;
+}
+#ls-submit {
+  padding-top: 9px;
+  padding-right: 30px;
+  padding-bottom: 9px;
+  padding-left: 30px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+
+#ls-submit-delete {
+  padding-top: 9px;
+  padding-right: 30px;
+  padding-bottom: 9px;
+  padding-left: 30px;
+  background-color: rgb(218, 17, 17);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+
+
+#ls-h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.ls-inputs {
   margin-top: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5px;
 }
 
-.table-div{
-    overflow-y: scroll;        
-  overflow-x: scroll;  
+.ls-submit-section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+  width: 100%;
+}
+
+.table-div {
+  overflow-y: scroll;
+  overflow-x: scroll;
   height: 320px;
 }
 
@@ -47,7 +85,8 @@
 }
 
 .table-div::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ffffff, #ffffff); /* green gradient */
+  background: linear-gradient(180deg, #ffffff, #ffffff);
+  /* green gradient */
   border-radius: 10px;
 }
 
@@ -55,63 +94,65 @@
 #ls-table {
 
 
-    margin: auto;
+  margin: auto;
   text-align: center;
   margin-top: 50px;
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    background-color: #f9f9f9;
-    border: 1px solid #707070;
-  
-    
-  }
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #707070;
 
-   #ls-table tbody td{
-    padding: 10px;
-   }
-  
-  /* Header Styling */
-  #ls-table thead tr {
-    background-color:#1f2022;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  /* Cell Padding and Borders */
-  #ls-table th, #table td {
-    padding: 12px 15px;
-    border: 1px solid #707070;
-    text-align: center;
-    
-  }
-  
-  /* Hover Effect for Rows */
-  #ls-table tbody tr:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
-  
-  /* Alternate Row Colors */
-  #ls-table tbody tr:nth-child(odd) {
-    background-color: #1f2022;
-    color: white;
-    border: 1px solid #707070;
-  }
-  
-  #ls-table tbody tr:nth-child(even) {
-    background-color: #f7f7f7;
-        padding: 50px;
 
+}
+
+#ls-table tbody td {
+  padding: 10px;
+}
+
+/* Header Styling */
+#ls-table thead tr {
+  background-color: #1f2022;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Cell Padding and Borders */
+#ls-table th,
+#table td {
+  padding: 12px 15px;
+  border: 1px solid #707070;
+  text-align: center;
+
+}
+
+/* Hover Effect for Rows */
+#ls-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Alternate Row Colors */
+#ls-table tbody tr:nth-child(odd) {
+  background-color: #1f2022;
+  color: white;
+  border: 1px solid #707070;
+}
+
+#ls-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+  padding: 50px;
+
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #ls-table {
+    font-size: 14px;
   }
-  
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    #ls-table {
-      font-size: 14px;
-    }
-  }
+}
+
 /*Done*/

@@ -31,7 +31,8 @@ padding: 10px;
 #todo-button-div {
     margin-top: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5px;
 }
 
 #todo-submit {
@@ -43,6 +44,7 @@ padding: 10px;
     border: none;
     border-radius: 5px;
     color: white;
+    width: 100%;
 
 
 }
@@ -56,6 +58,8 @@ padding: 10px;
     border: none;
     border-radius: 5px;
     color: white;
+        width: 100%;
+
 
 
 }
@@ -93,7 +97,7 @@ padding: 10px;
 
 #todo-th {
     background-color: rgb(5, 5, 5);
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 /*Done*/

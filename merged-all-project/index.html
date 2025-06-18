@@ -115,7 +115,7 @@
 
     <!--Counter app-->
     <div class="third">
-      <h1 id="counter-h1">People Entered</h1>
+      <h1 id="counter-h1">People Counter</h1>
       <h2 id="count-el">0</h2>
       <div class="counter-body">
         <button id="increment-btn" onclick="increment()">INCREMENT</button>
@@ -540,11 +540,13 @@
       <h1 id="ls-h1">LocalStorage Project</h1>
       <div class="col-md-12" style="text-align: center;">
         <form id="save-form">
+          <div class = "item-div">
+                      <input type="text" placeholder="Item" class="form-control" id="item">
+                      </div>
           <div class="ls-inputs">
-            <input type="text" placeholder="Quantity" class="form-control" id="quantity">
-            <input type="text" placeholder="Item" class="form-control" id="item">
+            <input type="number" placeholder="Quantity" class="form-control" id="quantity">
+            <input type="number" placeholder="Price" class="form-control" id="price">
           </div>
-          <input type="text" placeholder="Price" class="form-control" id="price">
           <div class="ls-submit-section">
             <button type="button" id="ls-submit">Submit</button>
             <div class="tooltip-container">
@@ -589,8 +591,8 @@
         <table id="todo-table" class="table table-bordered">
           <thead id="todo-th">
             <tr>
-              <th style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">Task</th>
-              <th style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">Completed</th>
+              <th style="border-top-left-radius: 5px;border-bottom-left-radius: 5px; padding: 10px;">Task</th>
+              <th style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; padding: 10px;">Completed</th>
             </tr>
           </thead>
           <tbody id="insertplace-todo">
@@ -608,17 +610,19 @@
       <label id="extension-label">Enter URL</label>
       <input type="text" id="extension-input-el" placeholder="Enter URL...">
       <div class="extension-button-container">
-        <button type="button" id="extension-input-btn">SAVE INPUT</button>
-         <div class="tooltip-container">
-        <button type="button" id="extension-tab-btn">SAVE TAB</button>
-              <div class="tooltip"> Save tab works on extension!</div>
-            </div>
-        <div class="tooltip-container">
-          <button type="button" id="extension-delete-btn">DELETE</button>
-          <div class="tooltip">Double click for Deleting !</div>
-        </div>
+    <button type="button" id="extension-input-btn">SAVE INPUT</button>
 
-      </div>
+  <div class="tooltip-container">
+    <button type="button" id="extension-tab-btn">SAVE TAB</button>
+    <div class="tooltip">Save tab works on extension!</div>
+  </div>
+
+  <div class="tooltip-container">
+    <button type="button" id="extension-delete-btn">DELETE</button>
+    <div class="tooltip">Double click for Deleting!</div>
+  </div>
+</div>
+
       <div class="table-extension">
         <ul id="extension-ul-el">
         </ul>
@@ -649,7 +653,6 @@
         <div class="expense-button-section">
           <button type="button" id="expense-submit-add">Add</button>
           <input type="text" id="expense-search" placeholder="Search...">
-          <i class="fa fa-search" id="expense-search-icon"></i>
 
         </div>
         <div class="expense-table-section">
@@ -713,10 +716,8 @@
       <h1 id="movie-exploler-h1" style="color: white; font-size: 30px;">Movie Exploler</h1>
 
       <div class="me-header">
-        <div class="me-input-icon">
           <input type="text" id="me-search-bar" placeholder="Search...">
           <i class="fas fa-search" id="me-icon"></i>
-        </div>
       </div>
       <div class = "movie-description">
         <img src="images/poster.jpg" id="me-image">
@@ -767,7 +768,7 @@
 
   <div class="about-us">
     <div class="about-us-section">
-      <h1 id="about-us-h1">About Projects</h1>
+      <h1 id="about-us-h1">About The Projects</h1>
       <p id="about-us-p">Welcome to my JavaScript Projects portfolio! I'm a passionate and creative developer with a
         strong focus on building practical, mid-level JavaScript applications that solve real-world problems. These
         projects reflect my journey of learning, experimenting, and improving my coding skills through hands-on
